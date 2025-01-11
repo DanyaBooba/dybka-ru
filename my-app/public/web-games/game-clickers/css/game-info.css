@@ -1,0 +1,35 @@
+.game-info ul {
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none;
+}
+
+.game-info ul li {
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+    display: flex;
+    align-itrems: baseline;
+    padding: 1rem 0;
+    color: #6d6d6d;
+}
+
+.game-info ul li::before {
+    content: '';
+    border-bottom: .2rem dotted #cdcdcd;
+    flex-grow: 1;
+    order: 2;
+    margin: 0 5px;
+}
+
+.game-info ul span {
+    order: 3;
+    color: #000 !important;
+    text-align: end;
+}
+
+@media(hover: hover) {
+    .game-info ul li:hover {
+        background-color: #1d4e3833;
+    }
+}

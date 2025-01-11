@@ -1,0 +1,6 @@
+.robot div {
+    font-family: monospace;
+    text-align: end;
+    padding: 1rem 0;
+    border-bottom: .2rem dotted #cdcdcd;
+}

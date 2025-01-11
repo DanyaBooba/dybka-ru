@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title></title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="body__left">
+        <button onClick="popup()" id="popup-open">
+            ?
+        </button>
+    </div>
+    <div class="body__center">
+        <div class="allcash" id="allcash"></div>
+        <div class="button-group">
+            <button id="button-half"></button>
+            <button id="button-add"></button>
+            <button id="button-boost"></button>
+        </div>
+        <div class="game-info">
+            <ul>
+                <li id="game-info-time"></li>
+                <li id="game-info-clicks"></li>
+                <li id="game-info-whatcando"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="body__right">
+        <div class="robot" id="robot-clicks"></div>
+        <div class="robot" id="robot-auto"></div>
+    </div>
+    <div class="popup">
+        <button onClick="popupClose()" class="popup__close">
+            X
+        </button>
+        <div class="popup__bg">
+            <div class="popup__content">
+                <h1>
+                    Бесконечная игра в кликер
+                </h1>
+                <p>
+                    Добро пожаловать в бесконечную игру в кликер, написанную полностью на JavaScript!
+                    </p>
+                    <p>
+                        В этой игре вам предстоит:
+                </p>
+                <ul>
+                    <li>кликать на кнопку, чтобы <b>зарабатывать бабки</b></li>
+                    <li>кликать на кнопку, чтобы <b>прокачать робота</b></li>
+                    <li>кликать на кнопку, чтобы <b>испытать удачу</b>.</li>
+                </ul>
+                <p>
+                    Скорее заходи в игру и начинай кликать!
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="js/money.js"></script>
+    <script src="js/stats.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/auto.js"></script>
+    <script src="js/buttons.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/popup.js"></script>
+</body>
+</html>
