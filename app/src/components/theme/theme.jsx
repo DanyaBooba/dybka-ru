@@ -11,17 +11,12 @@ export const theme = extendTheme({
                 },
                 background: {
                     body: '#f4f6f7',
-                    surface: '#ffffff'
-                },
-                header: {
-                    borderColor: 'hsla(220, 20%, 80%, 0.4)',
-                    backgroundColor: 'rgba(252, 252, 252, 0.8)',
-                    boxShadow: 'rgba(9, 11, 17, 0.03) 0px 4px 8px 0px, rgba(19, 23, 32, 0.03) 0px 7px 4px -5px',
+//                    surface: '#ffffff'
                 },
                 showBlock: {
                     borderColor: 'rgba(210, 219, 227, .5)',
                     backgroundColor: '#ffffff',
-                    boxShadow: '0px 2px 16px 0px #e5ecef'
+                    boxShadow: 'inset 0 -1px 0 0 rgba(47,43,67,.1),0 1px 3px 0 rgba(47,43,67,.1)'
                 },
             },
         },
@@ -43,7 +38,7 @@ export const theme = extendTheme({
                 showBlock: {
                     borderColor: 'rgba(44, 81, 86, .5)',
                     backgroundColor: '#244448',
-                    boxShadow: '0px 2px 16px 0px #183235',
+                    boxShadow: '',
                 },
             },
         },
