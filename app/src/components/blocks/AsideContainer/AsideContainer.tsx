@@ -6,7 +6,7 @@ function AsideContainer({children}) {
     return (
         <>
             <Header />
-            <Container maxWidth="md">
+            <Container maxWidth="md" className="container">
                 {children}
             </Container>
             <Footer />

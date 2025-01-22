@@ -1,32 +1,80 @@
 import Container from '@mui/material/Container';
 import {currentTheme} from '../../theme/theme';
 import Link from '@mui/joy/Link';
+import Typography from "@mui/joy/Typography";
+import Box from '@mui/joy/Box';
+
+function HeaderDesktop({list}) {
+    return (
+        <Box sx={{
+                 display: {
+                     lg: 'block',
+                     md: 'block',
+                     sm: 'block',
+                     xs: 'none',
+                 }
+             }}>
+            <header className="header">
+                <Container className="" maxWidth="md"  >
+                    <div className="header__container" style={{
+                             borderColor: currentTheme().showBlock.borderColor,
+                             boxShadow: currentTheme().showBlock.boxShadow,
+                             backgroundColor: currentTheme().showBlock.backgroundColor
+                         }}>
+                        {list.map((item, index) => (
+                            <Typography level="body-xs" className="header__link" key={index}>
+                                <Link href={item.link} color="neutral">
+                                    {item.name}
+                                </Link>
+                            </Typography>
+                        ))}
+                    </div>
+                </Container>
+            </header>
+        </Box>
+    )
+}
+
+function HeaderMobile({list}) {
+    return (
+        <Box sx={{
+                 display: {
+                     lg: 'none',
+                     md: 'none',
+                     sm: 'none',
+                     xs: 'block',
+                 }
+             }}>
+            123
+        </Box>
+    )
+}
 
 function Header() {
+    const list = [
+        {
+            name: 'проекты',
+            link: '/projects',
+        },
+        {
+            name: 'навыки',
+            link: '/',
+        },
+        {
+            name: 'достижения',
+            link: '/',
+        },
+        {
+            name: 'мероприятия',
+            link: '/',
+        },
+    ]
+
     return (
-        <Container maxWidth="md">
-            <header className="header" style={{
-                        borderColor: currentTheme().showBlock.borderColor,
-                        boxShadow: currentTheme().showBlock.boxShadow,
-                        backgroundColor: currentTheme().showBlock.backgroundColor
-                    }}>
-                <Link href="/" color="neutral">
-                    проекты
-                </Link>
-                <Link href="/" color="neutral">
-                    навыки
-                </Link>
-                <Link href="/" color="neutral">
-                    достижения
-                </Link>
-                <Link href="/" color="neutral">
-                    учеба
-                </Link>
-                <Link href="/" color="neutral">
-                    мероприятия
-                </Link>
-            </header>
-        </Container>
+        <>
+            <HeaderDesktop list={list} />
+            <HeaderMobile list={list} />
+        </>
     )
 }
 
