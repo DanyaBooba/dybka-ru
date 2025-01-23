@@ -3,7 +3,13 @@ import Link from '@mui/joy/Link'
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft'
 import Box from '@mui/joy/Box'
 
-const BlockNotFind = ({ elem, link, elemTitle = "Не удалось найти" }) => (
+type Props = {
+    elem: string,
+    link: string,
+    elemTitle: string,
+};
+
+const BlockNotFind = ({ elem="", link, elemTitle = "Не удалось найти" } : Props) => (
     <Box sx={{
         height: '100vh !important',
         justifyContent: 'center',
@@ -39,7 +45,7 @@ const BlockNotFind = ({ elem, link, elemTitle = "Не удалось найти"
 function Page404() {
     return (
         <>
-            <BlockNotFind elemTitle="Страница не найдена" link="/" />
+            <BlockNotFind elemTitle="Страница не найдена" link="/" elem="" />
         </>
     )
 }

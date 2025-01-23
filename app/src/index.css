@@ -10,6 +10,23 @@
     margin-bottom: .5rem;
 }
 
+.sheetBlock-hero {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 24px;
+    margin-bottom: 2rem;
+}
+
+.sheetBlock-hero img {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+}
+
+.sheetBlock-hero .sheetBlock-hero__inner {
+    padding: 1rem 2.5rem 2.5rem 2.5rem;
+}
+
 .header {
     position: fixed;
     width: 100%;
