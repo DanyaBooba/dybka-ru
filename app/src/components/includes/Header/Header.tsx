@@ -63,7 +63,7 @@ function HeaderMobileDrawer({list}) {
             <List>
               {list.map((item, index) => (
                 <ListItem key={index}>
-                  <ListItemButton component="a" href="/123">
+                  <ListItemButton component="a" href={item.link} className="header__mobile-link-drawer">
                       {item.name}
                   </ListItemButton>
                 </ListItem>

@@ -43,9 +43,13 @@
 
 .header__mobile-button-drawer {
     position: fixed !important;
-    top: 10px;
+    bottom: 10px;
     right: 10px;
     z-index: 100;
+}
+
+.header__mobile-link-drawer {
+    text-transform: capitalize;
 }
 
 @media(max-width: 601px) {
