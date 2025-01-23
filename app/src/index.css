@@ -39,13 +39,19 @@
     justify-content: space-around;
     border-bottom-left-radius: 24px;
     border-bottom-right-radius: 24px;
+    border-style: solid;
+    border-width: 1px;
+    border-top: none !important;
     margin-bottom: 2rem;
     padding: 1rem;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 .header .header__link {
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .footer {
