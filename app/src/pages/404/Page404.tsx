@@ -5,10 +5,11 @@ import Box from '@mui/joy/Box'
 
 const BlockNotFind = ({ elem, link, elemTitle = "Не удалось найти" }) => (
     <Box sx={{
-        mb: '5rem',
-        mt: {
-            lg: '14rem'
-        }
+        height: '100vh !important',
+        justifyContent: 'center',
+        display: 'flex',
+        alignItems: 'center',
+        flexDirection: 'column'
     }}>
         <div style={{
             display: 'flex',
