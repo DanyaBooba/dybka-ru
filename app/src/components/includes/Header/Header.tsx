@@ -33,7 +33,7 @@ function HeaderMobileDrawer({list}) {
         <IconButton variant="solid" size="lg" className="header__mobile-button-drawer" color="primary" onClick={toggleDrawer(true)}>
           <DragHandleIcon />
         </IconButton>
-        <Drawer open={open} onClose={toggleDrawer(false)} anchor="right">
+        <Drawer open={open} onClose={toggleDrawer(false)} anchor="bottom" size="sm" className="header__mobile-drawer">
           <Box
             role="presentation"
             onClick={toggleDrawer(false)}
@@ -93,7 +93,7 @@ function HeaderDesktop({list}) {
                          }}>
                         {list.map((item, index) => (
                             <Typography level="body-xs" className="header__link" key={index}>
-                                <Link href={item.link} color="neutral">
+                                <Link href={item.link} color="neutral" variant="soft" underline="none" sx={{ backgroundColor: currentTheme().header.backgroundColor }}>
                                     {item.name}
                                 </Link>
                             </Typography>

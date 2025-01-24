@@ -27,7 +27,7 @@ function ShowBlock({title, showMore="", image="", children} : Props) {
             {!!image && (
                 <img src={`/img/illustrations/${image}.png`} aria-label={title} style={{ maxWidth: '80px', height: 'auto' }}  alt={title}/>
             )}
-            <Typography level="h2">
+            <Typography level="h2" id={image}>
                 {title}
             </Typography>
             {children}

@@ -1,6 +1,6 @@
 export const contests = [
     {
-        imageCap: 'image cap 1',
+        imageCap: '2024/pstgu/cap.jpg',
         title: '123',
         desc: '123',
         date: '123',
@@ -12,7 +12,7 @@ export const contests = [
         link: 'link 1'
     },
     {
-        imageCap: 'image cap 2',
+        imageCap: '2024/pstgu/cap.jpg',
         title: '123',
         desc: '123',
         date: '123',
@@ -24,7 +24,7 @@ export const contests = [
         link: 'link 2'
     },
     {
-        imageCap: 'image cap 2',
+        imageCap: '2024/pstgu/cap.jpg',
         title: '123',
         desc: '123',
         date: '123',

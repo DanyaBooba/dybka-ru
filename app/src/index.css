@@ -3,7 +3,6 @@
     border-width: 1px;
     border-radius: 24px;
     margin-bottom: 2rem;
-    padding: 2.5rem;
 }
 
 .sheetBlock h2 {
@@ -73,16 +72,37 @@
 
 .header__mobile-link-drawer {
     text-transform: capitalize;
+    line-height: 35px !important;
+}
+
+.image-contests div {
+    border-radius: 12px;
+}
+
+.image-contests img {
+    border-radius: 12px;
+}
+
+.header__mobile-drawer div[role="dialog"] {
+    max-height: 250px;
 }
 
 @media(max-width: 601px) {
     .container {
         padding-top: 1rem;
     }
+
+    .sheetBlock {
+        padding: 1.5rem;
+    }
 }
 
 @media(min-width: 600px) {
     .container {
         padding-top: 5rem;
+    }
+
+    .sheetBlock {
+        padding: 2.5rem;
     }
 }
