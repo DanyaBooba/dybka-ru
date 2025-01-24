@@ -23,7 +23,7 @@
 }
 
 .sheetBlock-hero .sheetBlock-hero__inner {
-    padding: 1rem 2.5rem 2.5rem 2.5rem;
+    padding: 1.5rem 2.5rem 2.5rem 2.5rem;
 }
 
 .header {
@@ -84,7 +84,7 @@
 }
 
 .header__mobile-drawer div[role="dialog"] {
-    max-height: 250px;
+    max-height: 300px;
 }
 
 @media(max-width: 601px) {

@@ -59,6 +59,9 @@ function PageIndex() {
             <ShowBlock title="Участие в СМИ" showMore="/123" image="smi">
                 <InnerBlockPhotos />
             </ShowBlock>
+            <ShowBlock title="Обо мне" showMore="/123" image="aboutMe">
+                <InnerBlockPhotos />
+            </ShowBlock>
             <ShowBlock title="Навыки в программировании" image="charts" showMore="">
                 123
             </ShowBlock>

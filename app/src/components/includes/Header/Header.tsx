@@ -93,7 +93,7 @@ function HeaderDesktop({list}) {
                          }}>
                         {list.map((item, index) => (
                             <Typography level="body-xs" className="header__link" key={index}>
-                                <Link href={item.link} color="neutral" variant="soft" underline="none" sx={{ backgroundColor: currentTheme().header.backgroundColor }}>
+                                <Link href={item.link} color="neutral" variant="soft" underline="none" sx={{ backgroundColor: 'transparent' }}>
                                     {item.name}
                                 </Link>
                             </Typography>
@@ -127,15 +127,19 @@ function Header() {
             link: '/projects',
         },
         {
-            name: 'навыки',
-            link: '/',
-        },
-        {
             name: 'достижения',
             link: '/',
         },
         {
             name: 'мероприятия',
+            link: '/',
+        },
+        {
+            name: 'сми',
+            link: '/',
+        },
+        {
+            name: 'обо мне',
             link: '/',
         },
     ]
