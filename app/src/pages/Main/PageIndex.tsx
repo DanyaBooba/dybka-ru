@@ -9,6 +9,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import InnerBlockProject from './PageIndex/InnerBlockProject';
 import HeroShowBlock from './PageIndex/HeroShowBlock';
 import InnerBlockPhotos from './PageIndex/InnerBlockPhotos';
+import InnerBlockContacts from './PageIndex/InnerBlockContacts';
 
 type Props = {
     children?: ReactNode,
@@ -49,20 +50,23 @@ function PageIndex() {
             <ShowBlock title="Мои проекты" showMore="/projects" image="projects">
                 <InnerBlockProject />
             </ShowBlock>
-            <ShowBlock title="Навыки в программировании" showMore="/123" image="charts">
-                123
-            </ShowBlock>
             <ShowBlock title="Достижения" showMore="/123" image="success">
-                123
-            </ShowBlock>
-            <ShowBlock title="Учеба" showMore="/123" image="education">
                 123
             </ShowBlock>
             <ShowBlock title="Фотографии с мероприятий" showMore="/123" image="photo">
                 <InnerBlockPhotos />
             </ShowBlock>
-            <ShowBlock title="Контакты" showMore="/123" image="contacts">
+            <ShowBlock title="Участие в СМИ" showMore="/123" image="smi">
+                <InnerBlockPhotos />
+            </ShowBlock>
+            <ShowBlock title="Навыки в программировании" image="charts" showMore="">
                 123
+            </ShowBlock>
+            <ShowBlock title="Образование" image="education" showMore="">
+                123
+            </ShowBlock>
+            <ShowBlock title="Контакты" image="contacts" showMore="">
+                <InnerBlockContacts />
             </ShowBlock>
         </AsideContainer>
     )

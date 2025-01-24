@@ -4,7 +4,14 @@ import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import Typography from "@mui/joy/Typography";
 import Link from "@mui/joy/Link";
 
-function BlockProject({ title, subtitle, link, gridSize=6 }) {
+function BlockProject({ title, subtitle, link }) {
+    const gridSize = {
+        lg: 6,
+        md: 6,
+        sm: 12,
+        xs: 12
+    }
+
     return (
         <Grid size={gridSize}>
             <Card variant="plain" color="primary" invertedColors sx={{ gap: '.25rem' }}>
