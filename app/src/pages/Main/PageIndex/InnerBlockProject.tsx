@@ -15,9 +15,9 @@ function BlockProject({ title, subtitle, link }) {
     return (
         <Grid size={gridSize}>
             <Card variant="plain" color="primary" invertedColors sx={{ gap: '.25rem' }}>
-                <Typography level="h4" endDecorator={<OpenInNewIcon
-                                sx={{ 'width': '.8em !important', height: '.8em !important' }} />}
-                            sx={{ justifyContent: 'space-between' }}>
+                <Typography color="primary" level="title-lg" variant="plain"
+                            endDecorator={<OpenInNewIcon sx={{ 'width': '.8em !important', height: '.8em !important' }} />}
+                            sx={{ justifyContent: 'space-between', textTransform: 'uppercase', fontWeight: '700' }}>
                     {title}
                     <Link overlay href={link} />
                 </Typography>

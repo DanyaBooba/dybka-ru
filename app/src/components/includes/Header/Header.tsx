@@ -88,7 +88,6 @@ function HeaderDesktop({list}) {
                 <Container className="" maxWidth="md"  >
                     <div className="header__container" style={{
                              borderColor: currentTheme().header.borderColor,
-                             boxShadow: currentTheme().header.boxShadow,
                              backgroundColor: currentTheme().header.backgroundColor
                          }}>
                         {list.map((item, index) => (

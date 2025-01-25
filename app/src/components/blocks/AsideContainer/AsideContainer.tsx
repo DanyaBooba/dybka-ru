@@ -6,7 +6,7 @@ function AsideContainer({children}) {
     return (
         <>
             <Header />
-            <Container maxWidth="md" className="container">
+            <Container maxWidth="md" className="container" sx={{ minHeight: 'calc(100vh - 85px - 2rem)' }}>
                 {children}
             </Container>
             <Footer />
