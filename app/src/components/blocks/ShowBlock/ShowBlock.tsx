@@ -10,26 +10,26 @@ type Props = {
     title: string,
     showMore: string,
     image: string,
+    linkText?: string,
 };
 
-function ShowBlock({title, showMore="", image="", children} : Props) {
+function ShowBlock({title, showMore="", image="", children, linkText="Смотреть ещё"} : Props) {
     return (
         <Sheet sx={{
                    borderColor: currentTheme().showBlock.borderColor,
                    backgroundColor: currentTheme().showBlock.backgroundColor,
                    boxShadow: currentTheme().showBlock.boxShadow,
                }} className="sheetBlock">
-            {!!image && (
-                <img src={`/img/illustrations/${image}.png`} aria-label={title} style={{ maxWidth: '80px', height: 'auto' }}  alt={title}/>
-            )}
-            <Typography level="h2" id={image}>
+            <Typography level="h2" id={image} endDecorator={!!image && (
+                                <img src={`/img/illustrations/${image}.png`} aria-label={title} style={{ maxWidth: '80px', height: 'auto' }}  alt={title}/>
+                        )} sx={{ justifyContent: 'space-between', alignItems: 'end', mb: '1.5rem !important' }}>
                 {title}
             </Typography>
             {children}
             {!!showMore && (
                 <div style={{ marginTop: '2rem' }}>
                     <Link href={showMore} variant="soft" endDecorator={<ChevronRightIcon />}>
-                        Смотреть ещё
+                        {linkText}
                     </Link>
                 </div>
             )}
