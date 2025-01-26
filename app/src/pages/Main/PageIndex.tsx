@@ -14,7 +14,7 @@ function PageIndex() {
             <ShowBlock title="Мои проекты" showMore="/projects" image="projects">
                 <InnerBlockProject />
             </ShowBlock>
-            <ShowBlock title="Фотографии с мероприятий" showMore="/123" image="photo">
+            <ShowBlock title="Фотографии с мероприятий" showMore="/contests" image="photo">
                 <InnerBlockPhotos />
             </ShowBlock>
             <ShowBlock title="Участие в СМИ" showMore="/smi" image="smi">
@@ -26,13 +26,13 @@ function PageIndex() {
             <ShowBlock title="Обо мне" showMore="/about" image="aboutme" linkText="Читать далее">
                 <InnerAboutMe />
             </ShowBlock>
-            <ShowBlock title="Навыки в программировании" image="charts" showMore="">
+            <ShowBlock title="Навыки в программировании" image="charts">
                 123
             </ShowBlock>
-            <ShowBlock title="Образование" image="education" showMore="">
+            <ShowBlock title="Образование" image="education">
                 123
             </ShowBlock>
-            <ShowBlock title="Контакты" image="contacts" showMore="">
+            <ShowBlock title="Контакты" image="contacts">
                 <InnerBlockContacts />
             </ShowBlock>
         </AsideContainer>

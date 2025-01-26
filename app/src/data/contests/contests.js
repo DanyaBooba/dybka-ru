@@ -4,9 +4,7 @@ export const contests = [
         title: 'ICPC',
         desc: 'Международная олимпиада ICPC по программированию и математике.',
         date: '2024 г.',
-        images: [
-            '2024/icpc/img1.jpg',
-        ],
+        images: [],
         link: 'icpc-2024'
     },
     {
@@ -18,7 +16,6 @@ export const contests = [
             '2024/pstgu/img1.jpg',
             '2024/pstgu/img2.jpg',
             '2024/pstgu/img3.jpg',
-            '2024/pstgu/img4.jpg',
         ],
         link: 'pstgu-faculty-evening'
     },

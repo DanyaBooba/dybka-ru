@@ -13,6 +13,7 @@ import DragHandleIcon from '@mui/icons-material/DragHandle';
 import ModalClose from '@mui/joy/ModalClose';
 
 function HeaderMobileDrawer({list}) {
+    const pathname = window.location.pathname
     const [open, setOpen] = useState(false);
 
     const toggleDrawer =
@@ -74,6 +75,27 @@ function HeaderMobileDrawer({list}) {
     );
 }
 
+function HeaderDesktopLink({item}) {
+    const pathname = window.location.pathname
+
+    if(pathname == item.link) {
+        return (
+            <Typography level="body-xs" variant="solid" color="primary" className="header__link">
+                {item.name}
+            </Typography>
+        )
+    }
+    else {
+        return (
+            <Typography level="body-xs" className="header__link">
+                <Link href={item.link} color="primary" variant="soft" underline="none" sx={{ backgroundColor: 'transparent' }}>
+                    {item.name}
+                </Link>
+            </Typography>
+        )
+    }
+}
+
 function HeaderDesktop({list}) {
     return (
         <Box sx={{
@@ -91,11 +113,7 @@ function HeaderDesktop({list}) {
                              backgroundColor: currentTheme().header.backgroundColor
                          }}>
                         {list.map((item, index) => (
-                            <Typography level="body-xs" className="header__link" key={index}>
-                                <Link href={item.link} color="neutral" variant="soft" underline="none" sx={{ backgroundColor: 'transparent' }}>
-                                    {item.name}
-                                </Link>
-                            </Typography>
+                            <HeaderDesktopLink item={item} key={index} />
                         ))}
                     </div>
                 </Container>
@@ -127,19 +145,19 @@ function Header() {
         },
         {
             name: 'достижения',
-            link: '/',
+            link: '/achievements',
         },
         {
             name: 'мероприятия',
-            link: '/',
+            link: '/contests',
         },
         {
             name: 'сми',
-            link: '/',
+            link: '/smi',
         },
         {
             name: 'обо мне',
-            link: '/',
+            link: '/about',
         },
     ]
 

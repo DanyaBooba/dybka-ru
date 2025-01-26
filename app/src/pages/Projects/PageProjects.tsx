@@ -3,8 +3,10 @@ import ShowBlock from '../../components/blocks/ShowBlock/ShowBlock';
 
 function PageProjects() {
     return (
-        <AsideContainer>
-            123
+        <AsideContainer needBack="true">
+            <div>
+                123
+            </div>
         </AsideContainer>
     )
 }

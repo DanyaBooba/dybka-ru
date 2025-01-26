@@ -51,7 +51,7 @@ function BlockPhoto({ image, title, link }) {
                   >
                     <Typography level="h3" sx={{ fontSize: 'lg' }}>
                       <Link
-                        href={`/smi#${link}`}
+                        href={`/contests#${link}`}
                         overlay
                         underline="none"
                         sx={{
@@ -84,9 +84,6 @@ function InnerBlockPhotos() {
         <Grid container spacing={2}>
             {contestsMainPage.map((item, index) => (
                 <Grid size={gridSize} key={index}>
-                    {/*<AspectRatio ratio="1/1" className="image-contests">*/}
-                    {/*    <img src={`/img/contests/${item.imageCap}`} alt={item.title} />*/}
-                    {/*</AspectRatio>*/}
                     <BlockPhoto image={item.imageCap} link={item.link} title={item.title} />
                 </Grid>
             ))}
