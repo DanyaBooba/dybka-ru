@@ -1,17 +1,11 @@
 import Grid from '@mui/material/Grid2';
 import {contestsMainPage} from '../../../data/contests/contests';
 import AspectRatio from "@mui/joy/AspectRatio";
-import Avatar from '@mui/joy/Avatar';
 import Box from '@mui/joy/Box';
 import Card from '@mui/joy/Card';
 import CardCover from '@mui/joy/CardCover';
-import Chip from '@mui/joy/Chip';
-import IconButton from '@mui/joy/IconButton';
 import Typography from '@mui/joy/Typography';
 import Link from '@mui/joy/Link';
-import Favorite from '@mui/icons-material/Favorite';
-import Visibility from '@mui/icons-material/Visibility';
-import CreateNewFolder from '@mui/icons-material/CreateNewFolder';
 
 function BlockPhoto({ image, title, link }) {
     return (

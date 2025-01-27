@@ -39,6 +39,9 @@ function BlockImage({ imageCap, images, title }) {
                     </AspectRatio>
                 </a>
             </Fancybox>
+            <div style={{ display: 'none' }}>
+                {!!images}
+            </div>
         </>
     )
 }

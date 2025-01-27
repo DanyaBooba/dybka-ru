@@ -1,5 +1,5 @@
 import AsideContainer from '../../components/blocks/AsideContainer/AsideContainer';
-import ShowBlock from '../../components/blocks/ShowBlock/ShowBlock';
+//import ShowBlock from '../../components/blocks/ShowBlock/ShowBlock';
 
 function PageProjects() {
     return (

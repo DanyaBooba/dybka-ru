@@ -13,7 +13,6 @@ import DragHandleIcon from '@mui/icons-material/DragHandle';
 import ModalClose from '@mui/joy/ModalClose';
 
 function HeaderMobileDrawer({list}) {
-    const pathname = window.location.pathname
     const [open, setOpen] = useState(false);
 
     const toggleDrawer =
