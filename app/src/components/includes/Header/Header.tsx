@@ -11,12 +11,11 @@ import ListItem from '@mui/joy/ListItem';
 import ListItemButton from '@mui/joy/ListItemButton';
 import DragHandleIcon from '@mui/icons-material/DragHandle';
 import ModalClose from '@mui/joy/ModalClose';
-
-//
-// Отобразить кнопку если не на главной:
-//
-
 import HomeIcon from '@mui/icons-material/Home';
+
+function needSeeButtonHome() {
+    return window.location.pathname.slice(1).length > 0;
+}
 
 function HeaderMobileDrawer({list}) {
     const [open, setOpen] = useState(false);
@@ -35,7 +34,12 @@ function HeaderMobileDrawer({list}) {
       };
 
     return (
-      <Box sx={{ display: 'flex' }}>
+        <Box sx={{ display: 'flex' }}>
+            {needSeeButtonHome() && (
+                <IconButton component="a" href="/" variant="solid" size="lg" className="header__mobile-button-home" color="primary">
+                    <HomeIcon />
+                  </IconButton>
+            )}
         <IconButton variant="solid" size="lg" className="header__mobile-button-drawer" color="primary" onClick={toggleDrawer(true)}>
           <DragHandleIcon />
         </IconButton>
@@ -115,8 +119,14 @@ function HeaderDesktop({list}) {
                 <Container className="" maxWidth="md"  >
                     <div className="header__container" style={{
                              borderColor: currentTheme().header.borderColor,
-                             backgroundColor: currentTheme().header.backgroundColor
+                             backgroundColor: currentTheme().header.backgroundColor,
+                             alignItems: 'center'
                          }}>
+                        {needSeeButtonHome() && (
+                            <Link href="/" color="primary" variant="soft" underline="none" sx={{ backgroundColor: 'transparent' }}>
+                                <HomeIcon />
+                            </Link>
+                        )}
                         {list.map((item, index) => (
                             <HeaderDesktopLink item={item} key={index} />
                         ))}

@@ -45,6 +45,9 @@ export const theme = extendTheme({
                     backgroundColor: '#182f32',
                     boxShadow: '',
                 },
+                neutral: {
+                    800: "#223f43"
+                }
             },
         },
     },
