@@ -28,18 +28,12 @@ function InnerBlockContacts() {
             </Grid>
             <Grid size={gridSize}>
                 <Card variant="soft">
-                    <Link href="//github/DanyaBooba" target="_blank" overlay sx={{ justifyContent: 'center' }}>
-                        github/DanyaBooba
+                    <Link href="//github.com/DanyaBooba" target="_blank" overlay sx={{ justifyContent: 'center' }}>
+                        github.com/DanyaBooba
                     </Link>
                 </Card>
             </Grid>
         </Grid>
-//        <>
-//            <
-//            {/*daniil@dybka.ru*/}
-//            {/*ddybka.t.me*/}
-//            {/*github/DanyaBooba*/}
-//        </>
     )
 }
 

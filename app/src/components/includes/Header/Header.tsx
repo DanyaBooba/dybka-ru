@@ -12,6 +12,12 @@ import ListItemButton from '@mui/joy/ListItemButton';
 import DragHandleIcon from '@mui/icons-material/DragHandle';
 import ModalClose from '@mui/joy/ModalClose';
 
+//
+// Отобразить кнопку если не на главной:
+//
+
+import HomeIcon from '@mui/icons-material/Home';
+
 function HeaderMobileDrawer({list}) {
     const [open, setOpen] = useState(false);
 

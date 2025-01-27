@@ -55,7 +55,7 @@ export function ShowBlockImage({ imageCap, title, desc, date, images, link  } : 
                }} className="sheetBlock-hero">
             <BlockImage imageCap={imageCap} images={images} title={title} />
             <div className="sheetBlock-hero__inner">
-                <Typography level="h2" sx={{ mb: '.5rem' }} id={link}>
+                <Typography level="h2" sx={{ mb: '.5rem' }}>
                     {title}
                 </Typography>
                 <Chip size="lg" sx={{ mb: '1rem' }}>{date}</Chip>
