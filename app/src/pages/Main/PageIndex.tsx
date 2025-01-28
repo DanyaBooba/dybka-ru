@@ -7,6 +7,10 @@ import InnerBlockPhotos from './PageIndex/InnerBlockPhotos';
 import InnerBlockSMI from './PageIndex/InnerBlockSMI';
 import InnerAboutMe from './PageIndex/InnerAboutMe';
 import InnerBlockContacts from './PageIndex/InnerBlockContacts';
+//import InnerBlockEducation from './PageIndex/InnerBlockEducation';
+import InnerBlockTech from './PageIndex/InnerBlockTech';
+import InnerBlockPlatforms from './PageIndex/InnerBlockPlatforms';
+import InnerBlockLanguages from './PageIndex/InnerBlockLanguages';
 
 function PageIndex() {
     return (
@@ -27,12 +31,18 @@ function PageIndex() {
             <ShowBlock title="Обо мне" showMore="/about" image="aboutme" linkText="Читать далее">
                 <InnerAboutMe />
             </ShowBlock>
-            <ShowBlock title="Навыки в программировании" image="charts">
-                123
+            <ShowBlock title="Используемые технологии">
+                <InnerBlockTech />
             </ShowBlock>
-            <ShowBlock title="Образование" image="education">
-                123
+            <ShowBlock title="Языки программирования (разметки)">
+                <InnerBlockLanguages />
             </ShowBlock>
+            <ShowBlock title="Актуальные платформы">
+                <InnerBlockPlatforms />
+            </ShowBlock>
+            {/*<ShowBlock title="Образование" image="education">*/}
+            {/*    <InnerBlockEducation />*/}
+            {/*</ShowBlock>*/}
             <ShowBlock title="Контакты" image="contacts">
                 <InnerBlockContacts />
             </ShowBlock>

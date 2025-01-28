@@ -133,13 +133,15 @@ function ShowBlock({title, showMore="", image="", children, linkText="Смотр
                    borderColor: currentTheme().showBlock.borderColor,
                    backgroundColor: currentTheme().showBlock.backgroundColor,
                    boxShadow: currentTheme().showBlock.boxShadow,
+                   my: (!image ? '1rem !important' : '3rem !important')
                }} className="sheetBlock">
             {!!image && (
                 <img
                     src={`/img/illustrations/${image}.png`}
                     aria-label={title}
-                    className="showBlock__image"
-                    alt={title} />
+                    className={`showBlock__image ${(image == 'education' && 'showBlock__image-education')}`}
+                    alt={title}
+                />
             )}
             <Typography level="h2" id={image} sx={{ justifyContent: 'space-between', alignItems: 'end', mb: '1.5rem !important' }}>
                 {title}
