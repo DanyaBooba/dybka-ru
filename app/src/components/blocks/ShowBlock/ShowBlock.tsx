@@ -70,6 +70,63 @@ export function ShowBlockImage({ imageCap, title, desc, date, link  } : PropsIma
     )
 }
 
+export function ShowBlockProject({ fullTitle, subtitle, stack, link, github }) {
+    return (
+        <Sheet sx={{
+                   borderColor: currentTheme().showBlock.borderColor,
+                   backgroundColor: currentTheme().showBlock.backgroundColor,
+                   boxShadow: currentTheme().showBlock.boxShadow,
+                   mb: '1rem !important'
+               }} className="sheetBlock">
+            <Typography level="h2" sx={{ justifyContent: 'space-between', alignItems: 'end', mb: '.5rem !important' }}>
+                {fullTitle}
+            </Typography>
+            <div style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '.25rem' }}>
+                {stack.map((stackItem, stackIndex) => (
+                    <Chip size="lg" key={stackIndex}>
+                        {stackItem}
+                    </Chip>
+                ))}
+            </div>
+            {!!subtitle && (
+                <Typography>
+                    {subtitle}
+                </Typography>
+            )}
+            <div style={{ marginTop: '2rem', display: 'flex', alignItems: 'center', gap: '2rem' }}>
+                <Link href={link} variant="soft" target="_blank" endDecorator={<ChevronRightIcon />}>
+                    Смотреть проект
+                </Link>
+                {!!github && (
+                    <Link href={`//github.com/DanyaBooba/${github}`} target="_blank" variant="plain">
+                        Открыть страницу GitHub
+                    </Link>
+                )}
+            </div>
+        </Sheet>
+    )
+}
+
+export function ShowBlockSMI({ title, link }) {
+    return (
+        <Sheet sx={{
+                   borderColor: currentTheme().showBlock.borderColor,
+                   backgroundColor: currentTheme().showBlock.backgroundColor,
+                   boxShadow: currentTheme().showBlock.boxShadow,
+                   mb: '1rem !important'
+               }} className="sheetBlock">
+            <Typography level="h2" sx={{ justifyContent: 'space-between', alignItems: 'end', mb: '.5rem !important' }}>
+                {title}
+            </Typography>
+            <div>
+                <Link href={link} variant="soft" target="_blank" endDecorator={<ChevronRightIcon />}>
+                    Открыть новость
+                </Link>
+            </div>
+        </Sheet>
+    )
+}
+
 function ShowBlock({title, showMore="", image="", children, linkText="Смотреть ещё"} : Props) {
     return (
         <Sheet sx={{
