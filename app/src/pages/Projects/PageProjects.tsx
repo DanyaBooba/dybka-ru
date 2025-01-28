@@ -3,7 +3,7 @@ import AsideContainer from '../../components/blocks/AsideContainer/AsideContaine
 
 function PageProjects() {
     return (
-        <AsideContainer needBack="true">
+        <AsideContainer>
             <div>
                 123
             </div>

@@ -7,8 +7,6 @@ import InnerBlockPhotos from './PageIndex/InnerBlockPhotos';
 import InnerBlockContacts from './PageIndex/InnerBlockContacts';
 import InnerAboutMe from './PageIndex/InnerAboutMe';
 
-import { Link } from "react-router-dom";
-
 function PageIndex() {
     return (
         <AsideContainer>
@@ -21,9 +19,6 @@ function PageIndex() {
             </ShowBlock>
             <ShowBlock title="Участие в СМИ" showMore="/smi" image="smi">
                 <InnerBlockPhotos />
-                <Link to="/contests#bmstu-theoretical-informatics-and-computer-technologies">
-                    example
-                </Link>
             </ShowBlock>
             <ShowBlock title="Достижения" showMore="/123" image="success">
                 123

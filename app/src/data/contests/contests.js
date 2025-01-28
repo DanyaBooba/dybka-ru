@@ -3,63 +3,42 @@ export const contests = [
         imageCap: '2024/icpc/cap.jpg',
         title: 'ICPC',
         desc: 'Международная олимпиада ICPC по программированию и математике.',
-        date: '2024 г.',
-        images: [],
+        date: '17 ноября 2024 г.',
         link: 'icpc-2024'
     },
     {
         imageCap: '2024/pstgu/cap.jpg',
         title: 'Факультетский вечер',
         desc: 'Православный Свято-Тихоновский Гуманитарный Университет.',
-        date: '2024 г.',
-        images: [
-            '2024/pstgu/img1.jpg',
-            '2024/pstgu/img2.jpg',
-            '2024/pstgu/img3.jpg',
-        ],
+        date: '10 ноября 2024 г.',
         link: 'pstgu-faculty-evening'
     },
     {
         imageCap: '2024/baumanka4/cap.jpg',
         title: 'Теоретическая информатика и компьютерные технологии',
         desc: 'Конференция в МГТУ им. Н.Э. Баумана, кафердры ИУ-9.',
-        date: '2024 г.',
-        images: [
-            '2024/baumanka4/img1.jpg',
-            '2024/baumanka4/img2.jpg',
-        ],
+        date: '30 октября 2024 г.',
         link: 'bmstu-theoretical-informatics-and-computer-technologies'
     },
     {
         imageCap: '2024/izob/cap.jpg',
         title: 'Изобит-2024',
         desc: 'Конференция в Изобретариуме 3.0.',
-        date: '2024 г.',
-        images: [
-            '2024/izob/img1.jpg',
-        ],
+        date: '21 апреля 2024 г.',
         link: 'izobit-2024'
     },
     {
         imageCap: '2024/baumanka3/cap.jpg',
         title: 'Студенческая весна',
         desc: 'Конференция в МГТУ им. Н.Э. Баумана, кафедры ИУ-9.',
-        date: '2024 г.',
-        images: [
-            '2024/baumanka3/img1.jpg',
-        ],
+        date: '19 апреля 2024 г.',
         link: 'bmstu-student-spring'
     },
     {
         imageCap: '2023/baumanka2/cap.jpg',
         title: 'Русский Инженер',
         desc: 'Конференция в МГТУ им. Н.Э. Баумана, кафедры ИУ-9.',
-        date: '2023 г.',
-        images: [
-            '2023/baumanka2/img1.jpg',
-            '2023/baumanka2/img2.jpg',
-            '2023/baumanka2/img3.jpg',
-        ],
+        date: '1 ноября 2023 г.',
         link: 'bmstu-russian-engineer'
     },
     {
@@ -67,10 +46,6 @@ export const contests = [
         title: 'Юные техники и изобретатели',
         desc: 'Награждение в Государственной думе.',
         date: '15 сентября 2023 г.',
-        images: [
-            '2023/gosduma/img1.jpg',
-            '2023/gosduma/img2.jpg',
-        ],
         link: 'state-duma-young-technicians-and-inventors'
     },
     {
@@ -78,9 +53,6 @@ export const contests = [
         title: 'Радио-Поиск',
         desc: 'Конкурс радиолюбителей, г. Москва.',
         date: '22 апреля 2023 г.',
-        images: [
-            '2023/radiopoisk/img1.jpg',
-        ],
         link: 'radio-search'
     },
     {
@@ -88,10 +60,6 @@ export const contests = [
         title: 'Будущее сильной России – в высоких технологиях',
         desc: 'Конференция, проводимая в сотрудничестве с Radar MMS, г. Санкт-Петербург.',
         date: '8 апреля 2023 г.',
-        images: [
-            '2023/futurerussia/img1.jpg',
-            '2023/futurerussia/img2.jpg',
-        ],
         link: 'the-future-of-a-strong-russia-lies-in-high-technology'
     },
     {
@@ -99,9 +67,6 @@ export const contests = [
         title: 'Шаг в будущее',
         desc: 'Олимпиада института МГТУ им. Н.Э. Баумана.',
         date: '23 марта 2023 г.',
-        images: [
-            '2023/baumanka/img1.jpg',
-        ],
         link: 'bmstu-step-into-the-future'
     },
     {
@@ -109,24 +74,77 @@ export const contests = [
         title: 'Будущее начинается сегодня',
         desc: 'Конкурс от института МАИ.',
         date: '15 марта 2023 г.',
-        images: [
-            '2023/mai3/img1.jpg',
-        ],
-        link: 'mai-the-future-starts-today'
+        link: 'mai-the-future-starts-today-2'
     },
     {
         imageCap: '2023/radarmms/cap.jpg',
         title: 'Будущее Петербурга – в творчестве юных',
         desc: 'Кейс-фестиваль на базе Radar MMS, г. Санкт-Петербург.',
         date: '3 марта 2023 г.',
-        images: [
-            '2023/radarmms/img1.jpg',
-            '2023/radarmms/img2.jpg',
-            '2023/radarmms/img3.jpg',
-            '2023/radarmms/img4.jpg',
-            '2023/radarmms/img5.jpg',
-        ],
         link: 'the-future-of-st-petersburg-is-in-the-creativity-of-young-people'
+    },
+    {
+        imageCap: '2022/bionika/cap.jpg',
+        title: 'Бионика-2022',
+        desc: 'Конференция от МГТУ им. Н.Э. Баумана.',
+        date: '25 декабря 2022 г.',
+        link: 'bmstu-bionics'
+    },
+    {
+        imageCap: '2022/mai2/cap.jpg',
+        title: 'Я — конструктор будущего',
+        desc: 'Конкурс от Московского Авиационного Института.',
+        date: '11 ноября 2022 г.',
+        link: 'mai-i-am-the-designer-of-the-future'
+    },
+    {
+        imageCap: '2022/mgy/cap.jpg',
+        title: 'Ученые будущего',
+        desc: 'Конкурс от Московского Государственного Университета.',
+        date: '8 октября 2022 г.',
+        link: 'mgu-scientists-of-the-future'
+    },
+    {
+        imageCap: '2022/skolkovo/cap.jpg',
+        title: 'Разведка боем',
+        desc: 'Стартап программа в Сколково.',
+        date: '10 августа 2022 г.',
+        link: 'skolkovo-combat-reconnaissance'
+    },
+    {
+        imageCap: '2022/innopolis/cap.jpg',
+        title: 'Startup House Universities',
+        desc: 'Конкурс от института «Иннополис», г. Казань.',
+        date: '25-28 мая 2022 г.',
+        link: 'innopolis-startup-house-universities'
+    },
+    {
+        imageCap: '2022/1c/cap.jpg',
+        title: 'НТИ Олимпиада',
+        desc: 'Награждение финалистов в офисе 1C.',
+        date: '19 апреля 2022 г.',
+        link: 'nti-olympiad'
+    },
+    {
+        imageCap: '2022/mai/cap.jpg',
+        title: 'Будущее начинается сегодня',
+        desc: 'Конкурс от Московского Авиационного Института.',
+        date: '13 апреля 2022 г.',
+        link: 'mai-the-future-starts-today'
+    },
+    {
+        imageCap: '2022/mfti/cap.jpg',
+        title: 'Старт в инновации',
+        desc: 'Организационная и предметная среда, проводимая в МФТИ.',
+        date: '18-21 марта 2022 г.',
+        link: 'mfti-a-start-in-innovation'
+    },
+    {
+        imageCap: '2022/worldskills/cap.jpg',
+        title: 'WorldSkills',
+        desc: 'Национальный чемпионат сквозных рабочих профессий высокотехнологичных отраслей промышленности.',
+        date: '2022 г.',
+        link: 'worldskills'
     },
 ]
 

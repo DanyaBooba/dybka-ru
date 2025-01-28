@@ -4,7 +4,7 @@ import Footer from '../../includes/Footer/Footer'
 //import Link from '@mui/joy/Link';
 //import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 
-function AsideContainer({needBack="", children}) {
+function AsideContainer({children}) {
     return (
         <>
             <Header />

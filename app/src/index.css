@@ -2,7 +2,7 @@
     border-style: solid;
     border-width: 1px;
     border-radius: 24px;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .sheetBlock h2 {
@@ -13,7 +13,7 @@
     border-style: solid;
     border-width: 1px;
     border-radius: 24px;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .sheetBlock-hero img {
@@ -95,6 +95,13 @@
     max-height: 300px;
 }
 
+.showBlock__image {
+    position: absolute;
+    top: -20px;
+    max-width: 80px;
+    height: auto;
+}
+
 @media(max-width: 601px) {
     * {
         scroll-padding: 30px;
@@ -120,5 +127,17 @@
 
     .sheetBlock {
         padding: 2.5rem;
+    }
+}
+
+@media(max-width: 901px) {
+    .showBlock__image {
+        right: 10px
+    }
+}
+
+@media(min-width: 900px) {
+    .showBlock__image {
+        right: -20px;
     }
 }

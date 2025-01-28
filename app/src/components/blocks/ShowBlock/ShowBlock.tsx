@@ -7,13 +7,14 @@ import Link from "@mui/joy/Link";
 import AspectRatio from "@mui/joy/AspectRatio";
 import Chip from "@mui/joy/Chip";
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import InsertLinkIcon from '@mui/icons-material/InsertLink';
+import IconButton from '@mui/joy/IconButton';
 
 type PropsImage = {
     imageCap: string,
     title: string,
     desc: string,
     date: string,
-    images: Array<string>,
     link: string,
 };
 
@@ -25,7 +26,7 @@ type Props = {
     linkText?: string
 };
 
-function BlockImage({ imageCap, images, title }) {
+function BlockImage({ imageCap, title }) {
     return (
         <>
             <Fancybox>
@@ -39,26 +40,28 @@ function BlockImage({ imageCap, images, title }) {
                     </AspectRatio>
                 </a>
             </Fancybox>
-            <div style={{ display: 'none' }}>
-                {!!images}
-            </div>
         </>
     )
 }
 
-export function ShowBlockImage({ imageCap, title, desc, date, images, link  } : PropsImage) {
+export function ShowBlockImage({ imageCap, title, desc, date, link  } : PropsImage) {
     return (
         <Sheet sx={{
-                   borderColor: currentTheme().showBlock.borderColor,
                    backgroundColor: currentTheme().showBlock.backgroundColor,
                    boxShadow: currentTheme().showBlock.boxShadow,
+                   border: 'none !important'
                }} className="sheetBlock-hero">
-            <BlockImage imageCap={imageCap} images={images} title={title} />
+            <BlockImage imageCap={imageCap} title={title} />
             <div className="sheetBlock-hero__inner">
                 <Typography level="h2" sx={{ mb: '.5rem' }}>
                     {title}
                 </Typography>
-                <Chip size="lg" sx={{ mb: '1rem' }}>{date}</Chip>
+                <div style={{ display: 'flex', gap: '.5rem', alignItems: 'center', marginBottom: '1rem' }}>
+                    <Chip size="lg">{date}</Chip>
+                    <IconButton component="a" href={`/contests/#${link}`}>
+                        <InsertLinkIcon className="showBlockImageLink" />
+                    </IconButton>
+                </div>
                 <Typography level="body-lg">
                     {desc}
                 </Typography>
@@ -74,9 +77,14 @@ function ShowBlock({title, showMore="", image="", children, linkText="Смотр
                    backgroundColor: currentTheme().showBlock.backgroundColor,
                    boxShadow: currentTheme().showBlock.boxShadow,
                }} className="sheetBlock">
-            <Typography level="h2" id={image} endDecorator={!!image && (
-                                <img src={`/img/illustrations/${image}.png`} aria-label={title} style={{ maxWidth: '80px', height: 'auto' }}  alt={title}/>
-                        )} sx={{ justifyContent: 'space-between', alignItems: 'end', mb: '1.5rem !important' }}>
+            {!!image && (
+                <img
+                    src={`/img/illustrations/${image}.png`}
+                    aria-label={title}
+                    className="showBlock__image"
+                    alt={title} />
+            )}
+            <Typography level="h2" id={image} sx={{ justifyContent: 'space-between', alignItems: 'end', mb: '1.5rem !important' }}>
                 {title}
             </Typography>
             {children}
