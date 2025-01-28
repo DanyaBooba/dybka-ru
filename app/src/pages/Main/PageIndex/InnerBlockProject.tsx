@@ -3,6 +3,7 @@ import Card from '@mui/joy/Card';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import Typography from "@mui/joy/Typography";
 import Link from "@mui/joy/Link";
+import {projectsMainPage} from '../../../data/projects/projects';
 
 function BlockProject({ title, subtitle, link }) {
     const gridSize = {
@@ -19,7 +20,7 @@ function BlockProject({ title, subtitle, link }) {
                             endDecorator={<OpenInNewIcon sx={{ 'width': '.8em !important', height: '.8em !important' }} />}
                             sx={{ justifyContent: 'space-between', textTransform: 'uppercase', fontWeight: '700' }}>
                     {title}
-                    <Link overlay href={link} />
+                    <Link overlay href={link} target="_blank" />
                 </Typography>
                 <Typography level="body-md">
                     {subtitle}
@@ -32,26 +33,9 @@ function BlockProject({ title, subtitle, link }) {
 function InnerBlockProject() {
     return (
         <Grid container spacing={2}>
-            <BlockProject
-                title="Аквариум"
-                subtitle="Платформа социального взаимодействия."
-                link="#"
-            />
-            <BlockProject
-                title="Creagoo"
-                subtitle="Разработка мобильных игр."
-                link="#"
-            />
-            <BlockProject
-                title="Special"
-                subtitle="Медиасообщество на тему кода."
-                link="#"
-            />
-            <BlockProject
-                title="Around"
-                subtitle="Открытый банк заданий."
-                link="#"
-            />
+            {projectsMainPage.map((item, index) => (
+                <BlockProject {...item} key={index} />
+            ))}
         </Grid>
     )
 }

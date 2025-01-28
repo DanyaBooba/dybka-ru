@@ -16,7 +16,7 @@ function InnerBlockSMI() {
             {smiMainPage.map((item, index) => (
                 <Grid size={gridSize} key={index}>
                     <Card variant="soft">
-                        <Link href={item.link} overlay sx={{
+                        <Link href={item.link} target="_blank" overlay sx={{
                                   whiteSpace: 'nowrap',
                                   overflow: 'hidden',
                                   textOverflow: 'ellipsis',
