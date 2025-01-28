@@ -1,11 +1,12 @@
 import AsideContainer from '../../components/blocks/AsideContainer/AsideContainer';
 import ShowBlock from '../../components/blocks/ShowBlock/ShowBlock';
 
-import InnerBlockProject from './PageIndex/InnerBlockProject';
 import HeroShowBlock from './PageIndex/HeroShowBlock';
+import InnerBlockProject from './PageIndex/InnerBlockProject';
 import InnerBlockPhotos from './PageIndex/InnerBlockPhotos';
-import InnerBlockContacts from './PageIndex/InnerBlockContacts';
+import InnerBlockSMI from './PageIndex/InnerBlockSMI';
 import InnerAboutMe from './PageIndex/InnerAboutMe';
+import InnerBlockContacts from './PageIndex/InnerBlockContacts';
 
 function PageIndex() {
     return (
@@ -18,7 +19,7 @@ function PageIndex() {
                 <InnerBlockPhotos />
             </ShowBlock>
             <ShowBlock title="Участие в СМИ" showMore="/smi" image="smi">
-                <InnerBlockPhotos />
+                <InnerBlockSMI />
             </ShowBlock>
             <ShowBlock title="Достижения" showMore="/123" image="success">
                 123

@@ -1,14 +1,13 @@
 import AsideContainer from '../../components/blocks/AsideContainer/AsideContainer';
-//import ShowBlock from '../../components/blocks/ShowBlock/ShowBlock';
 
-function PageProjects() {
+function PageSMI() {
     return (
         <AsideContainer>
             <div>
-                projects
+                smi
             </div>
         </AsideContainer>
     )
 }
 
-export default PageProjects;
+export default PageSMI;

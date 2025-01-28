@@ -15,7 +15,7 @@ export const theme = extendTheme({
                 },
                 header: {
                     borderColor: 'rgba(210, 219, 227, .5)',
-                    backgroundColor: 'rgba(255, 255, 255, .75)',
+                    backgroundColor: 'rgba(255, 255, 255, .8)',
                     boxShadow: 'inset 0 -1px 0 0 rgba(47,43,67,.1),0 1px 3px 0 rgba(47,43,67,.1)'
                 },
                 showBlock: {
