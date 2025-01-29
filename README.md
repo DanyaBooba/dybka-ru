@@ -4,7 +4,7 @@
 
 ## Технологии
 
-React + TypeScript + JoyUI.
+`React` `TypeScript` `JoyUI`
 
 ## Запуск
 
