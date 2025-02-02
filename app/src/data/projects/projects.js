@@ -82,4 +82,4 @@ export const projects = [
 
 export const projectsMainPage = projects
     .slice(0, 4)
-    .map(({ title, subtitle, link }) => ({ title, subtitle, link }));
+    .map(({title, subtitle, link}) => ({title, subtitle, link}));

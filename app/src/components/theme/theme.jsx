@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react'
+import {useState, useEffect} from 'react'
 import useMediaQuery from '@mui/material/useMediaQuery'
-import { extendTheme } from '@mui/joy/styles'
+import {extendTheme} from '@mui/joy/styles'
 
 export const theme = extendTheme({
     colorSchemes: {

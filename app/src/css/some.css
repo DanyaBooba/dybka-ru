@@ -1,0 +1,19 @@
+.image-contests div {
+    border-radius: 12px;
+}
+
+.image-contests img {
+    border-radius: 12px;
+}
+
+.linkBorder {
+    border-radius: 50px !important;
+    padding: 8px 20px !important;
+    text-decoration: none !important;
+}
+
+.linkBorderIcon {
+    border-radius: 50px !important;
+    padding: 8px !important;
+}
+

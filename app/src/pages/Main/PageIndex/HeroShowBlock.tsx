@@ -7,19 +7,21 @@ import Link from "@mui/joy/Link";
 function HeroShowBlock() {
     return (
         <Sheet sx={{
-                   borderColor: currentTheme().showBlock.borderColor,
-                   backgroundColor: currentTheme().showBlock.backgroundColor,
-                   boxShadow: currentTheme().showBlock.boxShadow,
-               }} className="sheetBlock-hero">
-            <AspectRatio ratio="8/5" sx={{ '& div': {
-                             backgroundColor: currentTheme().showBlock.backgroundColor,
-                             borderTopLeftRadius: '24px',
-                             borderTopRightRadius: '24px',
-                         } }}>
-                <img src={`/img/illustrations/cap.jpg`} alt="Даниил Дыбка" />
+            borderColor: currentTheme().showBlock.borderColor,
+            backgroundColor: currentTheme().showBlock.backgroundColor,
+            boxShadow: currentTheme().showBlock.boxShadow,
+        }} className="sheetBlock-hero">
+            <AspectRatio ratio="8/5" sx={{
+                '& div': {
+                    backgroundColor: currentTheme().showBlock.backgroundColor,
+                    borderTopLeftRadius: '24px',
+                    borderTopRightRadius: '24px',
+                }
+            }}>
+                <img src={`/img/illustrations/cap.jpg`} alt="Даниил Дыбка"/>
             </AspectRatio>
             <div className="sheetBlock-hero__inner">
-                <Typography level="h1" sx={{ mb: '.5rem' }}>
+                <Typography level="h1" sx={{mb: '.5rem'}}>
                     Даниил Дыбка
                 </Typography>
                 <Typography level="body-lg">

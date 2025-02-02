@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import {useState, useEffect} from "react";
+import {useLocation} from "react-router-dom";
 import AsideContainer from '../../components/blocks/AsideContainer/AsideContainer';
-import { ShowBlockImage } from '../../components/blocks/ShowBlock/ShowBlock';
-import { contests } from '../../data/contests/contests';
-import { Element } from 'react-scroll';
+import {ShowBlockImage} from '../../components/blocks/ShowBlock/ShowBlock';
+import {contests} from '../../data/contests/contests';
+import {Element} from 'react-scroll';
 import Search, {SearchAllCount, highlightText} from '../../components/blocks/Search/Search';
 
 function PageContests() {
@@ -11,30 +11,30 @@ function PageContests() {
     const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
-      if (location.hash) {
-        const targetId = location.hash.replace("#", "");
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-          targetElement.scrollIntoView({ behavior: "smooth" });
+        if (location.hash) {
+            const targetId = location.hash.replace("#", "");
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({behavior: "smooth"});
+            }
         }
-      }
     }, [location]);
 
     function handleSearch(term) {
-      setSearchTerm(term);
+        setSearchTerm(term);
     }
 
     const filteredItems = contests.filter(item => {
         const searchLower = searchTerm.toLowerCase();
         return (
-          (item.title && item.title.toLowerCase().includes(searchLower)) ||
-          (item.desc && item.desc.toLowerCase().includes(searchLower))
+            (item.title && item.title.toLowerCase().includes(searchLower)) ||
+            (item.desc && item.desc.toLowerCase().includes(searchLower))
         );
     });
 
     return (
         <AsideContainer hasSearch="true">
-            <Search onSearch={handleSearch} />
+            <Search onSearch={handleSearch}/>
             {filteredItems.map((item, index) => (
                 <Element id={item.link} key={index}>
                     <ShowBlockImage
@@ -46,7 +46,7 @@ function PageContests() {
                     />
                 </Element>
             ))}
-            <SearchAllCount count={filteredItems.length} mb="4rem" />
+            <SearchAllCount count={filteredItems.length} mb="3.5rem"/>
         </AsideContainer>
     )
 }

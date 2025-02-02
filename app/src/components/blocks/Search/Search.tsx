@@ -9,13 +9,13 @@ export function highlightText(text, searchTerm) {
     const regex = new RegExp(`(${searchTerm})`, 'gi');
 
     return text.split(regex).map(function (part, index) {
-      return regex.test(part) ? <mark key={index}>{part}</mark> : part;
+        return regex.test(part) ? <mark key={index}>{part}</mark> : part;
     });
 }
 
-export function SearchAllCount({ count, mb="0" }) {
+export function SearchAllCount({count, mb = "0"}) {
     return (
-        <Typography sx={{ textAlign: 'center', pt: '1rem', mb: mb }}>
+        <Typography sx={{textAlign: 'center', pt: '1rem', mb: mb}}>
             Всего найдено: {count}
         </Typography>
     )
@@ -25,9 +25,9 @@ function Search(props) {
     const [searchTerm, setSearchTerm] = useState('');
 
     function handleChange(event) {
-          const value = event.target.value;
-          setSearchTerm(value);
-          props.onSearch(value); // Передаем значение поиска в родительский компонент
+        const value = event.target.value;
+        setSearchTerm(value);
+        props.onSearch(value); // Передаем значение поиска в родительский компонент
     }
 
     return (
@@ -35,7 +35,7 @@ function Search(props) {
             <Input
                 value={searchTerm}
                 onChange={handleChange}
-                startDecorator={<SearchIcon />}
+                startDecorator={<SearchIcon/>}
                 placeholder="Найти..."
                 size="lg"
                 variant="outlined"
@@ -47,7 +47,7 @@ function Search(props) {
                     py: '1rem',
                     px: '2rem'
                 }}
-              />
+            />
         </div>
     )
 }

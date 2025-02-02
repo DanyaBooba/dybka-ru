@@ -1,13 +1,11 @@
 import AsideContainer from '../../components/blocks/AsideContainer/AsideContainer';
 import ShowBlock from '../../components/blocks/ShowBlock/ShowBlock';
-
 import HeroShowBlock from './PageIndex/HeroShowBlock';
 import InnerBlockProject from './PageIndex/InnerBlockProject';
 import InnerBlockPhotos from './PageIndex/InnerBlockPhotos';
 import InnerBlockSMI from './PageIndex/InnerBlockSMI';
 import InnerAboutMe from './PageIndex/InnerAboutMe';
 import InnerBlockContacts from './PageIndex/InnerBlockContacts';
-//import InnerBlockEducation from './PageIndex/InnerBlockEducation';
 import InnerBlockTech from './PageIndex/InnerBlockTech';
 import InnerBlockPlatforms from './PageIndex/InnerBlockPlatforms';
 import InnerBlockLanguages from './PageIndex/InnerBlockLanguages';

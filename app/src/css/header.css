@@ -1,0 +1,50 @@
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: -1px;
+}
+
+.header .header__container {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    border-style: solid;
+    border-width: 1px;
+    border-top: none !important;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.header .header__link {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.header__mobile-button-drawer {
+    position: fixed !important;
+    bottom: 10px;
+    right: 10px;
+    z-index: 100;
+}
+
+.header__mobile-button-home {
+    position: fixed !important;
+    bottom: 64px;
+    right: 10px;
+    z-index: 100;
+}
+
+.header__mobile-link-drawer {
+    text-transform: capitalize;
+    line-height: 35px !important;
+}
+
+.header__mobile-drawer div[role="dialog"] {
+    max-height: 300px;
+}

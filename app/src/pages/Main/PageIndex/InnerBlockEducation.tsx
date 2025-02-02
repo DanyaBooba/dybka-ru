@@ -3,7 +3,7 @@ import Typography from "@mui/joy/Typography";
 
 function InnerBlockEducation() {
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+        <div style={{display: 'flex', flexDirection: 'column', gap: '1rem'}}>
             <Card>
                 <Typography level="h4">
                     1

@@ -9,7 +9,7 @@ type Props = {
     elemTitle: string,
 };
 
-const BlockNotFind = ({ elem="", link, elemTitle = "Не удалось найти" } : Props) => (
+const BlockNotFind = ({elem = "", link, elemTitle = "Не удалось найти"}: Props) => (
     <Box sx={{
         height: '100vh !important',
         justifyContent: 'center',
@@ -34,10 +34,10 @@ const BlockNotFind = ({ elem="", link, elemTitle = "Не удалось найт
                 />
             </Link>
         </div>
-        <Typography level="h1" sx={{ mb: '1rem', textAlign: 'center' }}>{elemTitle} {elem}</Typography>
-        <Typography sx={{ mb: '1rem', textAlign: 'center' }}>Возможно вы ошиблись в ссылке.</Typography>
-        <div style={{ textAlign: 'center' }}>
-            <Link href={link} startDecorator={<KeyboardArrowLeftIcon />}>Вернуться назад</Link>
+        <Typography level="h1" sx={{mb: '1rem', textAlign: 'center'}}>{elemTitle} {elem}</Typography>
+        <Typography sx={{mb: '1rem', textAlign: 'center'}}>Возможно вы ошиблись в ссылке.</Typography>
+        <div style={{textAlign: 'center'}}>
+            <Link href={link} startDecorator={<KeyboardArrowLeftIcon/>}>Вернуться назад</Link>
         </div>
     </Box>
 )
@@ -45,7 +45,7 @@ const BlockNotFind = ({ elem="", link, elemTitle = "Не удалось найт
 function Page404() {
     return (
         <>
-            <BlockNotFind elemTitle="Страница не найдена" link="/" elem="" />
+            <BlockNotFind elemTitle="Страница не найдена" link="/" elem=""/>
         </>
     )
 }

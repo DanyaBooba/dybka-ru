@@ -150,4 +150,4 @@ export const contests = [
 
 export const contestsMainPage = contests
     .slice(0, 3)
-    .map(({ imageCap, link, title }) => ({ imageCap, link, title }));
+    .map(({imageCap, link, title}) => ({imageCap, link, title}));

@@ -8,7 +8,7 @@ function PageSMI() {
     const [searchTerm, setSearchTerm] = useState('');
 
     function handleSearch(term) {
-      setSearchTerm(term);
+        setSearchTerm(term);
     }
 
     const filteredItems = smi.filter(function (item) {
@@ -17,11 +17,11 @@ function PageSMI() {
 
     return (
         <AsideContainer hasSearch="true">
-            <Search onSearch={handleSearch} />
+            <Search onSearch={handleSearch}/>
             {filteredItems.map((item, index) => (
-                <ShowBlockSMI link={item.link} title={highlightText(item.title, searchTerm)} key={index} />
+                <ShowBlockSMI link={item.link} title={highlightText(item.title, searchTerm)} key={index}/>
             ))}
-            <SearchAllCount count={filteredItems.length} />
+            <SearchAllCount count={filteredItems.length}/>
         </AsideContainer>
     )
 }

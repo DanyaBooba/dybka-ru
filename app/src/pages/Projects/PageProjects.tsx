@@ -10,21 +10,21 @@ function PageProjects() {
     const [searchTerm, setSearchTerm] = useState('');
 
     function handleSearch(term) {
-      setSearchTerm(term);
+        setSearchTerm(term);
     }
 
     const filteredItems = projects.filter(item => {
         const searchLower = searchTerm.toLowerCase();
         return (
-          (item.title && item.title.toLowerCase().includes(searchLower)) ||
-          (item.fullTitle && item.fullTitle.toLowerCase().includes(searchLower)) ||
-          (item.subtitle && item.subtitle.toLowerCase().includes(searchLower))
+            (item.title && item.title.toLowerCase().includes(searchLower)) ||
+            (item.fullTitle && item.fullTitle.toLowerCase().includes(searchLower)) ||
+            (item.subtitle && item.subtitle.toLowerCase().includes(searchLower))
         );
     });
 
     return (
         <AsideContainer hasSearch="true">
-            <Search onSearch={handleSearch} />
+            <Search onSearch={handleSearch}/>
             {filteredItems.map((item, index) => (
                 <ShowBlockProject
                     fullTitle={highlightText(item.fullTitle, searchTerm)}
@@ -35,7 +35,7 @@ function PageProjects() {
                     key={index}
                 />
             ))}
-            <SearchAllCount count={filteredItems.length} />
+            <SearchAllCount count={filteredItems.length}/>
         </AsideContainer>
     )
 }
