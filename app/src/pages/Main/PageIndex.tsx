@@ -28,10 +28,10 @@ function PageIndex() {
             <ShowBlock title="Обо мне" showMore="/about" image="aboutme" linkText="Читать далее">
                 <InnerAboutMe />
             </ShowBlock>
-            <ShowBlock title="Используемые технологии">
+            <ShowBlock title="Фреймворки">
                 <InnerBlockTech />
             </ShowBlock>
-            <ShowBlock title="Языки программирования (разметки)">
+            <ShowBlock title="Технологии">
                 <InnerBlockLanguages />
             </ShowBlock>
             <ShowBlock title="Актуальные платформы">

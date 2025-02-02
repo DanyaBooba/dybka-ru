@@ -155,7 +155,7 @@ function ShowBlock({title, showMore="", image="", children, linkText="Смотр
                    borderColor: currentTheme().showBlock.borderColor,
                    backgroundColor: currentTheme().showBlock.backgroundColor,
                    boxShadow: currentTheme().showBlock.boxShadow,
-                   my: (!image ? '1rem !important' : '3rem !important')
+                   my: '3rem !important'
                }} className="sheetBlock">
             {!!image && (
                 <img

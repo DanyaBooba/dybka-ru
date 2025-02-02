@@ -63,3 +63,14 @@ export const currentTheme = () => {
 
     return theme.colorSchemes[mode].palette
 }
+
+export const infoTheme = () => {
+    const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
+    const [mode, setMode] = useState(prefersDarkMode ? 'dark' : 'light')
+
+    useEffect(() => {
+        setMode(prefersDarkMode ? 'dark' : 'light')
+    }, [prefersDarkMode])
+
+    return mode
+}
