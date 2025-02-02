@@ -25,9 +25,6 @@ function PageIndex() {
             <ShowBlock title="Участие в СМИ" showMore="/smi" image="smi">
                 <InnerBlockSMI />
             </ShowBlock>
-            <ShowBlock title="Достижения" showMore="/123" image="success">
-                123
-            </ShowBlock>
             <ShowBlock title="Обо мне" showMore="/about" image="aboutme" linkText="Читать далее">
                 <InnerAboutMe />
             </ShowBlock>
@@ -40,9 +37,6 @@ function PageIndex() {
             <ShowBlock title="Актуальные платформы">
                 <InnerBlockPlatforms />
             </ShowBlock>
-            {/*<ShowBlock title="Образование" image="education">*/}
-            {/*    <InnerBlockEducation />*/}
-            {/*</ShowBlock>*/}
             <ShowBlock title="Контакты" image="contacts">
                 <InnerBlockContacts />
             </ShowBlock>

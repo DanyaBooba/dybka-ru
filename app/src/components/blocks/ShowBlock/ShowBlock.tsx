@@ -9,6 +9,7 @@ import Chip from "@mui/joy/Chip";
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import InsertLinkIcon from '@mui/icons-material/InsertLink';
 import IconButton from '@mui/joy/IconButton';
+import Box from '@mui/material/Box';
 
 type PropsImage = {
     imageCap: string,
@@ -21,7 +22,7 @@ type PropsImage = {
 type Props = {
     title: string,
     showMore?: string,
-    image: string,
+    image?: string,
     children: ReactNode,
     linkText?: string
 };
@@ -93,16 +94,37 @@ export function ShowBlockProject({ fullTitle, subtitle, stack, link, github }) {
                     {subtitle}
                 </Typography>
             )}
-            <div style={{ marginTop: '2rem', display: 'flex', alignItems: 'center', gap: '2rem' }}>
-                <Link href={link} variant="soft" target="_blank" endDecorator={<ChevronRightIcon />}>
+            <Box
+                sx={{
+                    marginTop: '2rem', display: 'flex',
+                    flexDirection: {
+                        lg: 'row',
+                        md: 'row',
+                        sm: 'row',
+                        xs: 'column',
+                    },
+                    alignItems: {
+                        lg: 'center',
+                        md: 'center',
+                        sm: 'center',
+                        xs: 'start',
+                    },
+                    gap: {
+                        lg: '2rem',
+                        md: '2rem',
+                        sm: '2rem',
+                        xs: '1rem',
+                    }
+                }}>
+                <Link href={link} variant="soft" className="linkBorder" target="_blank" endDecorator={<ChevronRightIcon />}>
                     Смотреть проект
                 </Link>
                 {!!github && (
-                    <Link href={`//github.com/DanyaBooba/${github}`} target="_blank" variant="plain">
+                    <Link href={`//github.com/DanyaBooba/${github}`} sx={{ backgroundColor: 'transparent !important' }} target="_blank" variant="plain">
                         Открыть страницу GitHub
                     </Link>
                 )}
-            </div>
+            </Box>
         </Sheet>
     )
 }
@@ -115,11 +137,11 @@ export function ShowBlockSMI({ title, link }) {
                    boxShadow: currentTheme().showBlock.boxShadow,
                    mb: '1rem !important'
                }} className="sheetBlock">
-            <Typography level="h2" sx={{ justifyContent: 'space-between', alignItems: 'end', mb: '.5rem !important' }}>
+            <Typography level="h2" sx={{ justifyContent: 'space-between', alignItems: 'end', mb: '1rem !important' }}>
                 {title}
             </Typography>
             <div>
-                <Link href={link} variant="soft" target="_blank" endDecorator={<ChevronRightIcon />}>
+                <Link href={link} variant="soft" overlay className="linkBorder" target="_blank" endDecorator={<ChevronRightIcon />}>
                     Открыть новость
                 </Link>
             </div>
@@ -149,7 +171,7 @@ function ShowBlock({title, showMore="", image="", children, linkText="Смотр
             {children}
             {!!showMore && (
                 <div style={{ marginTop: '2rem' }}>
-                    <Link href={showMore} variant="soft" endDecorator={<ChevronRightIcon />}>
+                    <Link href={showMore} variant="soft" className="linkBorder" endDecorator={<ChevronRightIcon />}>
                         {linkText}
                     </Link>
                 </div>

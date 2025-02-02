@@ -16,7 +16,7 @@ function PageSMI() {
     });
 
     return (
-        <AsideContainer>
+        <AsideContainer hasSearch="true">
             <Search onSearch={handleSearch} />
             {filteredItems.map((item, index) => (
                 <ShowBlockSMI link={item.link} title={highlightText(item.title, searchTerm)} key={index} />

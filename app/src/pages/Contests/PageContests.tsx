@@ -33,7 +33,7 @@ function PageContests() {
     });
 
     return (
-        <AsideContainer>
+        <AsideContainer hasSearch="true">
             <Search onSearch={handleSearch} />
             {filteredItems.map((item, index) => (
                 <Element id={item.link} key={index}>
@@ -46,7 +46,7 @@ function PageContests() {
                     />
                 </Element>
             ))}
-            <SearchAllCount count={filteredItems.length} />
+            <SearchAllCount count={filteredItems.length} mb="4rem" />
         </AsideContainer>
     )
 }

@@ -23,7 +23,7 @@ function PageProjects() {
     });
 
     return (
-        <AsideContainer>
+        <AsideContainer hasSearch="true">
             <Search onSearch={handleSearch} />
             {filteredItems.map((item, index) => (
                 <ShowBlockProject

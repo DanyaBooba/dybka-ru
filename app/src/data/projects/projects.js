@@ -69,15 +69,15 @@ export const projects = [
         link: '/web-games/clicker/index.html',
         github: 'js-get-money-game'
     },
-//    {
-//        title: 'Мини-игра «Крестики нолики»',
-//        fullTitle: 'Мини-игра «Крестики нолики»',
-//        stack: [
-//            'Чистый JS',
-//        ],
-//        link: '/web-games/tictactoe/index.html',
-//        github: 'js-tictactoe-super'
-//    },
+    {
+        title: 'Мини-игра «Крестики нолики»',
+        fullTitle: 'Мини-игра «Крестики нолики»',
+        stack: [
+            'Чистый JS',
+        ],
+        link: '/web-games/tictactoe/index.html',
+        github: 'js-tictactoe-super'
+    },
 ]
 
 export const projectsMainPage = projects

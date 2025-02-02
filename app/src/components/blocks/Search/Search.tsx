@@ -13,9 +13,9 @@ export function highlightText(text, searchTerm) {
     });
 }
 
-export function SearchAllCount({ count }) {
+export function SearchAllCount({ count, mb="0" }) {
     return (
-        <Typography sx={{ textAlign: 'center', pt: '1rem' }}>
+        <Typography sx={{ textAlign: 'center', pt: '1rem', mb: mb }}>
             Всего найдено: {count}
         </Typography>
     )
@@ -40,7 +40,13 @@ function Search(props) {
                 size="lg"
                 variant="outlined"
                 autoFocus
-                sx={{ mb: '1.5rem', borderRadius: '12px', py: '1rem' }}
+                className="search"
+                sx={{
+                    mb: '1.5rem',
+                    borderRadius: '50px',
+                    py: '1rem',
+                    px: '2rem'
+                }}
               />
         </div>
     )

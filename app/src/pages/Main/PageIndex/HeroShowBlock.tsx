@@ -28,7 +28,7 @@ function HeroShowBlock() {
                     <Link href="https://aquariumsocial.t.me" target="_blank">
                         @aquariumsocial
                     </Link>
-                    .<br/>Люблю заниматься программированием и преподавать его.
+                    <br/>Люблю заниматься программированием и преподавать его
                 </Typography>
             </div>
         </Sheet>

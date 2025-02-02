@@ -89,7 +89,7 @@ function HeaderDesktopLink({item}) {
 
     if(pathname == item.link) {
         return (
-            <Typography level="body-xs" variant="solid" color="primary" className="header__link">
+            <Typography level="body-xs" variant="solid" color="primary" className="header__link linkBorder">
                 {item.name}
             </Typography>
         )
@@ -97,7 +97,7 @@ function HeaderDesktopLink({item}) {
     else {
         return (
             <Typography level="body-xs" className="header__link">
-                <Link href={item.link} color="primary" variant="soft" underline="none" sx={{ backgroundColor: 'transparent' }}>
+                <Link href={item.link} color="primary" className="linkBorder" variant="soft" underline="none" sx={{ backgroundColor: 'transparent' }}>
                     {item.name}
                 </Link>
             </Typography>
@@ -123,7 +123,7 @@ function HeaderDesktop({list}) {
                              alignItems: 'center'
                          }}>
                         {needSeeButtonHome() && (
-                            <Link href="/" color="primary" variant="soft" underline="none" sx={{ backgroundColor: 'transparent' }}>
+                            <Link href="/" color="primary" variant="soft" className="linkBorderIcon" underline="none" sx={{ backgroundColor: 'transparent' }}>
                                 <HomeIcon />
                             </Link>
                         )}
@@ -157,10 +157,6 @@ function Header() {
         {
             name: 'проекты',
             link: '/projects',
-        },
-        {
-            name: 'достижения',
-            link: '/achievements',
         },
         {
             name: 'мероприятия',

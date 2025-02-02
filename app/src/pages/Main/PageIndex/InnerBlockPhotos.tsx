@@ -9,7 +9,7 @@ import Link from '@mui/joy/Link';
 
 function BlockPhoto({ image, title, link }) {
     return (
-        <Card variant="plain" sx={{ bgcolor: 'initial', p: 0 }}>
+        <Card variant="plain" sx={{ bgcolor: 'initial', p: 0, borderRadius: '16px !important' }}>
             <Box sx={{ position: 'relative' }}>
               <AspectRatio ratio="1/1">
                 <figure>
