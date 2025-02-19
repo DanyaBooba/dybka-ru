@@ -39,7 +39,7 @@ function BlockImage({imageCap, title}) {
                             borderTopRightRadius: '24px',
                         }
                     }}>
-                        <img src={`/img/contests/${imageCap}`} alt={title} loading="lazy"/>
+                        <img src={`/img/contests/${imageCap}`} alt={title} loading="lazy" />
                     </AspectRatio>
                 </a>
             </Fancybox>
@@ -74,7 +74,7 @@ export function ShowBlockImage({imageCap, title, desc, date, link}: PropsImage) 
                 </Typography>
                 <div style={{display: 'flex', gap: '.5rem', alignItems: 'center', marginBottom: '1rem'}}>
                     <Chip size="lg" color="primary">{date}</Chip>
-                    <IconButton component="a" color="primary" href={`/contests/#${link}`} sx={{ borderRadius: '50%' }}>
+                    <IconButton component="a" color="primary" href={`/contests/#${link}`} sx={{ borderRadius: '50%' }} aria-label={`Якорь на ${title}`}>
                         <InsertLinkIcon color="primary" className="showBlockImageLink"/>
                     </IconButton>
                 </div>

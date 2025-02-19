@@ -127,7 +127,7 @@ function HeaderDesktop({list}) {
                     }}>
                         {needSeeButtonHome() && (
                             <Link href="/" color="primary" variant="soft" className="linkBorderIcon" underline="none"
-                                  sx={{backgroundColor: 'transparent'}}>
+                                  sx={{backgroundColor: 'transparent'}} aria-label="Перейти на главную">
                                 <HomeIcon/>
                             </Link>
                         )}
