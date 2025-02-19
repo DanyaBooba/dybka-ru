@@ -1,5 +1,12 @@
 export const contests = [
     {
+        imageCap: '2025/1с/cap.jpg',
+        title: '1С Стажировка',
+        desc: 'Стажировка в отеле «Космос».',
+        date: '5 февраля 2025 г.',
+        link: '1c-2025'
+    },
+    {
         imageCap: '2024/icpc/cap.jpg',
         title: 'ICPC',
         desc: 'Международная олимпиада ICPC по программированию и математике.',

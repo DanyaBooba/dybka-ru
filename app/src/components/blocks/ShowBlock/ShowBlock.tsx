@@ -47,6 +47,19 @@ function BlockImage({imageCap, title}) {
     )
 }
 
+export function ShowBlockEmpty({children}) {
+    return (
+        <Sheet sx={{
+                   borderColor: currentTheme().showBlock.borderColor,
+                   backgroundColor: currentTheme().showBlock.backgroundColor,
+                   boxShadow: currentTheme().showBlock.boxShadow,
+                   mb: '2rem !important'
+               }} className="sheetBlock">
+                   {children}
+               </Sheet>
+    )
+}
+
 export function ShowBlockImage({imageCap, title, desc, date, link}: PropsImage) {
     return (
         <Sheet sx={{
@@ -60,9 +73,9 @@ export function ShowBlockImage({imageCap, title, desc, date, link}: PropsImage) 
                     {title}
                 </Typography>
                 <div style={{display: 'flex', gap: '.5rem', alignItems: 'center', marginBottom: '1rem'}}>
-                    <Chip size="lg">{date}</Chip>
-                    <IconButton component="a" href={`/contests/#${link}`}>
-                        <InsertLinkIcon className="showBlockImageLink"/>
+                    <Chip size="lg" color="primary">{date}</Chip>
+                    <IconButton component="a" color="primary" href={`/contests/#${link}`} sx={{ borderRadius: '50%' }}>
+                        <InsertLinkIcon color="primary" className="showBlockImageLink"/>
                     </IconButton>
                 </div>
                 <Typography level="body-lg">
@@ -86,7 +99,7 @@ export function ShowBlockProject({fullTitle, subtitle, stack, link, github}) {
             </Typography>
             <div style={{marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '.25rem'}}>
                 {stack.map((stackItem, stackIndex) => (
-                    <Chip size="lg" key={stackIndex}>
+                    <Chip size="lg" color="primary" key={stackIndex}>
                         {stackItem}
                     </Chip>
                 ))}

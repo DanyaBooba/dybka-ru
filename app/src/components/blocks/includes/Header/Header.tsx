@@ -38,7 +38,7 @@ function HeaderMobileDrawer({list}) {
             {needSeeButtonHome() && (
                 <IconButton component="a" href="/" variant="solid" size="lg" className="header__mobile-button-home"
                             color="primary" aria-label="Перейти на главную страницу">
-                    <HomeIcon/>
+                    <HomeIcon />
                 </IconButton>
             )}
             <IconButton variant="solid" size="lg" className="header__mobile-button-drawer" color="primary"

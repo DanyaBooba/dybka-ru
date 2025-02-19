@@ -9,7 +9,7 @@ function Footer() {
                 boxShadow: currentTheme().showBlock.boxShadow,
                 backgroundColor: currentTheme().showBlock.backgroundColor
             }}>
-                <Typography level="body-sm">
+                <Typography>
                     © Даниил Дыбка, 2025
                 </Typography>
             </footer>
