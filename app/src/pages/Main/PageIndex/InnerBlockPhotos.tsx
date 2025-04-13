@@ -1,5 +1,5 @@
 import Grid from '@mui/material/Grid2';
-import {contestsMainPage} from '../../../data/contests/contests';
+import { contestsMainPage } from '../../../data/contests/contests';
 import AspectRatio from "@mui/joy/AspectRatio";
 import Box from '@mui/joy/Box';
 import Card from '@mui/joy/Card';
@@ -7,10 +7,10 @@ import CardCover from '@mui/joy/CardCover';
 import Typography from '@mui/joy/Typography';
 import Link from '@mui/joy/Link';
 
-function BlockPhoto({image, title, link}) {
+function BlockPhoto({ image, title, link }) {
   return (
-    <Card variant="plain" sx={{bgcolor: 'initial', p: 0, borderRadius: '16px !important'}}>
-      <Box sx={{position: 'relative'}}>
+    <Card variant="plain" sx={{ bgcolor: 'initial', p: 0, borderRadius: '20px !important' }}>
+      <Box sx={{ position: 'relative' }}>
         <AspectRatio ratio="1/1">
           <figure>
             <img
@@ -43,7 +43,7 @@ function BlockPhoto({image, title, link}) {
                 alignSelf: 'flex-end',
               }}
             >
-              <Typography level="h3" sx={{fontSize: 'lg'}}>
+              <Typography level="h3" sx={{ fontSize: 'lg' }}>
                 <Link
                   href={`/contests#${link}`}
                   overlay
@@ -70,7 +70,7 @@ function InnerBlockPhotos() {
   const gridSize = {
     lg: 4,
     md: 4,
-    sm: 12,
+    sm: 6,
     xs: 12
   }
 
@@ -78,7 +78,7 @@ function InnerBlockPhotos() {
     <Grid container spacing={2}>
       {contestsMainPage.map((item, index) => (
         <Grid size={gridSize} key={index}>
-          <BlockPhoto image={item.imageCap} link={item.link} title={item.title}/>
+          <BlockPhoto image={item.imageCap} link={item.link} title={item.title} />
         </Grid>
       ))}
     </Grid>

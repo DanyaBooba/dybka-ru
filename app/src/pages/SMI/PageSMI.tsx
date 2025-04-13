@@ -1,8 +1,8 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import AsideContainer from '../../components/blocks/AsideContainer/AsideContainer';
-import {ShowBlockSMI} from '../../components/blocks/ShowBlock/ShowBlock';
-import Search, {SearchAllCount, highlightText} from '../../components/blocks/Search/Search';
-import {smi} from '../../data/smi/smi';
+import { ShowBlockSMI } from '../../components/blocks/ShowBlock/ShowBlock';
+import Search, { SearchAllCount, highlightText } from '../../components/blocks/Search/Search';
+import { smi } from '../../data/smi/smi';
 
 function PageSMI() {
     const [searchTerm, setSearchTerm] = useState('');
@@ -16,12 +16,12 @@ function PageSMI() {
     });
 
     return (
-        <AsideContainer hasSearch="true">
-            <Search onSearch={handleSearch}/>
+        <AsideContainer hasSearch="true" title="Страница СМИ" desc="Даниил Дыбка: участие в программах СМИ">
+            <Search onSearch={handleSearch} />
             {filteredItems.map((item, index) => (
-                <ShowBlockSMI link={item.link} title={highlightText(item.title, searchTerm)} key={index}/>
+                <ShowBlockSMI link={item.link} title={highlightText(item.title, searchTerm)} key={index} />
             ))}
-            <SearchAllCount count={filteredItems.length}/>
+            <SearchAllCount count={filteredItems.length} />
         </AsideContainer>
     )
 }

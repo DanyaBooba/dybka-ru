@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import Input from '@mui/joy/Input';
 import SearchIcon from '@mui/icons-material/Search';
 import Typography from '@mui/joy/Typography';
@@ -13,9 +13,9 @@ export function highlightText(text, searchTerm) {
     });
 }
 
-export function SearchAllCount({count, mb = "0"}) {
+export function SearchAllCount({ count, mb = "3rem" }) {
     return (
-        <Typography sx={{textAlign: 'center', pt: '1rem', mb: mb}}>
+        <Typography sx={{ textAlign: 'center', pt: '1rem', mb: mb }}>
             Всего найдено: {count}
         </Typography>
     )
@@ -35,14 +35,15 @@ function Search(props) {
             <Input
                 value={searchTerm}
                 onChange={handleChange}
-                startDecorator={<SearchIcon/>}
+                startDecorator={<SearchIcon />}
                 placeholder="Найти..."
                 size="lg"
+                type="search"
                 variant="outlined"
                 autoFocus
                 className="search"
                 sx={{
-                    mb: '1.5rem',
+                    mb: '2rem',
                     borderRadius: '50px',
                     py: '1rem',
                     px: '2rem'

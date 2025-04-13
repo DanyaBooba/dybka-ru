@@ -1,6 +1,6 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import Container from '@mui/material/Container';
-import {currentTheme} from '../../../theme/theme';
+import { currentTheme } from '../../../theme/theme';
 import Link from '@mui/joy/Link';
 import Typography from "@mui/joy/Typography";
 import Box from '@mui/joy/Box';
@@ -17,7 +17,7 @@ function needSeeButtonHome() {
     return window.location.pathname.slice(1).length > 0;
 }
 
-function HeaderMobileDrawer({list}) {
+function HeaderMobileDrawer({ list }) {
     const [open, setOpen] = useState(false);
 
     const toggleDrawer =
@@ -34,19 +34,19 @@ function HeaderMobileDrawer({list}) {
         };
 
     return (
-        <Box sx={{display: 'flex'}}>
+        <Box sx={{ display: 'flex' }}>
             {needSeeButtonHome() && (
                 <IconButton component="a" href="/" variant="solid" size="lg" className="header__mobile-button-home"
-                            color="primary" aria-label="Перейти на главную страницу">
+                    color="primary" aria-label="Перейти на главную страницу">
                     <HomeIcon />
                 </IconButton>
             )}
             <IconButton variant="solid" size="lg" className="header__mobile-button-drawer" color="primary"
-                        onClick={toggleDrawer(true)} aria-label="Открыть меню">
-                <DragHandleIcon/>
+                onClick={toggleDrawer(true)} aria-label="Открыть меню">
+                <DragHandleIcon />
             </IconButton>
             <Drawer open={open} onClose={toggleDrawer(false)} anchor="bottom" size="sm"
-                    className="header__mobile-drawer">
+                className="header__mobile-drawer">
                 <Box
                     role="presentation"
                     onClick={toggleDrawer(false)}
@@ -66,11 +66,11 @@ function HeaderMobileDrawer({list}) {
                         <Typography
                             component="label"
                             htmlFor="close-icon"
-                            sx={{fontSize: 'sm', fontWeight: 'lg', cursor: 'pointer'}}
+                            sx={{ fontSize: 'sm', fontWeight: 'lg', cursor: 'pointer' }}
                         >
                             Закрыть
                         </Typography>
-                        <ModalClose id="close-icon" sx={{position: 'initial'}}/>
+                        <ModalClose id="close-icon" sx={{ position: 'initial' }} />
                     </Box>
                     <List>
                         {list.map((item, index) => (
@@ -87,7 +87,7 @@ function HeaderMobileDrawer({list}) {
     );
 }
 
-function HeaderDesktopLink({item}) {
+function HeaderDesktopLink({ item }) {
     const pathname = window.location.pathname
 
     if (pathname == item.link) {
@@ -100,7 +100,7 @@ function HeaderDesktopLink({item}) {
         return (
             <Typography level="body-xs" className="header__link">
                 <Link href={item.link} color="primary" className="linkBorder" variant="soft" underline="none"
-                      sx={{backgroundColor: 'transparent'}}>
+                    sx={{ backgroundColor: 'transparent' }}>
                     {item.name}
                 </Link>
             </Typography>
@@ -108,7 +108,7 @@ function HeaderDesktopLink({item}) {
     }
 }
 
-function HeaderDesktop({list}) {
+function HeaderDesktop({ list }) {
     return (
         <Box sx={{
             display: {
@@ -123,25 +123,26 @@ function HeaderDesktop({list}) {
                     <div className="header__container" style={{
                         borderColor: currentTheme().header.borderColor,
                         backgroundColor: currentTheme().header.backgroundColor,
+                        boxShadow: currentTheme().header.boxShadow,
                         alignItems: 'center'
                     }}>
-                        {needSeeButtonHome() && (
-                            <Link href="/" color="primary" variant="soft" className="linkBorderIcon" underline="none"
-                                  sx={{backgroundColor: 'transparent'}} aria-label="Перейти на главную">
-                                <HomeIcon/>
-                            </Link>
-                        )}
                         {list.map((item, index) => (
-                            <HeaderDesktopLink item={item} key={index}/>
+                            <HeaderDesktopLink item={item} key={index} />
                         ))}
                     </div>
                 </Container>
             </header>
+            {needSeeButtonHome() && (
+                <IconButton component="a" href="/" variant="solid" size="lg" className="header__button-home"
+                    color="primary" aria-label="Перейти на главную страницу">
+                    <HomeIcon />
+                </IconButton>
+            )}
         </Box>
     )
 }
 
-function HeaderMobile({list}) {
+function HeaderMobile({ list }) {
     return (
         <Box sx={{
             display: {
@@ -151,7 +152,7 @@ function HeaderMobile({list}) {
                 xs: 'block',
             }
         }}>
-            <HeaderMobileDrawer list={list}/>
+            <HeaderMobileDrawer list={list} />
         </Box>
     )
 }
@@ -178,8 +179,8 @@ function Header() {
 
     return (
         <>
-            <HeaderDesktop list={list}/>
-            <HeaderMobile list={list}/>
+            <HeaderDesktop list={list} />
+            <HeaderMobile list={list} />
         </>
     )
 }

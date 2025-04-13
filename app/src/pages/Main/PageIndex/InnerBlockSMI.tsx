@@ -1,7 +1,6 @@
-import Grid from '@mui/material/Grid2';
-import Link from '@mui/joy/Link';
-import Card from '@mui/joy/Card';
-import {smiMainPage} from '../../../data/smi/smi';
+import Grid from '@mui/material/Grid2'
+import Link from '@mui/joy/Link'
+import { smiMainPage } from '../../../data/smi/smi'
 
 function InnerBlockSMI() {
     const gridSize = {
@@ -15,16 +14,15 @@ function InnerBlockSMI() {
         <Grid container spacing={2}>
             {smiMainPage.map((item, index) => (
                 <Grid size={gridSize} key={index}>
-                    <Card variant="soft" sx={{borderRadius: '50px', pl: '1.5rem'}}>
-                        <Link href={item.link} target="_blank" overlay sx={{
-                            whiteSpace: 'nowrap',
-                            overflow: 'hidden',
-                            textOverflow: 'ellipsis',
-                            width: '100%',
-                        }}>
-                            {item.title}
-                        </Link>
-                    </Card>
+                    <Link href={item.link} variant="soft" className="linkBorder" sx={{
+                        whiteSpace: 'nowrap',
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                        width: '100%',
+                        py: '16px !important',
+                    }}>
+                        {item.title}
+                    </Link>
                 </Grid>
             ))}
         </Grid>

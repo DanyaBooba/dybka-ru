@@ -1,7 +1,7 @@
-import {ReactNode} from 'react';
+import { ReactNode } from 'react';
 import Sheet from '@mui/joy/Sheet';
 import Typography from "@mui/joy/Typography";
-import {currentTheme} from '../../../components/theme/theme';
+import { currentTheme } from '../../../components/theme/theme';
 import Fancybox from '../../../components/blocks/Fancybox/Fancybox';
 import Link from "@mui/joy/Link";
 import AspectRatio from "@mui/joy/AspectRatio";
@@ -25,9 +25,10 @@ type Props = {
     image?: string,
     children: ReactNode,
     linkText?: string
+    myNone?: string
 };
 
-function BlockImage({imageCap, title}) {
+function BlockImage({ imageCap, title }) {
     return (
         <>
             <Fancybox>
@@ -47,35 +48,35 @@ function BlockImage({imageCap, title}) {
     )
 }
 
-export function ShowBlockEmpty({children}) {
+export function ShowBlockEmpty({ children }) {
     return (
         <Sheet sx={{
-                   borderColor: currentTheme().showBlock.borderColor,
-                   backgroundColor: currentTheme().showBlock.backgroundColor,
-                   boxShadow: currentTheme().showBlock.boxShadow,
-                   mb: '2rem !important'
-               }} className="sheetBlock">
-                   {children}
-               </Sheet>
+            borderColor: currentTheme().showBlock.borderColor,
+            backgroundColor: currentTheme().showBlock.backgroundColor,
+            boxShadow: currentTheme().showBlock.boxShadow,
+            mb: '2rem !important'
+        }} className="sheetBlock">
+            {children}
+        </Sheet>
     )
 }
 
-export function ShowBlockImage({imageCap, title, desc, date, link}: PropsImage) {
+export function ShowBlockImage({ imageCap, title, desc, date, link }: PropsImage) {
     return (
         <Sheet sx={{
             backgroundColor: currentTheme().showBlock.backgroundColor,
             boxShadow: currentTheme().showBlock.boxShadow,
             border: 'none !important'
         }} className="sheetBlock-hero">
-            <BlockImage imageCap={imageCap} title={title}/>
+            <BlockImage imageCap={imageCap} title={title} />
             <div className="sheetBlock-hero__inner">
-                <Typography level="h2" sx={{mb: '.5rem'}}>
+                <Typography level="h2" sx={{ mb: '.5rem' }}>
                     {title}
                 </Typography>
-                <div style={{display: 'flex', gap: '.5rem', alignItems: 'center', marginBottom: '1rem'}}>
+                <div style={{ display: 'flex', gap: '.5rem', alignItems: 'center', marginBottom: '1rem' }}>
                     <Chip size="lg" color="primary">{date}</Chip>
                     <IconButton component="a" color="primary" href={`/contests/#${link}`} sx={{ borderRadius: '50%' }} aria-label={`Якорь на ${title}`}>
-                        <InsertLinkIcon color="primary" className="showBlockImageLink"/>
+                        <InsertLinkIcon color="primary" className="showBlockImageLink" />
                     </IconButton>
                 </div>
                 <Typography level="body-lg">
@@ -86,18 +87,18 @@ export function ShowBlockImage({imageCap, title, desc, date, link}: PropsImage) 
     )
 }
 
-export function ShowBlockProject({fullTitle, subtitle, stack, link, github}) {
+export function ShowBlockProject({ fullTitle, subtitle, stack, link, github }) {
     return (
         <Sheet sx={{
             borderColor: currentTheme().showBlock.borderColor,
             backgroundColor: currentTheme().showBlock.backgroundColor,
             boxShadow: currentTheme().showBlock.boxShadow,
-            mb: '1rem !important'
+            mb: '2rem !important'
         }} className="sheetBlock">
-            <Typography level="h2" sx={{justifyContent: 'space-between', alignItems: 'end', mb: '.5rem !important'}}>
+            <Typography level="h2" sx={{ justifyContent: 'space-between', alignItems: 'end', mb: '.5rem !important' }}>
                 {fullTitle}
             </Typography>
-            <div style={{marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '.25rem'}}>
+            <div style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '.25rem' }}>
                 {stack.map((stackItem, stackIndex) => (
                     <Chip size="lg" color="primary" key={stackIndex}>
                         {stackItem}
@@ -132,12 +133,12 @@ export function ShowBlockProject({fullTitle, subtitle, stack, link, github}) {
                     }
                 }}>
                 <Link href={link} variant="soft" className="linkBorder" target="_blank"
-                      endDecorator={<ChevronRightIcon/>}>
+                    endDecorator={<ChevronRightIcon />}>
                     Смотреть проект
                 </Link>
                 {!!github && (
-                    <Link href={`//github.com/DanyaBooba/${github}`} sx={{backgroundColor: 'transparent !important'}}
-                          target="_blank" variant="plain">
+                    <Link href={`//github.com/DanyaBooba/${github}`} sx={{ backgroundColor: 'transparent !important' }}
+                        target="_blank" variant="plain">
                         Открыть страницу GitHub
                     </Link>
                 )}
@@ -146,20 +147,20 @@ export function ShowBlockProject({fullTitle, subtitle, stack, link, github}) {
     )
 }
 
-export function ShowBlockSMI({title, link}) {
+export function ShowBlockSMI({ title, link }) {
     return (
         <Sheet sx={{
             borderColor: currentTheme().showBlock.borderColor,
             backgroundColor: currentTheme().showBlock.backgroundColor,
             boxShadow: currentTheme().showBlock.boxShadow,
-            mb: '1rem !important'
+            mb: '2rem !important'
         }} className="sheetBlock">
-            <Typography level="h2" sx={{justifyContent: 'space-between', alignItems: 'end', mb: '1rem !important'}}>
+            <Typography level="h2" sx={{ justifyContent: 'space-between', alignItems: 'end', mb: '1rem !important' }}>
                 {title}
             </Typography>
             <div>
                 <Link href={link} variant="soft" overlay className="linkBorder" target="_blank"
-                      endDecorator={<ChevronRightIcon/>}>
+                    endDecorator={<ChevronRightIcon />}>
                     Открыть новость
                 </Link>
             </div>
@@ -167,30 +168,31 @@ export function ShowBlockSMI({title, link}) {
     )
 }
 
-function ShowBlock({title, showMore = "", image = "", children, linkText = "Смотреть ещё"}: Props) {
+function ShowBlock({ title, showMore = "", image = "", children, linkText = "Смотреть ещё", myNone = "" }: Props) {
     return (
         <Sheet sx={{
             borderColor: currentTheme().showBlock.borderColor,
             backgroundColor: currentTheme().showBlock.backgroundColor,
             boxShadow: currentTheme().showBlock.boxShadow,
-            my: '3rem !important'
+            my: myNone ? '0' : '3rem !important',
+            mb: myNone ? '2rem' : '0'
         }} className="sheetBlock">
             {!!image && (
                 <img
-                    src={`/img/illustrations/${image}.png`}
+                    src={`/img/illustrations/${image}`}
                     aria-label={title}
                     className={`showBlock__image ${(image == 'education' && 'showBlock__image-education')}`}
                     alt={title}
                 />
             )}
             <Typography level="h2" id={image}
-                        sx={{justifyContent: 'space-between', alignItems: 'end', mb: '1.5rem !important'}}>
+                sx={{ justifyContent: 'space-between', alignItems: 'end', mb: '1.5rem !important' }}>
                 {title}
             </Typography>
             {children}
             {!!showMore && (
-                <div style={{marginTop: '2rem'}}>
-                    <Link href={showMore} variant="soft" className="linkBorder" endDecorator={<ChevronRightIcon/>}>
+                <div style={{ marginTop: '2rem' }}>
+                    <Link href={showMore} variant="soft" className="linkBorder" endDecorator={<ChevronRightIcon />}>
                         {linkText}
                     </Link>
                 </div>

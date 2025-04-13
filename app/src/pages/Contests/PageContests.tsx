@@ -1,10 +1,10 @@
-import {useState, useEffect} from "react";
-import {useLocation} from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import AsideContainer from '../../components/blocks/AsideContainer/AsideContainer';
-import {ShowBlockImage} from '../../components/blocks/ShowBlock/ShowBlock';
-import {contests} from '../../data/contests/contests';
-import {Element} from 'react-scroll';
-import Search, {SearchAllCount, highlightText} from '../../components/blocks/Search/Search';
+import { ShowBlockImage } from '../../components/blocks/ShowBlock/ShowBlock';
+import { contests } from '../../data/contests/contests';
+import { Element } from 'react-scroll';
+import Search, { SearchAllCount, highlightText } from '../../components/blocks/Search/Search';
 
 function PageContests() {
     const location = useLocation();
@@ -15,7 +15,7 @@ function PageContests() {
             const targetId = location.hash.replace("#", "");
             const targetElement = document.getElementById(targetId);
             if (targetElement) {
-                targetElement.scrollIntoView({behavior: "smooth"});
+                targetElement.scrollIntoView({ behavior: "smooth" });
             }
         }
     }, [location]);
@@ -33,8 +33,8 @@ function PageContests() {
     });
 
     return (
-        <AsideContainer hasSearch="true">
-            <Search onSearch={handleSearch}/>
+        <AsideContainer hasSearch="true" title="Страница мероприятий" desc="Все мероприятия в которых было принято участие, Даниил Дыбка">
+            <Search onSearch={handleSearch} />
             {filteredItems.map((item, index) => (
                 <Element id={item.link} key={index}>
                     <ShowBlockImage
@@ -46,7 +46,7 @@ function PageContests() {
                     />
                 </Element>
             ))}
-            <SearchAllCount count={filteredItems.length} mb="3.5rem"/>
+            <SearchAllCount count={filteredItems.length} mb="3.5rem" />
         </AsideContainer>
     )
 }

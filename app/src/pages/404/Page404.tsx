@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import Typography from '@mui/joy/Typography'
 import Link from '@mui/joy/Link'
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft'
@@ -9,7 +10,7 @@ type Props = {
     elemTitle: string,
 };
 
-const BlockNotFind = ({elem = "", link, elemTitle = "Не удалось найти"}: Props) => (
+const BlockNotFind = ({ elem = "", link, elemTitle = "Не удалось найти" }: Props) => (
     <Box sx={{
         height: '100vh !important',
         justifyContent: 'center',
@@ -34,18 +35,23 @@ const BlockNotFind = ({elem = "", link, elemTitle = "Не удалось най�
                 />
             </Link>
         </div>
-        <Typography level="h1" sx={{mb: '1rem', textAlign: 'center'}}>{elemTitle} {elem}</Typography>
-        <Typography sx={{mb: '1rem', textAlign: 'center'}}>Возможно вы ошиблись в ссылке.</Typography>
-        <div style={{textAlign: 'center'}}>
-            <Link href={link} startDecorator={<KeyboardArrowLeftIcon/>}>Вернуться назад</Link>
+        <Typography level="h1" sx={{ mb: '1rem', textAlign: 'center' }}>{elemTitle} {elem}</Typography>
+        <Typography sx={{ mb: '1rem', textAlign: 'center' }}>Возможно вы ошиблись в ссылке.</Typography>
+        <div style={{ textAlign: 'center' }}>
+            <Link href={link} startDecorator={<KeyboardArrowLeftIcon />}>Вернуться назад</Link>
         </div>
     </Box>
 )
 
 function Page404() {
+    useEffect(() => {
+        document.title = 'Страница 404'
+        document.querySelector('head meta[name="description"]')?.setAttribute('content', 'Страница 404: не найдено')
+    })
+
     return (
         <>
-            <BlockNotFind elemTitle="Страница не найдена" link="/" elem=""/>
+            <BlockNotFind elemTitle="Страница не найдена" link="/" elem="" />
         </>
     )
 }

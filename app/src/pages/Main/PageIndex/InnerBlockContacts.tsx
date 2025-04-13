@@ -13,25 +13,40 @@ function InnerBlockContacts() {
     return (
         <Grid container spacing={2}>
             <Grid size={gridSize}>
-                <Card variant="soft" sx={{borderRadius: '50px'}}>
-                    <Link href="mailto:daniil@dybka.ru" overlay sx={{justifyContent: 'center'}}>
-                        daniil@dybka.ru
-                    </Link>
-                </Card>
+                <Link href="mailto:daniil@dybka.ru" variant="soft" className="linkBorder" sx={{
+                    whiteSpace: 'nowrap',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    width: '100%',
+                    py: '16px !important',
+                    justifyContent: 'center',
+                }}>
+                    daniil@dybka.ru
+                </Link>
             </Grid>
             <Grid size={gridSize}>
-                <Card variant="soft" sx={{borderRadius: '50px'}}>
-                    <Link href="//ddybka.t.me" target="_blank" overlay sx={{justifyContent: 'center'}}>
-                        ddybka.t.me
-                    </Link>
-                </Card>
+                <Link href="//ddybka.t.me" target="_blank" variant="soft" className="linkBorder" sx={{
+                    whiteSpace: 'nowrap',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    width: '100%',
+                    py: '16px !important',
+                    justifyContent: 'center',
+                }}>
+                    ddybka.t.me
+                </Link>
             </Grid>
             <Grid size={gridSize}>
-                <Card variant="soft" sx={{borderRadius: '50px'}}>
-                    <Link href="//github.com/DanyaBooba" target="_blank" overlay sx={{justifyContent: 'center'}}>
-                        github.com/DanyaBooba
-                    </Link>
-                </Card>
+                <Link href="//github.com/DanyaBooba" target="_blank" variant="soft" className="linkBorder" sx={{
+                    whiteSpace: 'nowrap',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    width: '100%',
+                    py: '16px !important',
+                    justifyContent: 'center',
+                }}>
+                    github.com/DanyaBooba
+                </Link>
             </Grid>
         </Grid>
     )
