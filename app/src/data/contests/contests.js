@@ -1,10 +1,24 @@
 export const contests = [
     {
+        imageCap: '2025/saintp/cap.jpg',
+        title: 'Будущее сильной России – в высоких технологиях',
+        desc: 'Конференция в Санкт-Петербурге. Участие принимают мои ученики: Замилацкова Арина и Зимин Ильяс.',
+        date: '9-11 апреля 2025 г.',
+        link: 'saintp-2025'
+    },
+    {
         imageCap: '2025/1с/cap.jpg',
         title: '1С Стажировка',
         desc: 'Стажировка в отеле «Космос».',
         date: '5 февраля 2025 г.',
         link: '1c-2025'
+    },
+    {
+        imageCap: '2024/izob-kids/cap.jpg',
+        title: 'Изобретариум',
+        desc: 'Конференция, проводимая в технопарке Изобретариум. Участие принимают мои ученики: Замилацкова Арина и Зимин Ильяс.',
+        date: '28 декабря 2024 г.',
+        link: 'izob-kids-2024'
     },
     {
         imageCap: '2024/icpc/cap.jpg',
@@ -157,4 +171,4 @@ export const contests = [
 
 export const contestsMainPage = contests
     .slice(0, 3)
-    .map(({imageCap, link, title}) => ({imageCap, link, title}));
+    .map(({ imageCap, link, title }) => ({ imageCap, link, title }));

@@ -1,6 +1,5 @@
-import Grid from '@mui/material/Grid2';
-import Link from '@mui/joy/Link';
-import Card from '@mui/joy/Card';
+import Grid from '@mui/material/Grid2'
+import Link from '@mui/joy/Link'
 
 function InnerBlockContacts() {
     const gridSize = {
