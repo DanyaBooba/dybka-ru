@@ -7,10 +7,6 @@
         padding-top: 1rem;
     }
 
-    .sheetBlock-hero .sheetBlock-hero__inner {
-        padding: 1.5rem 2rem 2rem 2rem;
-    }
-
     .container-mobile-search {
         padding-top: 94px;
     }
@@ -31,10 +27,6 @@
 
     .container {
         padding-top: 6rem;
-    }
-
-    .sheetBlock-hero .sheetBlock-hero__inner {
-        padding: 1.5rem 2rem 2rem 2rem;
     }
 }
 

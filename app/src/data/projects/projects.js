@@ -1,5 +1,23 @@
 export const projects = [
     {
+        title: 'Виджет «За Христа Пострадавшие»',
+        fullTitle: 'Виджет «За Христа Пострадавшие»',
+        subtitle: 'Реализация виджета, отображающего новомученников на текущую дату',
+        stack: [
+            'React'
+        ],
+        link: 'https://widget.dybka.ru',
+    },
+    {
+        title: 'Страница новомученников «За Христа Пострадавшие»',
+        fullTitle: 'Страница новомученников «За Христа Пострадавшие»',
+        subtitle: 'Реализация страницы, которая отображает подробную информацию о каждом новомученнике на текущую дату',
+        stack: [
+            'PHP'
+        ],
+        link: 'https://widget-info.dybka.ru',
+    },
+    {
         title: 'Аквариум',
         fullTitle: 'Социальная сеть Аквариум',
         subtitle: 'Платформа социального взаимодействия.',
@@ -82,4 +100,4 @@ export const projects = [
 
 export const projectsMainPage = projects
     .slice(0, 4)
-    .map(({title, subtitle, link}) => ({title, subtitle, link}));
+    .map(({ title, subtitle, link }) => ({ title, subtitle, link }));

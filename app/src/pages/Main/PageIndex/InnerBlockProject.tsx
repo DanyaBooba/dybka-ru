@@ -3,9 +3,9 @@ import Card from '@mui/joy/Card';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import Typography from "@mui/joy/Typography";
 import Link from "@mui/joy/Link";
-import {projectsMainPage} from '../../../data/projects/projects';
+import { projectsMainPage } from '../../../data/projects/projects';
 
-function BlockProject({title, subtitle, link}) {
+function BlockProject({ title, subtitle, link }) {
     const gridSize = {
         lg: 6,
         md: 6,
@@ -15,22 +15,22 @@ function BlockProject({title, subtitle, link}) {
 
     return (
         <Grid size={gridSize}>
-            <Card variant="plain" color="primary" invertedColors sx={{gap: '.25rem'}}>
+            <Card variant="plain" color="primary" invertedColors sx={{ gap: '.25rem', d: 'flex', height: '100%' }}>
                 <Typography color="primary"
-                            level="title-lg"
-                            variant="plain"
-                            endDecorator={<OpenInNewIcon sx={{'width': '.8em !important', height: '.8em !important'}}/>}
-                            sx={{
-                                justifyContent: 'space-between',
-                                textTransform: 'uppercase',
-                                fontWeight: '700',
-                                '&:hover': {
-                                    textDecoration: 'underline'
-                                }
-                            }}
+                    level="title-lg"
+                    variant="plain"
+                    endDecorator={<OpenInNewIcon sx={{ 'width': '.8em !important', height: '.8em !important' }} />}
+                    sx={{
+                        justifyContent: 'space-between',
+                        textTransform: 'uppercase',
+                        fontWeight: '700',
+                        '&:hover': {
+                            textDecoration: 'underline'
+                        }
+                    }}
                 >
                     {title}
-                    <Link overlay href={link} target="_blank" aria-label={title}/>
+                    <Link overlay href={link} target="_blank" aria-label={title} />
                 </Typography>
                 <Typography level="body-md">
                     {subtitle}
@@ -44,7 +44,7 @@ function InnerBlockProject() {
     return (
         <Grid container spacing={2}>
             {projectsMainPage.map((item, index) => (
-                <BlockProject {...item} key={index}/>
+                <BlockProject {...item} key={index} />
             ))}
         </Grid>
     )

@@ -20,6 +20,11 @@
     width: 100%;
     height: auto;
     border-radius: 24px;
+    padding: 8px !important;
+}
+
+.sheetBlock-hero .sheetBlock-hero__inner {
+    padding: 1rem 2rem 2rem 2rem;
 }
 
 .showBlock__image {
