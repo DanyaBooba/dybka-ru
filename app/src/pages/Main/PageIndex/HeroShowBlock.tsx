@@ -22,16 +22,29 @@ function HeroShowBlock() {
             </AspectRatio>
             <div className="sheetBlock-hero__inner">
                 <Typography level="h1" sx={{ mb: '.5rem' }}>
-                    Даниил Дыбка
+                    Привет, это Даниил Дыбка
                 </Typography>
-                <Typography level="body-lg">
-                    Разрабатываю свой проект Аквариум
-                    {' '}
-                    <Link href="https://aquariumsocial.t.me" underline="always" target="_blank">
-                        @aquariumsocial
-                    </Link>
-                    <br />Люблю заниматься программированием и преподавать его
-                </Typography>
+                <ul style={{ marginBottom: 0 }}>
+                    <li style={{ paddingTop: '.25rem', paddingBottom: '.25rem' }}>
+                        <Typography level="body-lg">
+                            Студент факультета информатики
+                        </Typography>
+                    </li>
+                    <li style={{ paddingTop: '.25rem', paddingBottom: '.25rem' }}>
+                        <Typography level="body-lg">
+                            Веб-разработчик, программист
+                        </Typography>
+                    </li>
+                    <li style={{ paddingTop: '.25rem', paddingBottom: '.25rem' }}>
+                        <Typography level="body-lg">
+                            Разрабатываю свой проект Аквариум
+                            {' '}
+                            <Link href="https://aquariumsocial.t.me" underline="always" target="_blank">
+                                @aquariumsocial
+                            </Link>
+                        </Typography>
+                    </li>
+                </ul>
             </div>
         </Sheet>
     )

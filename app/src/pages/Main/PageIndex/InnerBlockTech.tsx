@@ -59,8 +59,8 @@ function NodeJSIcon() {
 
 function InnerBlockTech() {
     const gridSize = {
-        lg: 4,
-        md: 4,
+        lg: 6,
+        md: 6,
         sm: 12,
         xs: 12
     }

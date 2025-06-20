@@ -7,7 +7,7 @@ export const theme = extendTheme({
         light: {
             palette: {
                 head: {
-                    themeColor: '#ffffff'
+                    themeColor: '#f4f6f7'
                 },
                 background: {
                     body: '#f4f6f7',
@@ -30,7 +30,7 @@ export const theme = extendTheme({
         dark: {
             palette: {
                 head: {
-                    themeColor: '#0f2324'
+                    themeColor: '#142133'
                 },
                 background: {
                     body: '#142133',
