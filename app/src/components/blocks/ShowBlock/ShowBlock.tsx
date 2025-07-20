@@ -87,7 +87,7 @@ export function ShowBlockImage({ imageCap, title, desc, date, link }: PropsImage
     )
 }
 
-export function ShowBlockProject({ fullTitle, subtitle, stack, link, github }) {
+export function ShowBlockProject({ fullTitle, subtitle, stack, link, github, button }) {
     return (
         <Sheet sx={{
             borderColor: currentTheme().showBlock.borderColor,
@@ -140,6 +140,12 @@ export function ShowBlockProject({ fullTitle, subtitle, stack, link, github }) {
                     <Link href={`//github.com/DanyaBooba/${github}`} sx={{ backgroundColor: 'transparent !important' }}
                         target="_blank" variant="plain">
                         Открыть страницу GitHub
+                    </Link>
+                )}
+                {!!button && (
+                    <Link href={button?.link} sx={{ backgroundColor: 'transparent !important' }}
+                        target="_blank" variant="plain">
+                        {button?.name}
                     </Link>
                 )}
             </Box>

@@ -1,5 +1,18 @@
 export const projects = [
     {
+        title: 'Редизайн сайта Изобретариум',
+        fullTitle: 'Редизайн сайта Изобретариум',
+        subtitle: 'Обновил сайт детского технопарка Изобретариум. Улучшил UI/UX',
+        stack: [
+            'React'
+        ],
+        link: 'https://izobretarium.ru',
+        button: {
+            name: 'Читать подробнее',
+            link: 'https://aquariumsocial.t.me'
+        }
+    },
+    {
         title: 'Виджет «За Христа Пострадавшие»',
         fullTitle: 'Виджет «За Христа Пострадавшие»',
         subtitle: 'Реализация виджета, отображающего новомученников на текущую дату',
