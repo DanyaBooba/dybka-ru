@@ -9,7 +9,7 @@ export const projects = [
         link: 'https://izobretarium.ru',
         button: {
             name: 'Читать подробнее',
-            link: 'https://aquariumsocial.t.me'
+            link: 'https://t.me/aquariumsocial/357'
         }
     },
     {
