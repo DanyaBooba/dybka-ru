@@ -18,7 +18,7 @@ function ShowMoreProjectsGitHub() {
                 <CardContent>
                     <Typography level="body-md" sx={{ lineHeight: '16px' }}>Смотреть еще больше проектов</Typography>
                     <Typography level="h2">
-                        <Link href="//github.com/DanyaBooba" overlay>
+                        <Link href="//github.com/DanyaBooba" target="_blank" overlay>
                             DanyaBooba
                         </Link>
                     </Typography>
