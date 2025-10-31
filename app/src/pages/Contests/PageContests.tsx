@@ -33,7 +33,7 @@ function PageContests() {
     });
 
     return (
-        <AsideContainer hasSearch="true" title="Страница мероприятий" desc="Все мероприятия в которых было принято участие, Даниил Дыбка">
+        <AsideContainer hasSearch="true" title="Страница мероприятий" desc="Страница, на которой рассказываю о мероприятиях, на которых я или мои ученики приняли участие">
             <Search onSearch={handleSearch} />
             {filteredItems.map((item, index) => (
                 <Element id={item.link} key={index}>

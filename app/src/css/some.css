@@ -10,10 +10,10 @@
     border-radius: 50px !important;
     padding: 8px 20px !important;
     text-decoration: none !important;
+    font-weight: 500;
 }
 
 .linkBorderIcon {
     border-radius: 50px !important;
     padding: 8px !important;
 }
-

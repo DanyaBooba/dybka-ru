@@ -16,7 +16,7 @@ function PageSMI() {
     });
 
     return (
-        <AsideContainer hasSearch="true" title="Страница СМИ" desc="Даниил Дыбка: участие в программах СМИ">
+        <AsideContainer hasSearch="true" title="Страница СМИ" desc="Страница, на которой я рассказываю об участии в программах СМИ и новостей">
             <Search onSearch={handleSearch} />
             {filteredItems.map((item, index) => (
                 <ShowBlockSMI link={item.link} title={highlightText(item.title, searchTerm)} key={index} />

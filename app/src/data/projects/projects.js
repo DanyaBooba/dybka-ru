@@ -4,9 +4,9 @@ export const projects = [
         fullTitle: 'Телеграм-бот с рассылкой проекта «За Христа Пострадавшие»',
         subtitle: 'Телеграм-бот с рассылкой проекта «За Христа Пострадавшие»',
         stack: [
-            'NodeJS'
+            'Node.js'
         ],
-        link: 'https://zahristabot.t.me',
+        link: 'https://zahrista_bot.t.me',
     },
     {
         title: 'Мини-приложение ВК',

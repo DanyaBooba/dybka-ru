@@ -12,7 +12,7 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 
 function ShowMoreProjectsGitHub() {
     return (
-        <Card variant="solid" color="primary" invertedColors sx={{ mb: '2rem', borderRadius: '24px', p: '2rem 1.5rem !important' }}>
+        <Card variant="solid" color="primary" invertedColors sx={{ mb: '2rem', borderRadius: '36px', p: '2rem 1.5rem !important' }}>
             <CardContent orientation="horizontal" sx={{ display: 'flex', alignItems: 'end', gap: '1rem' }}>
                 <GitHubIcon sx={{ fontSize: '65px' }} />
                 <CardContent>
@@ -45,7 +45,7 @@ function PageProjects() {
     });
 
     return (
-        <AsideContainer hasSearch="true" title="Страница проектов" desc="Проекты Даниила Дыбка">
+        <AsideContainer hasSearch="true" title="Страница проектов" desc="Страница, на которой я рассказываю о своих проектах, которые разрабатывал или разрабатываю сейчас">
             <Search onSearch={handleSearch} />
             <ShowMoreProjectsGitHub />
             {filteredItems.map((item, index) => (

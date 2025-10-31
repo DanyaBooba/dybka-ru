@@ -14,8 +14,8 @@ function HeroShowBlock() {
             <AspectRatio ratio="8/5" sx={{
                 '& div': {
                     backgroundColor: currentTheme().showBlock.backgroundColor,
-                    borderTopLeftRadius: '24px',
-                    borderTopRightRadius: '24px',
+                    borderTopLeftRadius: '36px',
+                    borderTopRightRadius: '36px',
                 }
             }}>
                 <img src={`/img/illustrations/cap.jpg`} alt="Даниил Дыбка" />

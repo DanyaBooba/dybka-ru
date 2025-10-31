@@ -36,8 +36,8 @@ function BlockImage({ imageCap, title }) {
                     <AspectRatio ratio="8/5" sx={{
                         '& div': {
                             backgroundColor: currentTheme().showBlock.backgroundColor,
-                            borderTopLeftRadius: '24px',
-                            borderTopRightRadius: '24px',
+                            borderTopLeftRadius: '36px',
+                            borderTopRightRadius: '36px',
                         }
                     }}>
                         <img src={`/img/contests/${imageCap}`} alt={title} loading="lazy" />
@@ -198,7 +198,12 @@ function ShowBlock({ title, showMore = "", image = "", children, linkText = "Ð¡Ð
             {children}
             {!!showMore && (
                 <div style={{ marginTop: '2rem' }}>
-                    <Link href={showMore} variant="soft" className="linkBorder" endDecorator={<ChevronRightIcon />}>
+                    <Link
+                        href={showMore}
+                        variant="soft"
+                        className="linkBorder"
+                        endDecorator={<ChevronRightIcon />}
+                    >
                         {linkText}
                     </Link>
                 </div>

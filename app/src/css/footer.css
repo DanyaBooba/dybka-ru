@@ -2,8 +2,8 @@
     display: flex;
     justify-content: center;
     gap: 2rem;
-    border-top-left-radius: 24px;
-    border-top-right-radius: 24px;
+    border-top-left-radius: 36px;
+    border-top-right-radius: 36px;
     margin-top: 2rem;
     padding: 2rem;
 }
