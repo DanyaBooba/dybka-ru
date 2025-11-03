@@ -1,7 +1,7 @@
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AppTheme from './components/theme/AppTheme';
 import RoutesMain from "./routes/RoutesMain.tsx";
-import Page404 from './pages/404/Page404.tsx';
+import PageIndex from './pages/Main/PageIndex';
 
 function App() {
     return (
@@ -9,7 +9,7 @@ function App() {
             <BrowserRouter>
                 <Routes>
                     {RoutesMain}
-                    <Route path="*" element={<Page404/>}/>
+                    <Route path="*" element={<PageIndex />} />
                 </Routes>
             </BrowserRouter>
         </AppTheme>
