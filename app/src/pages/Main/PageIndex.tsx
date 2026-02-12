@@ -9,11 +9,13 @@ import InnerBlockContacts from './PageIndex/InnerBlockContacts';
 import InnerBlockTech from './PageIndex/InnerBlockTech';
 import InnerBlockPlatforms from './PageIndex/InnerBlockPlatforms';
 import InnerBlockLanguages from './PageIndex/InnerBlockLanguages';
+import ShowBlockAquarium from './PageIndex/ShowBlockAquarium';
 
 function PageIndex() {
     return (
         <AsideContainer>
             <HeroShowBlock />
+            <ShowBlockAquarium />
             <ShowBlock title="Мои проекты" showMore="/projects" image="projects.png">
                 <InnerBlockProject />
             </ShowBlock>
