@@ -1,8 +1,22 @@
 {
-    "name": "app",
-    "private": true,
-    "version": "0.0.0",
+    "name": "dybka-ru",
+    "private": false,
+    "version": "1.0.0",
+    "author": "Daniil Dybka",
+    "description": "Landing page for dybka.ru",
+    "homepage": "https://dybka.ru",
     "type": "module",
+    "license": "GPL-3.0-or-later",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DanyaBooba/dybka-ru"
+    },
+    "keywords": [
+        "react",
+        "landing-page",
+        "joy-ui",
+        "vite"
+    ],
     "scripts": {
         "start": "vite",
         "dev": "vite",
@@ -34,5 +48,9 @@
         "typescript": "~5.6.2",
         "typescript-eslint": "^8.18.2",
         "vite": "^6.0.5"
+    },
+    "engines": {
+        "node": ">=18.0.0",
+        "npm": ">=9.0.0"
     }
 }

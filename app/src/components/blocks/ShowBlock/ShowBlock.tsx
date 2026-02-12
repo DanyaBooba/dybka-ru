@@ -30,21 +30,19 @@ type Props = {
 
 function BlockImage({ imageCap, title }) {
     return (
-        <>
-            <Fancybox>
-                <a data-fancybox="gallery" href={`/img/contests/${imageCap}`}>
-                    <AspectRatio ratio="8/5" sx={{
-                        '& div': {
-                            backgroundColor: currentTheme().showBlock.backgroundColor,
-                            borderTopLeftRadius: '36px',
-                            borderTopRightRadius: '36px',
-                        }
-                    }}>
-                        <img src={`/img/contests/${imageCap}`} alt={title} loading="lazy" />
-                    </AspectRatio>
-                </a>
-            </Fancybox>
-        </>
+        <Fancybox>
+            <a data-fancybox="gallery" href={`/img/contests/${imageCap}`}>
+                <AspectRatio ratio="8/5" sx={{
+                    '& div': {
+                        backgroundColor: currentTheme().showBlock.backgroundColor,
+                        borderTopLeftRadius: '36px',
+                        borderTopRightRadius: '36px',
+                    }
+                }}>
+                    <img src={`/img/contests/${imageCap}`} alt={title} loading="lazy" />
+                </AspectRatio>
+            </a>
+        </Fancybox>
     )
 }
 
@@ -175,6 +173,7 @@ export function ShowBlockSMI({ title, link }) {
 }
 
 function ShowBlock({ title, showMore = "", image = "", children, linkText = "Смотреть ещё", myNone = "" }: Props) {
+    image = image.split('.')[0]
     return (
         <Sheet sx={{
             borderColor: currentTheme().showBlock.borderColor,
@@ -184,12 +183,22 @@ function ShowBlock({ title, showMore = "", image = "", children, linkText = "С�
             mb: myNone ? '2rem' : '0'
         }} className="sheetBlock">
             {!!image && (
-                <img
-                    src={`/img/illustrations/${image}`}
-                    aria-label={title}
-                    className={`showBlock__image ${(image == 'education' && 'showBlock__image-education')}`}
-                    alt={title}
-                />
+                <picture>
+                    <source
+                        srcSet={`/img/illustrations/${image}.webp`}
+                        type="image/webp"
+                    />
+                    <source
+                        srcSet={`/img/illustrations/${image}.png`}
+                        type="image/png"
+                    />
+                    <img
+                        src={`/img/illustrations/${image}.png`}
+                        aria-label={title}
+                        className="showBlock__image"
+                        alt={title}
+                    />
+                </picture>
             )}
             <Typography level="h2" id={image}
                 sx={{ justifyContent: 'space-between', alignItems: 'end', mb: '1.5rem !important' }}>

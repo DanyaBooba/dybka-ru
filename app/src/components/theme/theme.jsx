@@ -30,31 +30,49 @@ export const theme = extendTheme({
         dark: {
             palette: {
                 head: {
-                    themeColor: '#142133'
+                    themeColor: '#1a1a1a'
                 },
                 background: {
-                    body: '#142133',
-                    surface: '#2b4364',
-                    popup: '#142735'
+                    body: '#1a1a1a',      // Темно-серый фон
+                    surface: '#303030',   // Серый для поверхностей
+                    popup: '#242424'      // Серый для попапов
                 },
                 header: {
-                    borderColor: '#233752',
-                    backgroundColor: '#233752cc',
-                    boxShadow: '',
+                    borderColor: '#3a3a3a',
+                    backgroundColor: '#242424cc',
+                    boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.3)',
                 },
                 navigate: {
                     svgFill: '#c7dff7',
                 },
                 showBlock: {
-                    borderColor: '#23375255',
-                    backgroundColor: '#233752',
-                    boxShadow: '',
+                    borderColor: '#3a3a3a55',
+                    backgroundColor: '#2a2a2a',
+                    boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.2)',
                 },
                 neutral: {
-                    800: "#2b4364",
+                    50: '#fafafa',
+                    100: '#f5f5f5',
+                    200: '#e5e5e5',
+                    300: '#d4d4d4',
+                    400: '#a3a3a3',
+                    500: '#737373',
+                    600: '#525252',
+                    700: '#404040',
+                    800: '#303030',
+                    900: '#1a1a1a',
                 },
                 primary: {
-                    800: '#0a6bca'
+                    50: '#eff6ff',
+                    100: '#dbeafe',
+                    200: '#bfdbfe',
+                    300: '#93c5fd',
+                    400: '#60a5fa',
+                    500: '#3b82f6',
+                    600: '#2563eb',
+                    700: '#1d4ed8',
+                    800: '#1e40af',
+                    900: '#1e3a8a',
                 }
             },
         },

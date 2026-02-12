@@ -1,5 +1,5 @@
 import Container from '@mui/material/Container';
-import {currentTheme} from '../../../theme/theme';
+import { currentTheme } from '../../../theme/theme';
 import Typography from "@mui/joy/Typography";
 
 function Footer() {
@@ -10,7 +10,7 @@ function Footer() {
                 backgroundColor: currentTheme().showBlock.backgroundColor
             }}>
                 <Typography>
-                    © Даниил Дыбка, 2025
+                    © Даниил Дыбка, {new Date().getFullYear()}
                 </Typography>
             </footer>
         </Container>
