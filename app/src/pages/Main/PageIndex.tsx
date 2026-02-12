@@ -26,13 +26,13 @@ function PageIndex() {
             <ShowBlock title="Обо мне" showMore="/about" image="aboutme.png" linkText="Читать далее">
                 <InnerAboutMe />
             </ShowBlock>
-            <ShowBlock title="Фреймворки">
+            <ShowBlock title="Фреймворки" hover={false}>
                 <InnerBlockTech />
             </ShowBlock>
-            <ShowBlock title="Технологии">
+            <ShowBlock title="Технологии" hover={false}>
                 <InnerBlockLanguages />
             </ShowBlock>
-            <ShowBlock title="Актуальные платформы">
+            <ShowBlock title="Актуальные платформы" hover={false}>
                 <InnerBlockPlatforms />
             </ShowBlock>
             <ShowBlock title="Контакты" image="contacts.png">

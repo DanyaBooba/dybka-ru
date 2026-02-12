@@ -1,19 +1,28 @@
 import AspectRatio from '@mui/joy/AspectRatio';
-import { currentTheme } from '../../../components/theme/theme';
+import { currentTheme, infoTheme } from '../../../components/theme/theme';
 import Typography from "@mui/joy/Typography";
 import Sheet from '@mui/joy/Sheet';
 import Link from "@mui/joy/Link";
 
+import { blockStyles, handleMouseMove } from '../../../components/blocks/ShowBlock/ShowBlock';
+
 function HeroShowBlock() {
     return (
-        <Sheet sx={{
-            borderColor: currentTheme().showBlock.borderColor,
-            backgroundColor: currentTheme().showBlock.backgroundColor,
-            boxShadow: currentTheme().showBlock.boxShadow,
-        }} className="sheetBlock-hero">
+        <Sheet
+            onMouseMove={handleMouseMove}
+            sx={{
+                ...blockStyles(currentTheme(), infoTheme(), false),
+                borderTopLeftRadius: '36px !important',
+                borderTopRightRadius: '36px !important',
+            }}
+            className="sheetBlock-hero"
+        >
+            <div className="glass-background" />
+            <div className="liquid-glow" />
+
             <AspectRatio ratio="8/5" sx={{
                 '& div': {
-                    backgroundColor: currentTheme().showBlock.backgroundColor,
+                    background: 'transparent',
                     borderTopLeftRadius: '36px',
                     borderTopRightRadius: '36px',
                 }

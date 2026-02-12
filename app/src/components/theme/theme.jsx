@@ -21,9 +21,9 @@ export const theme = extendTheme({
                     svgFill: '#c7dff7',
                 },
                 showBlock: {
-                    borderColor: 'rgba(210, 219, 227, .5)',
-                    backgroundColor: '#ffffff',
-                    boxShadow: 'inset 0 -1px 0 0 rgba(47,43,67,.035),0 1px 3px 0 rgba(47,43,67,.085)'
+                    backgroundColor: 'rgba(255, 255, 255, 0.45)',
+                    borderColor: 'rgba(255, 255, 255, 0.3)',
+                    glowColor: 'rgba(255, 255, 255, 0.8)',
                 },
             },
         },
@@ -46,9 +46,9 @@ export const theme = extendTheme({
                     svgFill: '#c7dff7',
                 },
                 showBlock: {
-                    borderColor: '#3a3a3a55',
-                    backgroundColor: '#2a2a2a',
-                    boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.2)',
+                    backgroundColor: 'rgba(20, 20, 20, 0.6)',
+                    borderColor: 'rgba(255, 255, 255, 0.1)',
+                    glowColor: 'rgba(255, 255, 255, 0.2)',
                 },
                 neutral: {
                     50: '#fafafa',

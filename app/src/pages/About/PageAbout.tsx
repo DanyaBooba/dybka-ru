@@ -5,7 +5,7 @@ import { Link } from '@mui/joy';
 
 function Block({ title, image, children }) {
     return (
-        <ShowBlock title={title} image={image} showMore="" myNone="yes">
+        <ShowBlock title={title} image={image} showMore="" myNone="yes" hover={false}>
             <Typography sx={{ lineHeight: '180%' }}>{children}</Typography>
         </ShowBlock>
     )
@@ -13,7 +13,7 @@ function Block({ title, image, children }) {
 
 function BlockEmpty({ title, children }) {
     return (
-        <ShowBlockEmpty>
+        <ShowBlockEmpty hover={false}>
             <Typography level="h2" sx={{ mb: '1rem !important' }}>{title}</Typography>
             <Typography sx={{ lineHeight: '180%' }}>{children}</Typography>
         </ShowBlockEmpty>
