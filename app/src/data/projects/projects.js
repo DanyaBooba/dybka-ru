@@ -1,13 +1,33 @@
 export const projects = [
     {
-        title: 'Аквариум мини',
-        fullTitle: 'Мессенджер «Аквариум мини»',
-        subtitle: 'Мессенджер нового поколения с разделением профиля.',
+        title: 'Приложение Аквариума',
+        fullTitle: 'Мобильное приложение мессенджера «Аквариум»',
+        subtitle: 'Все, чтобы связь держалась долго. Мобильное приложение мессенджера «Аквариум» собственной разработки для iOS и Android',
+        stack: [
+            'iOS',
+            'Android',
+            'React Native',
+            'WebSocket',
+        ],
+        soon: true,
+        new: true,
+        // link: 'https://aquarium.org.ru',
+    },
+    {
+        title: 'Аквариум',
+        fullTitle: 'Мессенджер «Аквариум»',
+        subtitle: 'Удобный способ держать связь. В связи с ограничениями было решено разработать собственный мессенджер',
         stack: [
             'React',
-            'JoyUI'
+            'JoyUI',
+            'Node.js',
+            'WebSocket',
         ],
-        link: 'https://mini.aquarium.org.ru',
+        link: 'https://aquarium.org.ru',
+        button: {
+            name: 'Читать подробнее',
+            link: 'https://t.me/aquariumsocial/455'
+        },
     },
     {
         title: 'Лендинг виджетов',
@@ -151,5 +171,6 @@ export const projects = [
 ]
 
 export const projectsMainPage = projects
+    .filter(p => !p.soon)
     .slice(0, 4)
     .map(({ title, subtitle, link }) => ({ title, subtitle, link }));

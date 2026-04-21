@@ -17,11 +17,18 @@ function InnerBlockSMI() {
                     <Link href={item.link} variant="soft" className="linkBorder" sx={{
                         whiteSpace: 'nowrap',
                         overflow: 'hidden',
-                        textOverflow: 'ellipsis',
                         width: '100%',
                         py: '16px !important',
+                        display: 'flex',
                     }}>
-                        {item.title}
+                        <span style={{
+                            overflow: 'hidden',
+                            whiteSpace: 'nowrap',
+                            maskImage: 'linear-gradient(to right, black 70%, transparent 100%)',
+                            WebkitMaskImage: 'linear-gradient(to right, black 70%, transparent 100%)',
+                        }}>
+                            {item.title}
+                        </span>
                     </Link>
                 </Grid>
             ))}

@@ -67,6 +67,13 @@ function InnerBlockTech() {
 
     return (
         <Grid container spacing={2}>
+            <Grid size={12}>
+                <Card variant="soft" sx={{ display: 'flex', height: '100% !important' }}>
+                    <Typography startDecorator={<ReactIcon />} sx={{ justifyContent: 'center', height: '100% !important' }}>
+                        React Native
+                    </Typography>
+                </Card>
+            </Grid>
             <Grid size={gridSize}>
                 <Card variant="soft" sx={{ display: 'flex', height: '100% !important' }}>
                     <Typography startDecorator={<NodeJSIcon />} sx={{ justifyContent: 'center', height: '100% !important' }}>

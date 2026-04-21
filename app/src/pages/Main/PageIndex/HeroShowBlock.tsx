@@ -30,9 +30,23 @@ function HeroShowBlock() {
                 <img src={`/img/illustrations/cap.jpg`} alt="Даниил Дыбка" />
             </AspectRatio>
             <div className="sheetBlock-hero__inner">
-                <Typography level="h1" sx={{ mb: '.5rem' }}>
+                <Typography level="h1" sx={{
+                    mb: '.5rem',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '.5rem'
+                }}>
                     Привет, это Даниил Дыбка
+                    <img
+                        src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif"
+                        style={{
+                            height: '40px',
+                            width: '40px',
+                            padding: '0px !important'
+                        }}
+                    />
                 </Typography>
+
                 <ul style={{ marginBottom: 0 }}>
                     <li style={{ paddingTop: '.25rem', paddingBottom: '.25rem' }}>
                         <Typography level="body-lg">
@@ -46,7 +60,7 @@ function HeroShowBlock() {
                     </li>
                     <li style={{ paddingTop: '.25rem', paddingBottom: '.25rem' }}>
                         <Typography level="body-lg">
-                            Разрабатываю свой проект Аквариум
+                            Разрабатываю свой мессенджер Аквариум
                             {' '}
                             <Link href="https://aquariumsocial.t.me" underline="always" target="_blank">
                                 @aquariumsocial

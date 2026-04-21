@@ -1,5 +1,12 @@
 export const contests = [
     {
+        imageCap: '2026/studvesna/cap.jpg',
+        title: 'Студенческая весна',
+        desc: 'Конференция в МГТУ им. Н.Э. Баумана, кафедры ИУ-9.',
+        date: '20 апреля 2026 г.',
+        link: 'bmstu-student-spring-2'
+    },
+    {
         imageCap: '2025/pstgu/cap.jpg',
         title: 'Факультетский вечер',
         desc: 'Факультетский вечер ФИПМ ПСТГУ',

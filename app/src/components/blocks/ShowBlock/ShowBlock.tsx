@@ -10,6 +10,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import InsertLinkIcon from '@mui/icons-material/InsertLink';
 import IconButton from '@mui/joy/IconButton';
 import Box from '@mui/material/Box';
+import { Badge } from '@mui/joy';
 
 export const handleMouseMove = (e) => {
     const { currentTarget: target } = e;
@@ -199,78 +200,169 @@ export function ShowBlockImage({ imageCap, title, desc, date, link }: PropsImage
     )
 }
 
-export function ShowBlockProject({ fullTitle, subtitle, stack, link, github, button }) {
+function SoonCardProjectShow({ fullTitle, subtitle, stack, isNew = false }) {
     return (
-        <Sheet
-            onMouseMove={handleMouseMove}
-            sx={{
-                ...blockStyles(currentTheme(), infoTheme()),
-                mb: '2rem !important'
-            }}
-            className="sheetBlock"
+        <Badge
+            badgeContent="Новое!"
+            color="danger"
+            size="lg"
+            invisible={!isNew}
         >
-            <div className="glass-background" />
-            <div className="liquid-glow" />
-
-            <Typography level="h2" sx={{ justifyContent: 'space-between', alignItems: 'end', mb: '.5rem !important' }}>
-                {fullTitle}
-            </Typography>
-            <div style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '.25rem' }}>
-                {stack.map((stackItem, stackIndex) => (
-                    <Chip size="lg" color="primary" key={stackIndex}>
-                        {stackItem}
-                    </Chip>
-                ))}
-            </div>
-            {!!subtitle && (
-                <Typography>
-                    {subtitle}
-                </Typography>
-            )}
-            <Box
+            <Sheet
+                onMouseMove={handleMouseMove}
                 sx={{
-                    marginTop: '2rem', display: 'flex',
-                    flexDirection: {
-                        lg: 'row',
-                        md: 'row',
-                        sm: 'row',
-                        xs: 'column',
-                    },
-                    alignItems: {
-                        lg: 'center',
-                        md: 'center',
-                        sm: 'center',
-                        xs: 'start',
-                    },
-                    gap: {
-                        lg: '2rem',
-                        md: '2rem',
-                        sm: '2rem',
-                        xs: '1rem',
-                    }
-                }}>
-                <Link href={link} variant="soft" className="linkBorder" target="_blank"
-                    endDecorator={<ChevronRightIcon />}>
-                    Смотреть проект
-                </Link>
-                {!!github && (
-                    <Link href={`//github.com/DanyaBooba/${github}`} sx={{ backgroundColor: 'transparent !important' }}
-                        target="_blank" variant="plain">
-                        Открыть страницу GitHub
-                    </Link>
+                    ...blockStyles(currentTheme(), infoTheme(), false),
+                    mb: '2rem !important'
+                }}
+                className="sheetBlock"
+            >
+                <div className="glass-background" />
+                <div className="liquid-glow" />
+
+                <Typography level="h2" sx={{ justifyContent: 'space-between', alignItems: 'end', mb: '.5rem !important' }}>
+                    {fullTitle}
+                </Typography>
+                <div style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '.25rem' }}>
+                    {stack.map((stackItem, stackIndex) => (
+                        <Chip size="lg" color="primary" key={stackIndex}>
+                            {stackItem}
+                        </Chip>
+                    ))}
+                </div>
+                {!!subtitle && (
+                    <Typography>
+                        {subtitle}
+                    </Typography>
                 )}
-                {!!button && (
-                    <Link href={button?.link} sx={{ backgroundColor: 'transparent !important' }}
-                        target="_blank" variant="plain">
-                        {button?.name}
-                    </Link>
-                )}
-            </Box>
-        </Sheet>
+                <Box
+                    sx={{
+                        marginTop: '2rem', display: 'flex',
+                        flexDirection: {
+                            lg: 'row',
+                            md: 'row',
+                            sm: 'row',
+                            xs: 'column',
+                        },
+                        alignItems: {
+                            lg: 'center',
+                            md: 'center',
+                            sm: 'center',
+                            xs: 'start',
+                        },
+                        gap: {
+                            lg: '2rem',
+                            md: '2rem',
+                            sm: '2rem',
+                            xs: '1rem',
+                        }
+                    }}>
+                    <Typography
+                        color="neutral"
+                        variant="soft"
+                        sx={{
+                            borderRadius: '99px',
+                            p: '.5rem 1.25rem',
+                            fontWeight: 600
+                        }}
+                    >
+                        Проект в разработке...
+                    </Typography>
+                </Box>
+            </Sheet>
+        </Badge>
     )
 }
 
-export function ShowBlockSMI({ title, link }) {
+export function ShowBlockProject({ fullTitle, subtitle, stack, link, github, button, soon = false, isNew = false }) {
+    if (soon) {
+        return (
+            <SoonCardProjectShow
+                fullTitle={fullTitle}
+                subtitle={subtitle}
+                stack={stack}
+                isNew={isNew}
+            />
+        )
+    }
+
+    return (
+        <Badge
+            badgeContent="Новое!"
+            color="danger"
+            size="lg"
+            invisible={!isNew}
+        >
+            <Sheet
+                onMouseMove={handleMouseMove}
+                sx={{
+                    ...blockStyles(currentTheme(), infoTheme()),
+                    mb: '2rem !important'
+                }}
+                className="sheetBlock"
+            >
+                <div className="glass-background" />
+                <div className="liquid-glow" />
+
+                <Typography level="h2" sx={{ justifyContent: 'space-between', alignItems: 'end', mb: '.5rem !important' }}>
+                    {fullTitle}
+                </Typography>
+                <div style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '.25rem' }}>
+                    {stack.map((stackItem, stackIndex) => (
+                        <Chip size="lg" color="primary" key={stackIndex}>
+                            {stackItem}
+                        </Chip>
+                    ))}
+                </div>
+                {!!subtitle && (
+                    <Typography>
+                        {subtitle}
+                    </Typography>
+                )}
+                <Box
+                    sx={{
+                        marginTop: '2rem', display: 'flex',
+                        flexDirection: {
+                            lg: 'row',
+                            md: 'row',
+                            sm: 'row',
+                            xs: 'column',
+                        },
+                        alignItems: {
+                            lg: 'center',
+                            md: 'center',
+                            sm: 'center',
+                            xs: 'start',
+                        },
+                        gap: {
+                            lg: '2rem',
+                            md: '2rem',
+                            sm: '2rem',
+                            xs: '1rem',
+                        }
+                    }}>
+                    <Link href={link} variant="soft" className="linkBorder" target="_blank"
+                        endDecorator={<ChevronRightIcon />}>
+                        Смотреть проект
+                    </Link>
+                    {!!github && (
+                        <Link href={`//github.com/DanyaBooba/${github}`} sx={{ backgroundColor: 'transparent !important' }}
+                            target="_blank" variant="plain">
+                            Открыть страницу GitHub
+                        </Link>
+                    )}
+                    {!!button && (
+                        <Link href={button?.link} sx={{ backgroundColor: 'transparent !important' }}
+                            target="_blank" variant="plain">
+                            {button?.name}
+                        </Link>
+                    )}
+                </Box>
+            </Sheet>
+        </Badge>
+    )
+}
+
+export function ShowBlockSMI({ title, link, date }) {
     return (
         <Sheet
             onMouseMove={handleMouseMove}
@@ -286,9 +378,20 @@ export function ShowBlockSMI({ title, link }) {
             <Typography level="h2" sx={{ justifyContent: 'space-between', alignItems: 'end', mb: '1rem !important' }}>
                 {title}
             </Typography>
+            {Boolean(date) && (
+                <Typography sx={{ mb: '1rem !important' }}>
+                    {date}
+                </Typography>
+            )}
             <div>
-                <Link href={link} variant="soft" overlay className="linkBorder" target="_blank"
-                    endDecorator={<ChevronRightIcon />}>
+                <Link
+                    href={link}
+                    variant="soft"
+                    overlay
+                    className="linkBorder"
+                    target="_blank"
+                    endDecorator={<ChevronRightIcon />}
+                >
                     Открыть новость
                 </Link>
             </div>

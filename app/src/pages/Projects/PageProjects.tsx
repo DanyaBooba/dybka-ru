@@ -56,6 +56,8 @@ function PageProjects() {
                     link={item.link}
                     github={item?.github}
                     button={item?.button}
+                    soon={item?.soon}
+                    isNew={item?.new}
                     key={index}
                 />
             ))}
