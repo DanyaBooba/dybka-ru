@@ -27,6 +27,13 @@ export const blockStyles = (theme, infoTheme = 'light', hover = true) => {
     const border = theme.showBlock?.borderColor || 'rgba(255, 255, 255, 0.3)';
     const isDark = infoTheme === 'dark';
 
+    const showBoxShadow = () => {
+        if (!hover) return null;
+        return isDark
+            ? '0 4px 34px -1px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.05)'
+            : '0 4px 34px -1px rgba(0, 0, 0, 0.05), inset 0 0 20px rgba(255, 255, 255, 0.1)'
+    }
+
     return {
         position: 'relative',
         borderRadius: '34px',
@@ -39,12 +46,10 @@ export const blockStyles = (theme, infoTheme = 'light', hover = true) => {
             inset: 0,
             zIndex: 0,
             borderRadius: '34px',
-            background: bg, // ИСПОЛЬЗУЕМ ЦВЕТ ИЗ ТЕМЫ
+            background: bg,
             backdropFilter: 'blur(20px) saturate(160%)',
-            border: `1px solid ${border}`, // ИСПОЛЬЗУЕМ БОРДЕР ИЗ ТЕМЫ
-            boxShadow: isDark
-                ? '0 4px 34px -1px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.05)'
-                : '0 4px 34px -1px rgba(0, 0, 0, 0.05), inset 0 0 20px rgba(255, 255, 255, 0.1)',
+            border: `1px solid ${border}`,
+            boxShadow: showBoxShadow(),
             overflow: 'hidden',
             transition: 'all 0.5s ease',
 
@@ -73,7 +78,6 @@ export const blockStyles = (theme, infoTheme = 'light', hover = true) => {
             '&:hover': {
                 transform: 'translateY(-10px) scale(1.01)',
                 '& .glass-background': {
-                    // При наведении в темной теме делаем фон чуть светлее, чтобы подчеркнуть объем
                     background: isDark ? 'rgba(40, 40, 40, 0.7)' : 'rgba(255, 255, 255, 0.65)',
                     boxShadow: isDark
                         ? '0 40px 80px -15px rgba(0, 0, 0, 0.6)'
@@ -207,6 +211,11 @@ function SoonCardProjectShow({ fullTitle, subtitle, stack, isNew = false }) {
             color="danger"
             size="lg"
             invisible={!isNew}
+            sx={{
+                '& .MuiBadge-badge': {
+                    transform: 'translate(0px, -10px)',
+                }
+            }}
         >
             <Sheet
                 onMouseMove={handleMouseMove}
@@ -219,10 +228,18 @@ function SoonCardProjectShow({ fullTitle, subtitle, stack, isNew = false }) {
                 <div className="glass-background" />
                 <div className="liquid-glow" />
 
-                <Typography level="h2" sx={{ justifyContent: 'space-between', alignItems: 'end', mb: '.5rem !important' }}>
+                <Typography
+                    level="h2"
+                    sx={{
+                        justifyContent: 'space-between',
+                        alignItems: 'end',
+                        mb: '.5rem !important',
+                        wordBreak: 'break-word',
+                    }}
+                >
                     {fullTitle}
                 </Typography>
-                <div style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '.25rem' }}>
+                <div style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '.25rem', flexWrap: 'wrap' }}>
                     {stack.map((stackItem, stackIndex) => (
                         <Chip size="lg" color="primary" key={stackIndex}>
                             {stackItem}
@@ -291,6 +308,11 @@ export function ShowBlockProject({ fullTitle, subtitle, stack, link, github, but
             color="danger"
             size="lg"
             invisible={!isNew}
+            sx={{
+                '& .MuiBadge-badge': {
+                    transform: 'translate(0px, -10px)',
+                }
+            }}
         >
             <Sheet
                 onMouseMove={handleMouseMove}
@@ -303,10 +325,18 @@ export function ShowBlockProject({ fullTitle, subtitle, stack, link, github, but
                 <div className="glass-background" />
                 <div className="liquid-glow" />
 
-                <Typography level="h2" sx={{ justifyContent: 'space-between', alignItems: 'end', mb: '.5rem !important' }}>
+                <Typography
+                    level="h2"
+                    sx={{
+                        justifyContent: 'space-between',
+                        alignItems: 'end',
+                        mb: '.5rem !important',
+                        wordBreak: 'break-word'
+                    }}
+                >
                     {fullTitle}
                 </Typography>
-                <div style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '.25rem' }}>
+                <div style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '.25rem', flexWrap: 'wrap' }}>
                     {stack.map((stackItem, stackIndex) => (
                         <Chip size="lg" color="primary" key={stackIndex}>
                             {stackItem}

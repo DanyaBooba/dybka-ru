@@ -36,13 +36,32 @@ function HeaderMobileDrawer({ list }) {
     return (
         <Box sx={{ display: 'flex' }}>
             {needSeeButtonHome() && (
-                <IconButton component="a" href="/" variant="solid" size="lg" className="header__mobile-button-home"
-                    color="primary" aria-label="Перейти на главную страницу">
+                <IconButton
+                    href="/"
+                    component="a"
+                    variant="solid"
+                    size="lg"
+                    className="header__mobile-button-home"
+                    color="primary"
+                    aria-label="Перейти на главную страницу"
+                    sx={{
+                        borderRadius: '12px',
+                    }}
+                >
                     <HomeIcon />
                 </IconButton>
             )}
-            <IconButton variant="solid" size="lg" className="header__mobile-button-drawer" color="primary"
-                onClick={toggleDrawer(true)} aria-label="Открыть меню">
+            <IconButton
+                variant="solid"
+                size="lg"
+                className="header__mobile-button-drawer"
+                color="primary"
+                onClick={toggleDrawer(true)}
+                aria-label="Открыть меню"
+                sx={{
+                    borderRadius: '12px'
+                }}
+            >
                 <DragHandleIcon />
             </IconButton>
             <Drawer open={open} onClose={toggleDrawer(false)} anchor="bottom" size="sm"
@@ -60,7 +79,9 @@ function HeaderMobileDrawer({ list }) {
                             ml: 'auto',
                             mt: 1,
                             mr: 2,
-                            justifyContent: 'right'
+                            justifyContent: 'right',
+                            marginTop: '-20px',
+                            transform: 'translate(0px, 30px)',
                         }}
                     >
                         <Typography
@@ -74,7 +95,12 @@ function HeaderMobileDrawer({ list }) {
                     </Box>
                     <List>
                         {list.map((item, index) => (
-                            <ListItem key={index}>
+                            <ListItem
+                                key={index}
+                                sx={{
+                                    maxWidth: 'calc(100% - 150px)'
+                                }}
+                            >
                                 <ListItemButton component="a" href={item.link} className="header__mobile-link-drawer">
                                     {item.name}
                                 </ListItemButton>
@@ -126,18 +152,27 @@ function HeaderDesktop({ list }) {
                         boxShadow: currentTheme().header.boxShadow,
                         alignItems: 'center'
                     }}>
+                        {needSeeButtonHome() && (
+                            <IconButton
+                                component="a"
+                                href="/"
+                                variant="plain"
+                                size="lg"
+                                color="primary"
+                                aria-label="Перейти на главную страницу"
+                                sx={{
+                                    borderRadius: '99px'
+                                }}
+                            >
+                                <HomeIcon />
+                            </IconButton>
+                        )}
                         {list.map((item, index) => (
                             <HeaderDesktopLink item={item} key={index} />
                         ))}
                     </div>
                 </Container>
             </header>
-            {needSeeButtonHome() && (
-                <IconButton component="a" href="/" variant="solid" size="lg" className="header__button-home"
-                    color="primary" aria-label="Перейти на главную страницу">
-                    <HomeIcon />
-                </IconButton>
-            )}
         </Box>
     )
 }

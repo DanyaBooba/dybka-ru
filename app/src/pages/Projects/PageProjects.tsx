@@ -16,12 +16,12 @@ function ShowMoreProjectsGitHub() {
             <CardContent orientation="horizontal" sx={{ display: 'flex', alignItems: 'end', gap: '1rem' }}>
                 <GitHubIcon sx={{ fontSize: '65px' }} />
                 <CardContent>
-                    <Typography level="body-md" sx={{ lineHeight: '16px' }}>Смотреть еще больше проектов</Typography>
                     <Typography level="h2">
                         <Link href="//github.com/DanyaBooba" target="_blank" overlay>
                             DanyaBooba
                         </Link>
                     </Typography>
+                    <Typography level="body-md" sx={{ lineHeight: '16px' }}>Все проекты на GitHub</Typography>
                 </CardContent>
             </CardContent>
         </Card>

@@ -30,21 +30,8 @@ function HeroShowBlock() {
                 <img src={`/img/illustrations/cap.jpg`} alt="Даниил Дыбка" />
             </AspectRatio>
             <div className="sheetBlock-hero__inner">
-                <Typography level="h1" sx={{
-                    mb: '.5rem',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '.5rem'
-                }}>
+                <Typography level="h1" sx={{ mb: '.5rem' }}>
                     Привет, это Даниил Дыбка
-                    <img
-                        src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif"
-                        style={{
-                            height: '40px',
-                            width: '40px',
-                            padding: '0px !important'
-                        }}
-                    />
                 </Typography>
 
                 <ul style={{ marginBottom: 0 }}>
