@@ -35,6 +35,19 @@ function HeaderMobileDrawer({ list }) {
 
     return (
         <Box sx={{ display: 'flex' }}>
+            <IconButton
+                variant="solid"
+                size="lg"
+                className="header__mobile-button-drawer"
+                color="primary"
+                onClick={toggleDrawer(true)}
+                aria-label="Открыть меню"
+                sx={{
+                    borderRadius: '12px'
+                }}
+            >
+                <DragHandleIcon />
+            </IconButton>
             {needSeeButtonHome() && (
                 <IconButton
                     href="/"
@@ -51,19 +64,7 @@ function HeaderMobileDrawer({ list }) {
                     <HomeIcon />
                 </IconButton>
             )}
-            <IconButton
-                variant="solid"
-                size="lg"
-                className="header__mobile-button-drawer"
-                color="primary"
-                onClick={toggleDrawer(true)}
-                aria-label="Открыть меню"
-                sx={{
-                    borderRadius: '12px'
-                }}
-            >
-                <DragHandleIcon />
-            </IconButton>
+
             <Drawer open={open} onClose={toggleDrawer(false)} anchor="bottom" size="sm"
                 className="header__mobile-drawer">
                 <Box

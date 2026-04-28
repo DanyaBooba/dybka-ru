@@ -29,14 +29,14 @@
 
 .header__mobile-button-drawer {
     position: fixed !important;
-    bottom: 64px;
+    bottom: 10px;
     right: 10px;
     z-index: 100;
 }
 
 .header__mobile-button-home {
     position: fixed !important;
-    bottom: 10px;
+    bottom: 64px;
     right: 10px;
     z-index: 100;
 }
