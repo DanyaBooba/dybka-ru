@@ -214,6 +214,7 @@ function SoonCardProjectShow({ fullTitle, subtitle, stack, isNew = false }) {
             sx={{
                 '& .MuiBadge-badge': {
                     transform: 'translate(0px, -10px)',
+                    opacity: isNew ? 1 : 0,
                 }
             }}
         >

@@ -1,4 +1,16 @@
 export const projects = [
+    // {
+    //     title: 'Веб-виджет: система объявлений',
+    //     fullTitle: 'Веб-виджет: система объявлений для ПСТГУ',
+    //     subtitle: 'Реализация системы объявлений для встраивания на сайты организаций',
+    //     stack: [
+    //         'PHP',
+    //         'MySQL',
+    //         'WebSocket',
+    //         '1С:Университет',
+    //     ],
+    //     link: 'https://dev.dybka.ru/pstgu/1c/',
+    // },
     {
         title: 'Приложение Аквариума',
         fullTitle: 'Мобильное приложение мессенджера «Аквариум»',
@@ -10,7 +22,7 @@ export const projects = [
             'WebSocket',
         ],
         soon: true,
-        new: true,
+        new: false,
         // link: 'https://aquarium.org.ru',
     },
     {

@@ -47,10 +47,10 @@ function HeroShowBlock() {
                     </li>
                     <li style={{ paddingTop: '.25rem', paddingBottom: '.25rem' }}>
                         <Typography level="body-lg">
-                            Разрабатываю свой мессенджер Аквариум
+                            Разрабатываю свой мессенджер
                             {' '}
-                            <Link href="https://aquariumsocial.t.me" underline="always" target="_blank">
-                                @aquariumsocial
+                            <Link href="https://aquarium.org.ru" underline="always" target="_blank">
+                                Аквариум
                             </Link>
                         </Typography>
                     </li>
