@@ -1,16 +1,29 @@
 export const projects = [
-    // {
-    //     title: 'Веб-виджет: система объявлений',
-    //     fullTitle: 'Веб-виджет: система объявлений для ПСТГУ',
-    //     subtitle: 'Реализация системы объявлений для встраивания на сайты организаций',
-    //     stack: [
-    //         'PHP',
-    //         'MySQL',
-    //         'WebSocket',
-    //         '1С:Университет',
-    //     ],
-    //     link: 'https://dev.dybka.ru/pstgu/1c/',
-    // },
+    {
+        title: 'Новый сайт creagoo.ru',
+        fullTitle: 'Обновленный сайт Creagoo в 2026',
+        subtitle: 'Было решено сделать дизайн более чистым и увеличить скорость работы',
+        stack: [
+            'React',
+            'JoyUI',
+            'Lucide Icons',
+            'Framer Motion',
+        ],
+        link: 'https://creagoo.ru',
+        github: 'creagoo-2026',
+    },
+    {
+        title: 'Веб-виджет: система объявлений',
+        fullTitle: 'Веб-виджет: система объявлений для ПСТГУ',
+        subtitle: 'Реализация системы объявлений для встраивания на сайты организаций',
+        stack: [
+            'PHP',
+            'MySQL',
+            'WebSocket',
+            '1С:Университет',
+        ],
+        link: 'https://dev.dybka.ru/pstgu/1c/',
+    },
     {
         title: 'Приложение Аквариума',
         fullTitle: 'Мобильное приложение мессенджера «Аквариум»',
@@ -118,7 +131,7 @@ export const projects = [
         stack: [
             'Gulp'
         ],
-        link: 'https://creagoo.ru',
+        link: 'https://creagoo.ru/old',
         github: 'creagoo-2023',
     },
     {
