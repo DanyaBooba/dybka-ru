@@ -42,7 +42,7 @@ function HeroShowBlock() {
                     </li>
                     <li style={{ paddingTop: '.25rem', paddingBottom: '.25rem' }}>
                         <Typography level="body-lg">
-                            Веб-разработчик, программист
+                            Мобильный и веб-разработчик, программист, дизайнер
                         </Typography>
                     </li>
                     <li style={{ paddingTop: '.25rem', paddingBottom: '.25rem' }}>

@@ -3,6 +3,7 @@ export const projects = [
         title: 'Новый сайт creagoo.ru',
         fullTitle: 'Обновленный сайт Creagoo в 2026',
         subtitle: 'Было решено сделать дизайн более чистым и увеличить скорость работы',
+        img: 'creagoo',
         stack: [
             'React',
             'JoyUI',
@@ -42,6 +43,7 @@ export const projects = [
         title: 'Аквариум',
         fullTitle: 'Мессенджер «Аквариум»',
         subtitle: 'Удобный способ держать связь. В связи с ограничениями было решено разработать собственный мессенджер',
+        img: 'aquarium',
         stack: [
             'React',
             'JoyUI',
@@ -58,6 +60,7 @@ export const projects = [
         title: 'Лендинг виджетов',
         fullTitle: 'Лендинг виджетов проекта «За Христа Пострадавшие»',
         subtitle: 'Страница с демонстрацией работы виджетов и инструкцией подключения',
+        img: 'zhp',
         stack: [
             'ReactTS',
             'Tailwind CSS',
@@ -87,6 +90,7 @@ export const projects = [
         title: 'Редизайн сайта Изобретариум',
         fullTitle: 'Редизайн сайта Изобретариум',
         subtitle: 'Обновил сайт детского технопарка Изобретариум. Улучшил UI/UX',
+        img: 'izobretarium',
         stack: [
             'React'
         ],
@@ -131,7 +135,7 @@ export const projects = [
         stack: [
             'Gulp'
         ],
-        link: 'https://creagoo.ru/old',
+        link: 'https://old.creagoo.ru/',
         github: 'creagoo-2023',
     },
     {
@@ -159,6 +163,7 @@ export const projects = [
         title: 'dybka.ru',
         fullTitle: 'Мой лендинг',
         subtitle: 'Мой лендинг.',
+        img: 'dybka',
         stack: [
             'React',
             'TS',
@@ -199,3 +204,7 @@ export const projectsMainPage = projects
     .filter(p => !p.soon)
     .slice(0, 4)
     .map(({ title, subtitle, link }) => ({ title, subtitle, link }));
+
+export const projectsImageMainPage = projects
+    .filter(p => p.img)
+    .slice(0, 5);
