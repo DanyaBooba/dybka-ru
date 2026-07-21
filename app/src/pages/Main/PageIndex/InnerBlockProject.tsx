@@ -3,9 +3,9 @@ import Box from '@mui/joy/Box';
 import ShowImageBlock from '../../../components/blocks/ShowBlock/ShowImageBlock';
 import { projectsImageMainPage } from '../../../data/projects/projects';
 
-// card takes 86% of the viewport, leaving a 7% peek of the neighbours on each side.
-const CARD_BASIS = '86%';
-const SIDE_BASIS = '7%';
+// card takes 93% of the viewport, leaving just a sliver of the neighbours on each side.
+const CARD_BASIS = '93%';
+const SIDE_BASIS = '3.5%';
 
 function InnerBlockProject() {
     const trackRef = useRef<HTMLDivElement>(null);
@@ -101,7 +101,7 @@ function InnerBlockProject() {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    gap: '.6rem',
+                    gap: '.4rem',
                     mt: '1.25rem',
                 }}
             >
@@ -116,26 +116,29 @@ function InnerBlockProject() {
                             aria-current={isActive}
                             sx={{
                                 p: 0,
+                                m: 0,
                                 border: 'none',
                                 cursor: 'pointer',
-                                background: 'transparent',
-                                display: 'inline-flex',
-                                alignItems: 'center',
+                                appearance: 'none',
+                                WebkitAppearance: 'none',
+                                WebkitTapHighlightColor: 'transparent',
+                                outline: 'none',
+                                boxShadow: 'none',
+                                '&:focus, &:focus-visible, &:active': {
+                                    outline: 'none',
+                                    boxShadow: 'none',
+                                },
+                                flex: 'none',
+                                height: '8px',
+                                width: isActive ? '26px' : '8px',
+                                borderRadius: '99px',
+                                backgroundColor: isActive
+                                    ? 'var(--joy-palette-primary-500, #0b6bcb)'
+                                    : 'var(--joy-palette-neutral-400, rgba(0,0,0,0.25))',
+                                opacity: isActive ? 1 : 0.5,
+                                transition: 'width 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease, opacity 0.4s ease',
                             }}
-                        >
-                            <Box
-                                sx={{
-                                    height: '8px',
-                                    width: isActive ? '26px' : '8px',
-                                    borderRadius: '99px',
-                                    backgroundColor: isActive
-                                        ? 'var(--joy-palette-primary-500, #0b6bcb)'
-                                        : 'var(--joy-palette-neutral-400, rgba(0,0,0,0.25))',
-                                    opacity: isActive ? 1 : 0.5,
-                                    transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
-                                }}
-                            />
-                        </Box>
+                        />
                     );
                 })}
             </Box>

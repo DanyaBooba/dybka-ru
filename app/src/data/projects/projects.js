@@ -1,5 +1,19 @@
 export const projects = [
     {
+        title: 'Приложение Аквариума',
+        fullTitle: 'Мобильное приложение мессенджера «Аквариум»',
+        subtitle: 'Все, чтобы связь держалась долго. Мобильное приложение мессенджера «Аквариум» собственной разработки для iOS и Android',
+        img: 'aquarium-app',
+        stack: [
+            'iOS',
+            'Android',
+            'React Native',
+            'WebSocket',
+        ],
+        new: true,
+        link: 'https://aquarium.org.ru/apps',
+    },
+    {
         title: 'Новый сайт creagoo.ru',
         fullTitle: 'Обновленный сайт Creagoo в 2026',
         subtitle: 'Было решено сделать дизайн более чистым и увеличить скорость работы',
@@ -24,20 +38,6 @@ export const projects = [
             '1С:Университет',
         ],
         link: 'https://dev.dybka.ru/pstgu/1c/',
-    },
-    {
-        title: 'Приложение Аквариума',
-        fullTitle: 'Мобильное приложение мессенджера «Аквариум»',
-        subtitle: 'Все, чтобы связь держалась долго. Мобильное приложение мессенджера «Аквариум» собственной разработки для iOS и Android',
-        stack: [
-            'iOS',
-            'Android',
-            'React Native',
-            'WebSocket',
-        ],
-        soon: true,
-        new: false,
-        // link: 'https://aquarium.org.ru',
     },
     {
         title: 'Аквариум',

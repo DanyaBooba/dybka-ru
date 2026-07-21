@@ -3,14 +3,26 @@ import Link from '@mui/joy/Link'
 
 function InnerBlockContacts() {
     const gridSize = {
-        lg: 4,
-        md: 4,
+        lg: 3,
+        md: 3,
         sm: 12,
         xs: 12
     }
 
     return (
         <Grid container spacing={2}>
+            <Grid size={gridSize}>
+                <Link href="https://aquarium.org.ru/show/ddybka" target="_blank" variant="soft" className="linkBorder" sx={{
+                    whiteSpace: 'nowrap',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    width: '100%',
+                    py: '16px !important',
+                    justifyContent: 'center',
+                }}>
+                    Аквариум
+                </Link>
+            </Grid>
             <Grid size={gridSize}>
                 <Link href="mailto:daniil@dybka.ru" variant="soft" className="linkBorder" sx={{
                     whiteSpace: 'nowrap',
@@ -32,7 +44,7 @@ function InnerBlockContacts() {
                     py: '16px !important',
                     justifyContent: 'center',
                 }}>
-                    ddybka.t.me
+                    Телеграм
                 </Link>
             </Grid>
             <Grid size={gridSize}>
@@ -44,7 +56,7 @@ function InnerBlockContacts() {
                     py: '16px !important',
                     justifyContent: 'center',
                 }}>
-                    github.com/DanyaBooba
+                    GitHub
                 </Link>
             </Grid>
         </Grid>

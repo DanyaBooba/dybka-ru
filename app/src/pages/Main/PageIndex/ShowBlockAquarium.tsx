@@ -35,7 +35,9 @@ const LeftBlock = () => {
             }}
         >
             <CardContent orientation="horizontal" sx={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <AquariumSVG />
+                <Box sx={{ transform: 'translate(0px, 5px)' }}>
+                    <AquariumSVG />
+                </Box>
                 <CardContent>
                     <Typography level="h2">
                         <Link href="https://aquarium.org.ru" target="_blank" overlay>
@@ -49,27 +51,42 @@ const LeftBlock = () => {
     )
 }
 
-const RightBlock = () => (
-    <Card
-        variant="outlined"
-        sx={{
-            borderRadius: '36px',
-            p: '2rem 1.5rem !important',
-            flex: 1,
-            borderStyle: 'dashed',
-            opacity: 0.75,
-        }}
-    >
-        <CardContent sx={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <CardContent>
-                <Typography level="h4">
-                    Мобильное приложение
-                </Typography>
-                <Typography level="body-sm">Скоро...</Typography>
+const RightBlock = () => {
+    const shadowTheme = '0 4px 34px -1px rgba(0, 0, 0, 0.05), inset 0 0 20px rgba(11, 107, 203, 0.08)';
+    const shadowThemeHover = '0 40px 80px -15px rgb(12 107 203 / 12%)';
+
+    return (
+        <Card
+            variant="soft"
+            color="primary"
+            sx={{
+                borderRadius: '36px',
+                p: '2rem 1.5rem !important',
+                flex: 1,
+                boxShadow: shadowTheme,
+                '&:hover': {
+                    boxShadow: shadowThemeHover,
+                    transform: 'translateY(-10px) scale(1.01)',
+                },
+                transition: 'all 0.25s ease',
+            }}
+        >
+            <CardContent orientation="horizontal" sx={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                <Box sx={{ transform: 'translate(0px, 5px)' }}>
+                    <AquariumSVG color="#0b6bcb" />
+                </Box>
+                <CardContent>
+                    <Typography level="h2" sx={{ lineHeight: '30px', mb: '.5rem' }}>
+                        <Link href="https://aquarium.org.ru/apps" target="_blank" overlay>
+                            Мобильное приложение
+                        </Link>
+                    </Typography>
+                    <Typography level="body-md">Аквариум в кармане</Typography>
+                </CardContent>
             </CardContent>
-        </CardContent>
-    </Card>
-)
+        </Card>
+    )
+}
 
 export default function ShowBlockAquarium() {
     return (
