@@ -9,6 +9,18 @@
     margin-bottom: .5rem;
 }
 
+/* длинные слова («программирования») иначе задают блоку min-content
+   шире экрана — и вся страница перестаёт сжиматься на узких смартфонах */
+.sheetBlock h1,
+.sheetBlock h2,
+.sheetBlock h3,
+.sheetBlock-hero h1,
+.sheetBlock-hero h2,
+.sheetBlock-hero h3 {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
 .sheetBlock-hero {
     border-style: solid;
     border-width: 1px;

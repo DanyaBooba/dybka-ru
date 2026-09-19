@@ -10,8 +10,8 @@ import List from '@mui/joy/List';
 import ListItem from '@mui/joy/ListItem';
 import ListItemButton from '@mui/joy/ListItemButton';
 import DragHandleIcon from '@mui/icons-material/DragHandle';
-import ModalClose from '@mui/joy/ModalClose';
 import HomeIcon from '@mui/icons-material/Home';
+import { navigation } from '../../../../data/navigation';
 
 function needSeeButtonHome() {
     return window.location.pathname.slice(1).length > 0;
@@ -43,7 +43,7 @@ function HeaderMobileDrawer({ list }) {
                 onClick={toggleDrawer(true)}
                 aria-label="Открыть меню"
                 sx={{
-                    borderRadius: '12px'
+                    borderRadius: '8px'
                 }}
             >
                 <DragHandleIcon />
@@ -58,7 +58,7 @@ function HeaderMobileDrawer({ list }) {
                     color="primary"
                     aria-label="Перейти на главную страницу"
                     sx={{
-                        borderRadius: '12px',
+                        borderRadius: '8px',
                     }}
                 >
                     <HomeIcon />
@@ -72,36 +72,9 @@ function HeaderMobileDrawer({ list }) {
                     onClick={toggleDrawer(false)}
                     onKeyDown={toggleDrawer(false)}
                 >
-                    <Box
-                        sx={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: 0.5,
-                            ml: 'auto',
-                            mt: 1,
-                            mr: 2,
-                            justifyContent: 'right',
-                            marginTop: '-20px',
-                            transform: 'translate(0px, 30px)',
-                        }}
-                    >
-                        <Typography
-                            component="label"
-                            htmlFor="close-icon"
-                            sx={{ fontSize: 'sm', fontWeight: 'lg', cursor: 'pointer' }}
-                        >
-                            Закрыть
-                        </Typography>
-                        <ModalClose id="close-icon" sx={{ position: 'initial' }} />
-                    </Box>
-                    <List>
+                    <List sx={{ py: '.5rem' }}>
                         {list.map((item, index) => (
-                            <ListItem
-                                key={index}
-                                sx={{
-                                    maxWidth: 'calc(100% - 150px)'
-                                }}
-                            >
+                            <ListItem key={index}>
                                 <ListItemButton component="a" href={item.link} className="header__mobile-link-drawer">
                                     {item.name}
                                 </ListItemButton>
@@ -137,14 +110,17 @@ function HeaderDesktopLink({ item }) {
 
 function HeaderDesktop({ list }) {
     return (
-        <Box sx={{
-            display: {
-                lg: 'block',
-                md: 'block',
-                sm: 'block',
-                xs: 'none',
-            }
-        }}>
+        <Box
+            className="header__desktop"
+            sx={{
+                display: {
+                    lg: 'block',
+                    md: 'block',
+                    sm: 'block',
+                    xs: 'none',
+                }
+            }}
+        >
             <header className="header">
                 <Container className="" maxWidth="md">
                     <div className="header__container" style={{
@@ -194,24 +170,7 @@ function HeaderMobile({ list }) {
 }
 
 function Header() {
-    const list = [
-        {
-            name: 'проекты',
-            link: '/projects',
-        },
-        {
-            name: 'мероприятия',
-            link: '/contests',
-        },
-        {
-            name: 'сми',
-            link: '/smi',
-        },
-        {
-            name: 'обо мне',
-            link: '/about',
-        },
-    ]
+    const list = navigation
 
     return (
         <>

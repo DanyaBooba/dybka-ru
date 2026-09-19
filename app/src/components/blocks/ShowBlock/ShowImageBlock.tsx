@@ -58,6 +58,7 @@ export default function ShowImageBlock({ img, fullTitle, subtitle, stack = [], l
             invisible={!isNew}
             sx={{
                 width: '100%',
+                height: '100%',
                 '& .MuiBadge-badge': {
                     transform: 'translate(-6px, 14px)',
                     opacity: isNew ? 1 : 0,
@@ -69,6 +70,8 @@ export default function ShowImageBlock({ img, fullTitle, subtitle, stack = [], l
                 sx={{
                     position: 'relative',
                     width: '100%',
+                    height: '100%',
+                    display: 'flex',
                     minHeight: { xs: 360, sm: 420, md: 460 },
                     borderRadius: '34px',
                     overflow: 'hidden',
@@ -109,15 +112,16 @@ export default function ShowImageBlock({ img, fullTitle, subtitle, stack = [], l
                 <Box className="showImageBlock__gradient" />
 
                 <Box
-                    style={{
+                    sx={{
                         position: 'relative',
                         zIndex: 2,
-                        height: '100%',
+                        flex: 1,
+                        width: '100%',
                         display: 'flex',
                         flexDirection: 'column',
                         justifyContent: 'flex-end',
-                        padding: '2rem',
-                        gap: '.5rem',
+                        padding: { xs: '1.25rem', sm: '2rem' },
+                        gap: { xs: '.35rem', sm: '.5rem' },
                     }}
                 >
                     {stack.length > 0 && (
@@ -141,7 +145,12 @@ export default function ShowImageBlock({ img, fullTitle, subtitle, stack = [], l
 
                     <Typography
                         level="h2"
-                        sx={{ color: '#fff', wordBreak: 'break-word', mb: '0 !important' }}
+                        sx={{
+                            color: '#fff',
+                            wordBreak: 'break-word',
+                            mb: '0 !important',
+                            lineHeight: { xs: 1.15, sm: 1.4 },
+                        }}
                     >
                         {fullTitle}
                     </Typography>

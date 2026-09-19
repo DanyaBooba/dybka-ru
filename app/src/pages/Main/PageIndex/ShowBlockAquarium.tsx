@@ -8,24 +8,64 @@ import { Box } from '@mui/joy'
 
 
 
+// Фирменный цвет Аквариума — Tiffany Blue
+const AQUARIUM = '#0ebab5';
+// затемнённый вариант: на светлом фоне сам Tiffany Blue читается плохо
+const AQUARIUM_ON_LIGHT = '#0a8079';
+// осветлённый вариант: на тёмном фоне логотип не должен сливаться
+const AQUARIUM_ON_DARK = '#4de3de';
+
+// общие адаптивные размеры карточек: на узких экранах всё компактнее
+const cardSx = {
+    borderRadius: { xs: '28px', sm: '36px' },
+    p: { xs: '1.25rem 1.25rem !important', sm: '2rem 1.5rem !important' },
+    flex: 1,
+    minWidth: 0,
+};
+
+const logoSx = {
+    transform: 'translate(0px, 5px)',
+    flexShrink: 0,
+    '& svg': {
+        width: { xs: 52, sm: 75 },
+        height: 'auto',
+    },
+};
+
+const rowSx = {
+    display: 'flex',
+    alignItems: 'center',
+    gap: { xs: '.75rem', sm: '1rem' },
+    minWidth: 0,
+};
+
+const titleSx = {
+    fontSize: { xs: '1.125rem', sm: '1.5rem' },
+    lineHeight: 1.25,
+    mb: '.25rem',
+    wordBreak: 'break-word',
+};
+
+const subtitleSx = {
+    fontSize: { xs: '0.875rem', sm: '1rem' },
+};
+
 const LeftBlock = () => {
     const isDark = infoTheme() === 'dark';
     const shadowTheme = isDark
-        ? '0 4px 34px -1px rgba(0, 0, 0, 0.05), inset 0 0 20px rgb(12 107 203 / 10%)'
-        : '0 4px 34px -1px rgba(0, 0, 0, 0.05), inset 0 0 20px rgba(12 107 203, 0.1)';
-    const shadowThemeHover = isDark
-        ? '0 40px 80px -15px rgb(12 107 203 / 12%)'
-        : '0 40px 80px -15px rgb(12 107 203 / 12%)';
+        ? '0 4px 34px -1px rgba(0, 0, 0, 0.3), inset 0 0 20px rgb(14 186 181 / 10%)'
+        : '0 4px 34px -1px rgba(0, 0, 0, 0.05), inset 0 0 20px rgb(14 186 181 / 10%)';
+    const shadowThemeHover = '0 40px 80px -15px rgb(14 186 181 / 35%)';
 
     return (
         <Card
             variant="solid"
-            color="primary"
             invertedColors
             sx={{
-                borderRadius: '36px',
-                p: '2rem 1.5rem !important',
-                flex: 1,
+                ...cardSx,
+                backgroundColor: AQUARIUM,
+                color: '#fff',
+                '& a, & a:hover': { color: '#fff' },
                 boxShadow: shadowTheme,
                 '&:hover': {
                     boxShadow: shadowThemeHover,
@@ -34,17 +74,17 @@ const LeftBlock = () => {
                 transition: 'all 0.25s ease',
             }}
         >
-            <CardContent orientation="horizontal" sx={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <Box sx={{ transform: 'translate(0px, 5px)' }}>
+            <CardContent orientation="horizontal" sx={rowSx}>
+                <Box sx={logoSx}>
                     <AquariumSVG />
                 </Box>
-                <CardContent>
-                    <Typography level="h2">
+                <CardContent sx={{ minWidth: 0 }}>
+                    <Typography level="h2" sx={titleSx}>
                         <Link href="https://aquarium.org.ru" target="_blank" overlay>
                             Аквариум
                         </Link>
                     </Typography>
-                    <Typography level="body-md">Удобный способ держать связь</Typography>
+                    <Typography level="body-md" sx={subtitleSx}>Удобный способ держать связь</Typography>
                 </CardContent>
             </CardContent>
         </Card>
@@ -52,17 +92,20 @@ const LeftBlock = () => {
 }
 
 const RightBlock = () => {
-    const shadowTheme = '0 4px 34px -1px rgba(0, 0, 0, 0.05), inset 0 0 20px rgba(11, 107, 203, 0.08)';
-    const shadowThemeHover = '0 40px 80px -15px rgb(12 107 203 / 12%)';
+    const isDark = infoTheme() === 'dark';
+    const accent = isDark ? AQUARIUM_ON_DARK : AQUARIUM_ON_LIGHT;
+    const shadowTheme = isDark
+        ? '0 4px 34px -1px rgba(0, 0, 0, 0.3), inset 0 0 20px rgb(14 186 181 / 8%)'
+        : '0 4px 34px -1px rgba(0, 0, 0, 0.05), inset 0 0 20px rgb(14 186 181 / 8%)';
+    const shadowThemeHover = '0 40px 80px -15px rgb(14 186 181 / 25%)';
 
     return (
         <Card
-            variant="soft"
-            color="primary"
+            variant="plain"
             sx={{
-                borderRadius: '36px',
-                p: '2rem 1.5rem !important',
-                flex: 1,
+                ...cardSx,
+                backgroundColor: isDark ? 'rgba(14, 186, 181, 0.14)' : 'rgba(14, 186, 181, 0.10)',
+                border: `1px solid ${isDark ? 'rgba(77, 227, 222, 0.32)' : 'rgba(14, 186, 181, 0.24)'}`,
                 boxShadow: shadowTheme,
                 '&:hover': {
                     boxShadow: shadowThemeHover,
@@ -71,17 +114,22 @@ const RightBlock = () => {
                 transition: 'all 0.25s ease',
             }}
         >
-            <CardContent orientation="horizontal" sx={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <Box sx={{ transform: 'translate(0px, 5px)' }}>
-                    <AquariumSVG color="#0b6bcb" />
+            <CardContent orientation="horizontal" sx={rowSx}>
+                <Box sx={logoSx}>
+                    <AquariumSVG color={accent} />
                 </Box>
-                <CardContent>
-                    <Typography level="h2" sx={{ lineHeight: '30px', mb: '.5rem' }}>
-                        <Link href="https://aquarium.org.ru/apps" target="_blank" overlay>
+                <CardContent sx={{ minWidth: 0 }}>
+                    <Typography level="h2" sx={titleSx}>
+                        <Link
+                            href="https://aquarium.org.ru/apps"
+                            target="_blank"
+                            overlay
+                            sx={{ color: accent, '&:hover': { color: accent } }}
+                        >
                             Мобильное приложение
                         </Link>
                     </Typography>
-                    <Typography level="body-md">Аквариум в кармане</Typography>
+                    <Typography level="body-md" sx={subtitleSx}>Аквариум в кармане</Typography>
                 </CardContent>
             </CardContent>
         </Card>
@@ -93,7 +141,9 @@ export default function ShowBlockAquarium() {
         <Box
             sx={{
                 display: 'flex',
-                flexDirection: 'row',
+                // flex: 1 не даёт карточкам переноситься, поэтому на узких экранах
+                // раскладываем их в колонку, а не сжимаем до половины ширины
+                flexDirection: { xs: 'column', sm: 'row' },
                 flexWrap: 'wrap',
                 gap: '1rem',
                 mb: '2rem',

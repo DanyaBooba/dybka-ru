@@ -11,7 +11,8 @@ function BlockPhoto({ image, title, link }) {
     return (
         <Card variant="plain" sx={{ bgcolor: 'initial', p: 0, borderRadius: '20px !important' }}>
             <Box sx={{ position: 'relative' }}>
-                <AspectRatio ratio="1/1">
+                {/* на мобильных фото чуть ниже квадрата, чтобы карточки не растягивали блок */}
+                <AspectRatio ratio="1/1" sx={{ '--AspectRatio-ratio': { xs: '16/11', sm: '1/1' } }}>
                     <figure>
                         <img
                             src={`/img/contests/${image}`}

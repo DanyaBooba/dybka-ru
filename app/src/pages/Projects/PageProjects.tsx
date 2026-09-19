@@ -16,15 +16,43 @@ import { Box } from '@mui/joy';
 function ShowMoreProjectsGitHub() {
     return (
         <Card variant="solid" color="primary" invertedColors sx={{ mb: '2rem', borderRadius: '36px', p: '2rem 1.5rem !important' }}>
-            <CardContent orientation="horizontal" sx={{ display: 'flex', alignItems: 'end', justifyContent: 'center', gap: '1rem' }}>
-                <GitHubIcon sx={{ fontSize: '65px' }} />
-                <Box>
-                    <Typography level="h2" sx={{ width: 'fit-content' }}>
+            <CardContent
+                orientation="horizontal"
+                sx={{
+                    // на мобильных — всё вместе по центру,
+                    // на десктопе — логотип слева, текст по абсолютному центру карточки
+                    position: 'relative',
+                    display: 'flex',
+                    alignItems: 'end',
+                    justifyContent: 'center',
+                    gap: '1rem',
+                }}
+            >
+                <GitHubIcon
+                    sx={{
+                        fontSize: '65px',
+                        position: { xs: 'static', sm: 'absolute' },
+                        left: 0,
+                        bottom: 0,
+                    }}
+                />
+                <Box
+                    sx={{
+                        textAlign: { xs: 'left', sm: 'center' },
+                        mx: { xs: 0, sm: 'auto' },
+                    }}
+                >
+                    <Typography level="h2" sx={{ width: 'fit-content', mx: { xs: 0, sm: 'auto' } }}>
                         <Link href="//github.com/DanyaBooba" target="_blank" overlay>
                             Все проекты
                         </Link>
                     </Typography>
-                    <Typography level="body-md" sx={{ lineHeight: '20px', width: 'fit-content' }}>github.com/DanyaBooba</Typography>
+                    <Typography
+                        level="body-md"
+                        sx={{ lineHeight: '20px', width: 'fit-content', mx: { xs: 0, sm: 'auto' } }}
+                    >
+                        github.com/DanyaBooba
+                    </Typography>
                 </Box>
             </CardContent>
         </Card>

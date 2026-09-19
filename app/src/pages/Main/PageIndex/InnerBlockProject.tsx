@@ -52,6 +52,8 @@ function InnerBlockProject() {
                 sx={{
                     position: 'relative',
                     display: 'flex',
+                    // карточки тянутся до высоты самой высокой, чтобы все были одинаковыми
+                    alignItems: 'stretch',
                     // No flex `gap`: a gap adds scroll room past the last card and lets a
                     // hard fling rest a few px off-centre. Spacing between cards is done
                     // with per-slide inner padding instead, so maxScroll lands exactly on
@@ -79,6 +81,8 @@ function InnerBlockProject() {
                             boxSizing: 'border-box',
                             // inner padding = visual gap between neighbouring cards
                             px: '0.625rem',
+                            display: 'flex',
+                            '& > .MuiBadge-root': { height: '100%' },
                         }}
                     >
                         <ShowImageBlock

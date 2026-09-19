@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import Container from '@mui/material/Container';
 import Header from '../includes/Header/Header'
+import Sidebar from '../includes/Sidebar/Sidebar'
 import Footer from '../includes/Footer/Footer'
 
 function AsideContainer({ hasSearch = "", title = "Даниил Дыбка — разработчик веб-платформ, игр и мобильных приложений", desc = "Даниил Дыбка — разработчик веб-платформ, игр и мобильных приложений", children }) {
@@ -12,6 +13,7 @@ function AsideContainer({ hasSearch = "", title = "Даниил Дыбка — �
     return (
         <>
             <Header />
+            <Sidebar />
             <Container maxWidth="md" className={`container ${hasSearch && 'container-mobile-search'}`}
                 sx={{ minHeight: 'calc(100vh - 85px - 2rem)' }}>
                 {children}

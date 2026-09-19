@@ -19,7 +19,7 @@ function PageIndex() {
             <ShowBlock title="Мои проекты" showMore="/projects" image="projects.png">
                 <InnerBlockProject />
             </ShowBlock>
-            <ShowBlock title="Фотографии с мероприятий" showMore="/contests" image="photo.png">
+            <ShowBlock title="Мероприятия" showMore="/contests" image="photo.png">
                 <InnerBlockPhotos />
             </ShowBlock>
             <ShowBlock title="Участие в СМИ" showMore="/smi" image="smi.png">
@@ -34,7 +34,7 @@ function PageIndex() {
             <ShowBlock title="Технологии и языки программирования" hover={false}>
                 <InnerBlockLanguages />
             </ShowBlock>
-            <ShowBlock title="Актуальные платформы" hover={false}>
+            <ShowBlock title="Операционные системы" hover={false}>
                 <InnerBlockPlatforms />
             </ShowBlock>
             <ShowBlock title="Мои контакты" image="contacts.png">

@@ -7,6 +7,16 @@
         padding-top: 1rem;
     }
 
+    /* на мобильных заголовки блоков компактнее */
+    .sheetBlock h2 {
+        font-size: 1.25rem;
+        line-height: 1.3;
+    }
+
+    .sheetBlock {
+        padding: 1.5rem 1.25rem;
+    }
+
     .container-mobile-search {
         padding-top: 94px;
     }
@@ -27,6 +37,36 @@
 
     .container {
         padding-top: 5.5rem;
+    }
+}
+
+/* Широкий десктоп: вместо шапки — фиксированное меню слева, контент по центру */
+@media(min-width: 1360px) {
+    * {
+        scroll-padding: 30px;
+    }
+
+    .header__desktop {
+        display: none !important;
+    }
+
+    .container,
+    .container-mobile-search {
+        padding-top: 2rem;
+    }
+
+    .search-sticky {
+        top: 1rem !important;
+    }
+
+    .sidebar {
+        display: block;
+        position: fixed;
+        z-index: 100;
+        top: 2rem;
+        /* левый отступ = центр экрана − половина контейнера (450px) − отступ − ширина меню */
+        left: max(16px, calc(50% - 666px));
+        width: 200px;
     }
 }
 

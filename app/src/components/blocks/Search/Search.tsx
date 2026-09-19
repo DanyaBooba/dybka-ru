@@ -33,6 +33,7 @@ function Search(props) {
 
     return (
         <Box
+            className="search-sticky"
             sx={{
                 position: 'sticky',
                 zIndex: 1000,
