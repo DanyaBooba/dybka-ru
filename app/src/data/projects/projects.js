@@ -1,5 +1,30 @@
 export const projects = [
     {
+        title: 'Авторские курсы',
+        fullTitle: 'Авторские курсы',
+        subtitle: 'Сайт с авторскими курсами по программированию',
+        stack: [
+            'React',
+            'JoyUI',
+            'Framer Motion',
+        ],
+        img: 'courses',
+        new: true,
+        link: 'https://courses.dybka.ru',
+    },
+    {
+        title: 'Приложение Память',
+        fullTitle: 'Приложение «Память Новомучеников»',
+        subtitle: 'Мобильное приложение «Память Новомучеников» собственной разработки для iOS и Android',
+        stack: [
+            'iOS',
+            'Android',
+            'React Native',
+        ],
+        soon: true,
+        link: null,
+    },
+    {
         title: 'Приложение Аквариума',
         fullTitle: 'Мобильное приложение мессенджера «Аквариум»',
         subtitle: 'Все, чтобы связь держалась долго. Мобильное приложение мессенджера «Аквариум» собственной разработки для iOS и Android',
@@ -10,7 +35,6 @@ export const projects = [
             'React Native',
             'WebSocket',
         ],
-        new: true,
         link: 'https://aquarium.org.ru/apps',
     },
     {
@@ -119,6 +143,21 @@ export const projects = [
         link: 'https://widget-info.dybka.ru',
     },
     {
+        title: 'dybka.ru',
+        fullTitle: 'Мой лендинг',
+        subtitle: 'Мой лендинг.',
+        img: 'dybka',
+        stack: [
+            'React',
+            'TS',
+        ],
+        link: 'https://dybka.ru',
+        github: 'dybka-ru'
+    },
+]
+
+export const archived = [
+    {
         title: 'Аквариум',
         fullTitle: 'Социальная сеть Аквариум',
         subtitle: 'Платформа социального взаимодействия.',
@@ -158,18 +197,6 @@ export const projects = [
         ],
         link: 'https://dev.dybka.ru',
         github: 'dev-dybka',
-    },
-    {
-        title: 'dybka.ru',
-        fullTitle: 'Мой лендинг',
-        subtitle: 'Мой лендинг.',
-        img: 'dybka',
-        stack: [
-            'React',
-            'TS',
-        ],
-        link: 'https://dybka.ru',
-        github: 'dybka-ru'
     },
     {
         title: 'vr.creagoo.ru',

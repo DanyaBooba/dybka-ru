@@ -42,7 +42,6 @@ const rowSx = {
 const titleSx = {
     fontSize: { xs: '1.125rem', sm: '1.5rem' },
     lineHeight: 1.25,
-    mb: '.25rem',
     wordBreak: 'break-word',
 };
 
@@ -78,9 +77,9 @@ const LeftBlock = () => {
                 <Box sx={logoSx}>
                     <AquariumSVG />
                 </Box>
-                <CardContent sx={{ minWidth: 0 }}>
+                <CardContent sx={{ minWidth: 0, gap: 0 }}>
                     <Typography level="h2" sx={titleSx}>
-                        <Link href="https://aquarium.org.ru" target="_blank" overlay>
+                        <Link href="https://aquarium.org.ru" target="_blank" overlay underline="none">
                             Аквариум
                         </Link>
                     </Typography>
@@ -94,9 +93,6 @@ const LeftBlock = () => {
 const RightBlock = () => {
     const isDark = infoTheme() === 'dark';
     const accent = isDark ? AQUARIUM_ON_DARK : AQUARIUM_ON_LIGHT;
-    const shadowTheme = isDark
-        ? '0 4px 34px -1px rgba(0, 0, 0, 0.3), inset 0 0 20px rgb(14 186 181 / 8%)'
-        : '0 4px 34px -1px rgba(0, 0, 0, 0.05), inset 0 0 20px rgb(14 186 181 / 8%)';
     const shadowThemeHover = '0 40px 80px -15px rgb(14 186 181 / 25%)';
 
     return (
@@ -105,8 +101,6 @@ const RightBlock = () => {
             sx={{
                 ...cardSx,
                 backgroundColor: isDark ? 'rgba(14, 186, 181, 0.14)' : 'rgba(14, 186, 181, 0.10)',
-                border: `1px solid ${isDark ? 'rgba(77, 227, 222, 0.32)' : 'rgba(14, 186, 181, 0.24)'}`,
-                boxShadow: shadowTheme,
                 '&:hover': {
                     boxShadow: shadowThemeHover,
                     transform: 'translateY(-10px) scale(1.01)',
@@ -118,13 +112,14 @@ const RightBlock = () => {
                 <Box sx={logoSx}>
                     <AquariumSVG color={accent} />
                 </Box>
-                <CardContent sx={{ minWidth: 0 }}>
+                <CardContent sx={{ minWidth: 0, gap: 0 }}>
                     <Typography level="h2" sx={titleSx}>
                         <Link
                             href="https://aquarium.org.ru/apps"
                             target="_blank"
                             overlay
                             sx={{ color: accent, '&:hover': { color: accent } }}
+                            underline="none"
                         >
                             Мобильное приложение
                         </Link>

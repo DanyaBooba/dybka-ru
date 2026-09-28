@@ -215,14 +215,16 @@ function SoonCardProjectShow({ fullTitle, subtitle, stack, isNew = false }) {
                 '& .MuiBadge-badge': {
                     transform: 'translate(0px, -10px)',
                     opacity: isNew ? 1 : 0,
-                }
+                },
+                width: '100%',
             }}
         >
             <Sheet
                 onMouseMove={handleMouseMove}
                 sx={{
                     ...blockStyles(currentTheme(), infoTheme(), false),
-                    mb: '2rem !important'
+                    mb: '2rem !important',
+                    flex: 1,
                 }}
                 className="sheetBlock"
             >

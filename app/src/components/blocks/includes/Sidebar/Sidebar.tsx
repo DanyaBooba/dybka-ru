@@ -46,7 +46,7 @@ function Sidebar() {
                 style={{
                     borderColor: currentTheme().header.borderColor,
                     backgroundColor: currentTheme().header.backgroundColor,
-                    boxShadow: currentTheme().header.boxShadow,
+                    // boxShadow: currentTheme().header.boxShadow,
                 }}
             >
                 {window.location.pathname === home.link ? (
