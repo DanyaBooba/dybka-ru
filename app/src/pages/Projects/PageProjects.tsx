@@ -103,6 +103,8 @@ function filterProjects(items, searchTerm) {
 function PageProjects() {
     const [searchTerm, setSearchTerm] = useState('');
     const [archiveOpen, setArchiveOpen] = useState(false);
+    // overflow: hidden нужен только во время анимации высоты, иначе обрезаются тени и карточки
+    const [archiveSettled, setArchiveSettled] = useState(false);
     const reduced = useReducedMotion();
 
     function handleSearch(term) {
@@ -128,7 +130,10 @@ function PageProjects() {
                         <Link
                             component="button"
                             underline="none"
-                            onClick={() => setArchiveOpen(open => !open)}
+                            onClick={() => {
+                                setArchiveSettled(false);
+                                setArchiveOpen(open => !open);
+                            }}
                             aria-expanded={archiveOpen}
                             endDecorator={
                                 <ExpandMoreIcon
@@ -151,9 +156,12 @@ function PageProjects() {
                                 animate={{ height: 'auto', opacity: 1 }}
                                 exit={{ height: 0, opacity: 0 }}
                                 transition={{ duration: reduced ? 0 : 0.5, ease: [0.16, 1, 0.3, 1] }}
-                                style={{ overflow: 'hidden' }}
+                                onAnimationComplete={(definition: any) => {
+                                    if (definition?.height === 'auto') setArchiveSettled(true);
+                                }}
+                                style={{ overflow: archiveSettled ? 'visible' : 'hidden' }}
                             >
-                                <Box sx={{ pt: '2rem', px: '.5rem', mx: '-.5rem' }}>
+                                <Box sx={{ pt: '2rem' }}>
                                     {filteredArchived.map((item, index) => (
                                         <motion.div
                                             key={item.fullTitle}
