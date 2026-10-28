@@ -1,5 +1,12 @@
 export const contests = [
     {
+        imageCap: '2026/russian-engineer/cap.jpg',
+        title: 'Теоретическая информатика и компьютерные технологии',
+        desc: 'Конференция в МГТУ им. Н.Э. Баумана, кафедры ИУ-9.',
+        date: '28 октября 2026 г.',
+        link: 'bmstu-student-spring-2'
+    },
+    {
         imageCap: '2026/studvesna/cap.jpg',
         title: 'Студенческая весна',
         desc: 'Конференция в МГТУ им. Н.Э. Баумана, кафедры ИУ-9.',
