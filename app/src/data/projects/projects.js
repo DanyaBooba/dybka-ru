@@ -1,5 +1,18 @@
 export const projects = [
     {
+        title: 'Приложение Память',
+        fullTitle: 'Приложение «Память Новомучеников»',
+        subtitle: 'Мобильное и веб-приложение «Память Новомучеников» собственной разработки для iOS и Android',
+        stack: [
+            'iOS',
+            'Android',
+            'React Native',
+        ],
+        img: 'pamyat',
+        new: true,
+        link: 'https://map.dybka.ru',
+    },
+    {
         title: 'Авторские курсы',
         fullTitle: 'Авторские курсы',
         subtitle: 'Сайт с авторскими курсами по программированию',
@@ -9,20 +22,7 @@ export const projects = [
             'Framer Motion',
         ],
         img: 'courses',
-        new: true,
         link: 'https://courses.dybka.ru',
-    },
-    {
-        title: 'Приложение Память',
-        fullTitle: 'Приложение «Память Новомучеников»',
-        subtitle: 'Мобильное приложение «Память Новомучеников» собственной разработки для iOS и Android',
-        stack: [
-            'iOS',
-            'Android',
-            'React Native',
-        ],
-        soon: true,
-        link: null,
     },
     {
         title: 'Приложение Аквариума',
